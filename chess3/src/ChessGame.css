@@ -1,11 +1,21 @@
 .chessboard-wrapper {
-  display: flex;
+  margin-left: 30%;
+  margin-right: 30%;
   justify-content: center;
-  background-color: #282c34;
   margin-top: 5%;
   margin-bottom:5%;
 }
 
 .chessboard {
+
+}
+
+.chat-window {
+
+background-color: #282c34;
+
+width: 25%;
+
+margin-left: 20%;
 
 }

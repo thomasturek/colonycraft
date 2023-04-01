@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import Chessboard from 'chessboardjsx';
-import io from "socket.io-client";
+import socketIO from 'socket.io-client';
 import { Chess } from 'chess.js';
 import './ChessGame.css';
 
-const socket = io("ec2-54-163-168-91.compute-1.amazonaws.com");
+const socket = socketIO.connect('http://localhost:8080');
 
 const ChessGame = () => {
 
@@ -12,33 +12,38 @@ const ChessGame = () => {
   const [highlight, setHighlight] = useState({});
   const [room, setRoom] = useState(""); // current room
   const [player, setPlayer] = useState(""); // current player (white or black)
+  const [chatInput, setChatInput] = useState(""); // chat input text
+  const [chatHistory, setChatHistory] = useState([]); // chat history
 
   useEffect(() => {
     socket.on("connect", () => {
       setRoom("exampleRoom"); // replace with your desired room name
       socket.emit("joinRoom", "exampleRoom"); // replace with your desired room name
     });
-  }, []);
 
-  useEffect(() => {
     socket.on("move", (data) => {
       handleMove(data);
     });
-  }, [fen]);
+
+    socket.on("chat", (data) => {
+      setChatHistory([...chatHistory, data]);
+    });
+  }, []);
 
   const handleSelect = (square) => {
-    const chess = new Chess(fen);
+  const chess = new Chess(fen);
 
-    const moves = chess.moves({ square: square });
+  const moves = chess.moves({ square: square });
 
-    const newHighlight = { [square]: 'yellow' };
+  const newHighlight = { [square]: 'yellow' };
 
-    moves.forEach((move) => {
-      newHighlight[move] = 'green';
-    });
+  moves.forEach((move) => {
+    newHighlight[move] = 'green';
+  });
 
-    setHighlight(newHighlight);
-  };
+  setHighlight({...highlight, ...newHighlight});
+};
+
 
   const handleMove = (move) => {
   const chess = new Chess(fen);
@@ -60,6 +65,19 @@ const ChessGame = () => {
   }
   socket.emit("move", move);
 };
+
+const handleChatSubmit = (e) => {
+    e.preventDefault();
+    if (chatInput.trim()) {
+      const data = {
+        message: chatInput,
+        sender: player,
+        timestamp: Date.now(),
+      };
+      socket.emit("chat", data);
+      setChatInput("");
+    }
+  };
 
   return (
     <div className="chessboard-wrapper">
