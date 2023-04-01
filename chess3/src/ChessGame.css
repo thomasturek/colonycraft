@@ -1,0 +1,11 @@
+.chessboard-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #282c34;
+  margin-top: 5%;
+  margin-bottom:5%;
+}
+
+.chessboard {
+
+}
