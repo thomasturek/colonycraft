@@ -1,13 +1,32 @@
 .chessboard-wrapper {
-  margin-left: 30%;
-  margin-right: 30%;
-  justify-content: center;
-  margin-top: 5%;
-  margin-bottom:5%;
+  background-color: #282c34;
+  min-height: 100vh;
+  align-items: center;
 }
 
 .chessboard {
 
+  border: 5px solid #000;
+  position: absolute;
+  top: 10%;
+  width: 70vh;
+  left: 30%;
+}
+
+.room-info {
+  align-content: center;
+  background-color: white;
+  font-size: 1.5rem;
+  top: 10%;
+  left: 5%;
+  width: 40vh;
+  position: absolute;
+  overflow-y: scroll;
+}
+
+.welcomesign {
+  padding: 1rem;
+  font-size: 2rem;
 }
 
 .chat-window {

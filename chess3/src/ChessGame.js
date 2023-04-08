@@ -15,95 +15,116 @@ const ChessGame = () => {
   const [fen, setFen] = useState(new Chess().fen());
   const [highlight, setHighlight] = useState({});
   const [room, setRoom] = useState("");
-  const [player, setPlayer] = useState("");
-  const [chatInput, setChatInput] = useState("");
-  const [chatHistory, setChatHistory] = useState([]);
+  const [orientation, setOrientation] = useState("");
+  const [username, setUserName] = useState("");
+  const [connected, setConnection] = useState(false);
   const [isMyTurn, setIsMyTurn] = useState(false);
 
   useEffect(() => {
 
-    socket.on("connect", () => {
+  socket.on("startGame", (fen) => {
+    setFen(fen);
+  });
 
-      if (room !== null) {
-        socket.emit("joinRoom", room);
-      } else {
-        const roomName = prompt("Please enter a room name:");
-        setRoom(roomName);
-        socket.emit("joinRoom", room);
-      }
-    });
+  socket.on("connect", () => {
 
-    socket.on("move", function (move) {
-      handleMove(move);
-    });
+    if (!connected) {
 
-    socket.on("player", function (player) {
-      setPlayer(player);
-    });
+      const roomName = "hello";
+      setUserName("a");
+      setRoom(roomName);
+      socket.emit("joinRoom", roomName, "a");
+      setConnection(true);
+    }
 
-    socket.on("turn", function () {
+  });
+
+  socket.on("move", function (move) {
+    movePiece(move);
+  });
+
+  socket.on("listen", function (move) {
+    listen(move);
+  });
+
+  socket.on("setOrientation", function (orientation) {
+    setOrientation(orientation);
+  });
+
+  socket.on("turn", function (turn) {
+    if (isMyTurn) {
+      setIsMyTurn(false);
+    } else if (!isMyTurn) {
       setIsMyTurn(true);
-    });
+    }
+  });
 
-    socket.on("gameover", function (result) {
-      alert(`Game over. ${result}`);
-    });
-  }, []);
-
-  const handleSelect = (square) => {
-
-    const chess = new Chess(fen);
-
-    const moves = chess.moves({ square: square });
-
-    const newHighlight = { [square]: "red" };
-
-    moves.forEach((move) => {
-      newHighlight[move] = "green";
-    });
-
-    setHighlight({ ...highlight, ...newHighlight });
-  };
-
-  const handleMove = (move) => {
-    const chess = new Chess(fen);
-
-    setFen(chess.fen());
-    setHighlight({});
-
-    setIsMyTurn(true);
-  };
+  socket.on("gameover", function (result) {
+    alert(`Game over. ${result}`);
+  });
+}, [room, orientation]);
 
   const movePiece = (move) => {
+
+    if(isMyTurn) {
+
     const chess = new Chess(fen);
+    const result = chess.move(move);
 
-    setFen(chess.fen());
-    setHighlight({});
+    if (result !== null) {
 
-    socket.emit("move", { room, move });
+      setFen(chess.fen());
+      setHighlight({});
 
-    setIsMyTurn(false);
+      socket.emit("move", { room: room, move: move, username: username});
+
+    }
+  }
+  };
+
+  const listen = (move) => {
+
+      const chess = new Chess(fen);
+      const result = chess.move(move);
+
+      if (result !== null) {
+
+        setFen(chess.fen());
+        setHighlight({});
+      }
   };
 
   return (
-      <div className="chessboard-wrapper">
-        <div className="room-info">
-          Room: {room}
-          <br />
-          It is {isMyTurn ? `your turn (${player})` : `${player === 'white' ? 'black' : 'white'}'s turn`}
-        </div>
-        <Chessboard
-          position={fen}
-          orientation={player}
-          onSquareClick={handleSelect}
-          onDrop={(move) => movePiece({ from: move.sourceSquare, to: move.targetSquare, promotion: "q" })}
-          squareStyles={highlight}
-          dropSquareStyle={{ boxShadow: "inset 0 0 1px 4px #90EE90" }}
-          className="chessboard"
-        />
+    <div className="chessboard-wrapper">
+      <div className="room-info">
+        Room Info <br /><br />
+        Room: {room} <br />
+        <br />
+        {isMyTurn
+          ? `your turn (${isMyTurn})`
+          : `${orientation === "white" ? "Black" : "White"}'s turn`} <br /><br />
+
+        Chat:<br /><br />
 
       </div>
-    );
+
+      <div className="chessboard">
+      <Chessboard
+        position={fen}
+        orientation={orientation}
+        onDrop={({ sourceSquare, targetSquare }) =>
+          movePiece({
+            from: sourceSquare,
+            to: targetSquare,
+            promotion: "q",
+          })
+        }
+        squareStyles={highlight}
+        dropSquareStyle={{ boxShadow: "inset 0 0 1px 4px #90EE90" }}
+      />
+      </div>
+    </div>
+  );
 };
 
 export default ChessGame;
