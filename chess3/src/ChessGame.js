@@ -30,7 +30,7 @@ const ChessGame = () => {
 
     if (!connected) {
 
-      const roomName = "hello";
+      const roomName = "Dad and Thomas";
       setUserName("a");
       setRoom(roomName);
       socket.emit("joinRoom", roomName, "a");
@@ -52,59 +52,69 @@ const ChessGame = () => {
   });
 
   socket.on("turn", function (turn) {
-    if (isMyTurn) {
-      setIsMyTurn(false);
-    } else if (!isMyTurn) {
-      setIsMyTurn(true);
-    }
-  });
+      setIsMyTurn(turn === orientation);
+    });
 
   socket.on("gameover", function (result) {
     alert(`Game over. ${result}`);
   });
-}, [room, orientation]);
+}, [room, orientation, setIsMyTurn, connected, setOrientation, setConnection]);
 
   const movePiece = (move) => {
 
+    console.log(isMyTurn)
+
     if(isMyTurn) {
 
-    const chess = new Chess(fen);
-    const result = chess.move(move);
+      const chess = new Chess(fen);
 
-    if (result !== null) {
+      chess.turn = orientation;
+      const update = `${move.from}-${move.to}`;
+
+      chess.move(update);
 
       setFen(chess.fen());
+      chess.load(chess.fen());
       setHighlight({});
 
       socket.emit("move", { room: room, move: move, username: username});
 
-    }
+      console.log("Broadcasted")
   }
-  };
+};
 
-  const listen = (move) => {
+    const listen = (move) => {
+    console.log("enemy move received", move);
 
-      const chess = new Chess(fen);
-      const result = chess.move(move);
+    const chess = new Chess(fen);
 
-      if (result !== null) {
+    console.log(move.color);
 
-        setFen(chess.fen());
-        setHighlight({});
-      }
-  };
+    chess.move(move);
+
+    setFen(chess.fen());
+
+    console.log("enemy move set");
+    };
 
   return (
     <div className="chessboard-wrapper">
       <div className="room-info">
-        Room Info <br /><br />
-        Room: {room} <br />
-        <br />
-        {isMyTurn
-          ? `your turn (${isMyTurn})`
-          : `${orientation === "white" ? "Black" : "White"}'s turn`} <br /><br />
+        <h2> Room Chat </h2> <br /><br />
 
-        Chat:<br /><br />
+        <input
+          type="text"
+          id="form-input-chat"
+          className="form-input-chat"
+        />
+        <button className="form-submit-button">
+          Send
+        </button>
+
+      </div>
+
+      <div className="room-moves">
+        <h2> Move History </h2> <br /><br />
 
       </div>
 
@@ -112,16 +122,24 @@ const ChessGame = () => {
       <Chessboard
         position={fen}
         orientation={orientation}
-        onDrop={({ sourceSquare, targetSquare }) =>
+        onDrop={({ sourceSquare, targetSquare,  }) =>
           movePiece({
             from: sourceSquare,
             to: targetSquare,
             promotion: "q",
+            color: orientation === "white" ? "w" : "b",
           })
         }
         squareStyles={highlight}
         dropSquareStyle={{ boxShadow: "inset 0 0 1px 4px #90EE90" }}
       />
+      </div>
+
+      <div className="room-detail">
+      <h2 className = "room"> Room: {room}</h2>
+      </div>
+      <div className="turn">
+      <h2 className= "playerturn"> {isMyTurn ? `It is ${orientation}'s turn` : `It is ${orientation === "white" ? "black" : "white"}'s turn`} </h2>
       </div>
     </div>
   );

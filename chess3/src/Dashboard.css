@@ -1,6 +1,8 @@
 .dashboard {
-  background-color: #282c34;
   color: #fff;
+  background-image: url("./images/backround.png");
+  background-size: cover;
+  background-position: top;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,19 +14,229 @@
 
 .welcomesign {
   padding: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.boxtitle {
+  padding: 1rem;
+  text-align: center;
+  color: white;
   font-size: 2rem;
 }
 
 .balance {
   padding: 1rem;
+  margin: 2rem;
   font-size: 1rem;
   background-color: white;
   color: black;
   border-radius: 0.5rem;
   border: 2px solid #000;
-  top: 1%;
   position: absolute;
-  left: 1%;
+  bottom: 10%;
+}
+
+.collection {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  margin: 0;
+  right:0%;
+  top:100vh;
+  min-height: 100vh;
+  width:100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.chesspieces {
+
+  width:86%;
+  height: 25vh;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 110vh;
+  display: flex;
+  font-size: 2rem;
+  border: 2px solid #000;
+  position: absolute;
+  left: 7%;
+  align-items: center;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* adds smooth scrolling */
+  white-space: nowrap; /* keeps images on one line */
+
+}
+
+.scrollableimage {
+
+  width: 20vh;
+  height: 12.5vh;
+  margin: 2vh;
+}
+
+.chessboards {
+
+  width:86%;
+  height: 25vh;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 137.5vh;
+  display: flex;
+  font-size: 2rem;
+  border: 2px solid #000;
+  position: absolute;
+  left: 7%;
+  align-items: center;
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* adds smooth scrolling */
+  white-space: nowrap; /* keeps images on one line */
+
+}
+
+.knights {
+
+  width:86%;
+  height: 25vh;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 165vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-text: center;
+  font-size: 2rem;
+  border: 2px solid #000;
+  position: absolute;
+  left: 7%;
+
+}
+
+.myFriends {
+
+  width:25rem;
+  height: 80vh;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-text: center;
+  font-size: 2rem;
+  border: 2px solid #000;
+  position: absolute;
+  left: 65%;
+
+}
+
+.game {
+
+  width:25rem;
+  height: 80vh;
+  align-items: center;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  position: relative;
+  align-text: center;
+  border: 2px solid #000;
+  position: absolute;
+
+}
+
+.myCollectibles {
+
+  width:25rem;
+  height: 50vh;
+  align-items: center;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-text: center;
+  font-size: 2rem;
+  position: relative;
+  border: 2px solid #000;
+  position: absolute;
+  right: 65%;
+
+}
+
+.wallet {
+
+  width:25rem;
+  height: 28vh;
+  align-items: center;
+  background-color: #282c34;
+  opacity: 65%;
+  backround-color: white;
+  top: 67vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-text: center;
+  font-size: 2rem;
+  position: relative;
+  border: 2px solid #000;
+  position: absolute;
+  right: 65%;
+
+}
+
+.collectibleswrapper {
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.myCollectibles:hover {
+  opacity: 0.9;
+}
+
+.myFriends:hover {
+  opacity: 0.9;
+}
+
+.wallet:hover {
+  opacity: 0.9;
+}
+
+.chesspieces:hover {
+  opacity: 0.9;
+}
+
+.chessboards:hover {
+  opacity: 0.9;
+}
+
+.knights:hover {
+  opacity: 0.9;
+}
+
+.game:hover {
+  opacity: 0.9;
 }
 
 .play-button {
@@ -35,7 +247,8 @@
   border-radius: 0.5rem;
   border: none;
   cursor: pointer;
-  margin: 1rem;
+  margin: 2rem;
+  transition: transform 0.3s ease;
 }
 
 html {
@@ -44,6 +257,7 @@ scroll-behavior: smooth;
 
 .play-button:hover {
   background-color: #5cb8d6;
+  transform: scale(1.1);
 }
 
 .slide-out {
@@ -51,69 +265,15 @@ scroll-behavior: smooth;
   transition: transform 0.5s ease-out;
 }
 
-.popdown-menu {
-  position: absolute;
-  background-color: #282c34;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+#tokenchart {
   width: 80%;
-  max-height: 100vh;
-  padding: 2rem 0;
+  height: 6vh;
+  padding: 1rem;
 }
 
-.popdown-menu-item {
-  background-color: #4a5869;
-  overflow: hidden;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  width: calc(33.33% - 2rem);
-  margin-right: 2rem;
-  display: flex;
-  max-height: 80vh;
-  min-height:80vh;
-  border: 2px solid #000;
-  flex-direction: column;
-  align-items: center;
-}
-
-.popdown-menu-item:last-child {
-  margin-right: 0;
-}
-
-.popdown-menu-item h3 {
-  font-size: 2rem;
-  margin-top: 7rem;
-  min-height: 3rem;
-  cursor: pointer;
-}
-
-.popdown-menu-item h3:hover {
-  background-color: #61dafb;
-}
-
-.popdown-menu-item ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.popdown-menu-item li {
-  padding: 0.5rem;
-}
-
-.popdown-menu-item li:hover {
-  background-color: #61dafb;
-}
-
-.popdown-menu-item p {
-  color: #fff;
-  font-size: 1rem;
-  line-height: 2;
-  text-decoration: none;
+.bar {
+  display: inline-block;
+  width: 30px;
+  margin-right: 10px;
+  background-color: white;
 }
