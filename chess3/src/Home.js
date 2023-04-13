@@ -34,15 +34,15 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1 className="title">Welcome to Chess³</h1>
+      <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
       <Link to="/dashboard">
-        <button className="play-button" onClick={handlePageChange}>
-          Login with Polygon Wallet
+        <button className="button" onClick={handlePageChange}>
+          Login
         </button>
       </Link>
-        <button className="mint-button" onClick={togglePopup}>
-          No Account? Mint a New Board!
+        <button className="button" onClick={togglePopup}>
+          Create an Account
         </button>
         {showPopup && (
           <div className="popup">
@@ -68,17 +68,17 @@ const Home = () => {
 
       <div className="popdown-menu">
         <div className="popdown-menu-item">
-          <h3>Why Chess³?</h3>
+          <h3>Why Napoleon?</h3>
           <p>
-          Chess³ is a unique chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
+          Napoleon is a unique chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
           <br/> <br/>
           With an easy-to-use interface and seamless integration of Polygon wallets, you can start playing, collecting, and trading in a player-based economy in no time.
           </p>
         </div>
         <div className="popdown-menu-item2">
-          <h3>Chess Kingdoms</h3>
+          <h3>Chess Campaigns</h3>
           <p>
-            Team up with your friends and defend your kingdom against enemy armies who want to raid you! Opposing factions will battle in large-scale tournaments for dynamic territories, adding strategic depth to chess.
+            Team up with your friends and defend your empire against enemy armies who want to conquer you! Opposing factions will battle in large-scale tournaments for dynamic territories, adding strategic depth to chess.
             <br/> <br/>
             Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
           </p>
@@ -88,7 +88,7 @@ const Home = () => {
           <p>
             Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your guild in tournaments and wars.
             <br/> <br/>
-            For more information about $MATE, you can check out our documentation and FAQs at www.chess3docs.com.
+            For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz.
           </p>
         </div>
       </div>

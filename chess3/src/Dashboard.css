@@ -1,6 +1,6 @@
 .dashboard {
   color: #fff;
-  background-image: url("./images/backround.png");
+  background-image: url("./images/Chess.png");
   background-size: cover;
   background-position: top;
   min-height: 100vh;
@@ -240,35 +240,39 @@
 }
 
 .play-button {
-  padding: 1rem;
-  background-color: #61dafb;
-  color: #282c34;
+  padding: 5vh;
+  width: 45vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1rem;
-  border-radius: 0.5rem;
-  border: none;
+  font-weight: 800;
+  background-color: transparent;
+  border: 0.5vh solid white;
   cursor: pointer;
-  margin: 2rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 1.5rem;
+  text-decoration: none;
 }
 
-html {
-scroll-behavior: smooth;
-}
+  html {
+  scroll-behavior: smooth;
+  }
 
 .play-button:hover {
-  background-color: #5cb8d6;
   transform: scale(1.1);
+  background-image: url("./images/soldier.png");
+  color: transparent;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: bottom;
+  text-decoration: none;
 }
 
 .slide-out {
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
-}
-
-#tokenchart {
-  width: 80%;
-  height: 6vh;
-  padding: 1rem;
 }
 
 .bar {

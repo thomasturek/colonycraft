@@ -11,47 +11,42 @@ const Dashboard = () => {
       <h2 className="boxtitle">Arena</h2>
       <Link to="/chess">
         <button className="play-button">
-          ⚔️ Play a Random Opponent ⚔️
+          Challenge a Random Opponent
         </button>
       </Link>
       <Link to="/chess">
         <button className="play-button">
-          💪 Play a Friend 💪
+          Challenge a Friend
         </button>
       </Link>
       <Link to="/chess">
         <button className="play-button">
-          🤖 Play a Computer 🤖
-        </button>
-      </Link>
-      <Link to="/chess">
-        <button className="play-button">
-          🤔 FAQ 🤔
+          Train Against a Computer
         </button>
       </Link>
       </div>
       <div className="myFriends">
-      <h2 className="boxtitle">My Guild</h2>
+      <h2 className="boxtitle">Factions</h2>
       <Link to="/chess">
         <button className="play-button">
-          🤝 Join a Guild 🤝
+          My Faction
         </button>
       </Link>
       <Link to="/chess">
       <button className="play-button">
-        🏰 Chess Kingdoms 🏰
+        Campaigns
       </button>
       </Link>
 
       <Link to="/chess">
       <button className="play-button">
-        🛡️ My Guild 🛡️
+        View Factions
       </button>
       </Link>
 
       <Link to="/chess">
       <button className="play-button">
-        📚 Past Wars 📚
+        Past Wars
       </button>
       </Link>
       </div>
@@ -60,11 +55,11 @@ const Dashboard = () => {
         <h2 className="boxtitle">Today's Challenges</h2>
 
         <button className="play-button">
-          👑 Checkmate With a Queen Today! 👑
+          Checkmate With a Queen Today!
         </button>
 
         <button className="play-button">
-          🍴 Fork a Random Player Today! 🍴
+          Fork a Random Player Today!
         </button>
 
         </div>
@@ -73,7 +68,7 @@ const Dashboard = () => {
 
         <h2 className="boxtitle">Your Wallet</h2>
 
-        <h3 className="balance"> Token Balance: 100 $R</h3>
+        <h3 className="balance"> Token Balance: 100 $M</h3>
 
         </div>
 
