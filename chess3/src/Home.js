@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -21,6 +23,7 @@ const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
+    navigate("/dashboard");
   };
 
   function togglePopup() {
@@ -31,11 +34,9 @@ const Home = () => {
     <div className="home">
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
-      <Link className="link" to="/dashboard">
         <button className="button" onClick={handleSubmit}>
           Login
         </button>
-      </Link>
         <button className="button" onClick={togglePopup}>
           Create an Account
         </button>
