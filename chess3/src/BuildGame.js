@@ -3,8 +3,6 @@ import "./BuildGame.css";
 import { Link } from "react-router-dom";
 
 const BuildGame = () => {
-  const [isPageChanging, setIsPageChanging] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
   const [formData, setFormData] = useState({ room: '' });
 
   const handleChange = (event) => {
@@ -21,10 +19,6 @@ const BuildGame = () => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-
-  function togglePopup() {
-  setShowPopup(!showPopup);
-}
 
   return (
     <div className="home">
@@ -64,7 +58,7 @@ const BuildGame = () => {
             state: { formData: formData },
           }}
           >
-        <button className="joinroombutton" onClick={togglePopup}>
+        <button className="joinroombutton" onClick={handleChange}>
           Join Room
         </button>
           </Link>
@@ -74,7 +68,7 @@ const BuildGame = () => {
             state: { formData: formData },
           }}
           >
-        <button className="createroombutton" onClick={togglePopup}>
+        <button className="createroombutton" onClick={handleChange}>
           Create Room
         </button>
           </Link>
