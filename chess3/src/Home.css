@@ -17,6 +17,10 @@
   text-decoration: none;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .title {
   color: white;
   font-size: 4rem;

@@ -36,7 +36,7 @@ const Home = () => {
     <div className="home">
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
-      <Link to="/dashboard">
+      <Link className="link" to="/dashboard">
         <button className="button" onClick={handlePageChange}>
           Login
         </button>

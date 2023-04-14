@@ -12,17 +12,17 @@ const Dashboard = () => {
 
       <h2 className="boxtitle">Arena</h2>
 
-      <Link to="/Chess">
+      <Link className = "link" to="/Chess">
         <button className="play-button">
           Challenge a Random Opponent
         </button>
       </Link>
-      <Link to="/BuildGame">
+      <Link className = "link" to="/BuildGame">
         <button className="play-button">
           Challenge a Friend
         </button>
       </Link>
-      <Link to="/Chess">
+      <Link className = "link" to="/Chess">
         <button className="play-button">
           Train Against a Computer
         </button>
@@ -32,18 +32,18 @@ const Dashboard = () => {
 
       <h2 className="boxtitle">Factions</h2>
 
-      <Link to="/Chess">
+      <Link className = "link" to="/Chess">
         <button className="play-button">
           My Faction
         </button>
       </Link>
-      <Link to="/Chess">
+      <Link className = "link" to="/Chess">
       <button className="play-button">
         Campaigns
       </button>
       </Link>
 
-      <Link to="/Chess">
+      <Link className = "link" to="/Chess">
       <button className="play-button">
         View Factions
       </button>

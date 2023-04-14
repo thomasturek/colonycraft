@@ -240,6 +240,10 @@
   opacity: 0.9;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .play-button {
   padding: 2vh;
   width: 80%;
