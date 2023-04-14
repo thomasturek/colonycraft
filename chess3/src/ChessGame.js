@@ -15,7 +15,6 @@ const ChessGame = () => {
   const { formData } = location.state || {};
   console.log(formData)
   const [fen, setFen] = useState(new Chess().fen());
-  const [highlight, setHighlight] = useState({});
   const [room, setRoom] = useState("");
   const [orientation, setOrientation] = useState("");
   const [username, setUserName] = useState("");
@@ -72,7 +71,6 @@ const ChessGame = () => {
   const newFen = chess.fen();
   setFen(newFen);
   socket.emit("move", { room: room, move: move, username: username, fen: newFen });
-  setHighlight({});
 
 };
 

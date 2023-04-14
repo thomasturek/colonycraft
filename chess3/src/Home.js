@@ -3,7 +3,6 @@ import "./Home.css";
 import { Link } from "react-router-dom";
 
 const Home = () => {
-  const [isPageChanging, setIsPageChanging] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -21,12 +20,8 @@ const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData); // do something with the form data
+    console.log(formData);
   };
-
-  function handlePageChange() {
-    setIsPageChanging(true);
-  }
 
   function togglePopup() {
   setShowPopup(!showPopup);
@@ -36,8 +31,8 @@ const Home = () => {
     <div className="home">
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
-      <Link className="link" to="/dashboard">
-        <button className="button" onClick={handlePageChange}>
+      <Link className="link" to="/dashboard" onClick={handleSubmit}>
+        <button className="button">
           Login
         </button>
       </Link>
