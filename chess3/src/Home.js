@@ -31,8 +31,8 @@ const Home = () => {
     <div className="home">
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
-      <Link className="link" to="/dashboard" onClick={handleSubmit}>
-        <button className="button">
+      <Link className="link" to="/dashboard">
+        <button className="button" onClick={handleSubmit}>
           Login
         </button>
       </Link>
