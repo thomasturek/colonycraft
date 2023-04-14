@@ -10,7 +10,7 @@ const Dashboard = () => {
 
       <div className="game">
 
-      <h2 className="boxtitle">Arena</h2>
+      <h2 className="boxtitle">Battlefield</h2>
 
       <Link className = "link" to="/Chess">
         <button className="play-button">

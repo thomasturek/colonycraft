@@ -82,7 +82,7 @@ const Home = () => {
         <div className="popdown-menu-item3">
           <h3>Token</h3>
           <p>
-            Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your guild in tournaments and wars.
+            Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your guild in tournaments and wars. Token value is derived from advertising on the Napoleon platform.
             <br/> <br/>
             For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz.
           </p>
