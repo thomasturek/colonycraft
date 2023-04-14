@@ -1,6 +1,6 @@
 {
-  "short_name": "Chess³",
-  "name": "Create React App Sample",
+  "short_name": "Napoleon Chess",
+  "name": "Napoleon Chess",
   "icons": [
     {
       "src": "favicon.ico",

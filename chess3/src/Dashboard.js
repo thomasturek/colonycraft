@@ -7,68 +7,70 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h1 className="welcomesign">Welcome, Player</h1>
+
       <div className="game">
+
       <h2 className="boxtitle">Arena</h2>
-      <Link to="/chess">
+
+      <Link to="/Chess">
         <button className="play-button">
           Challenge a Random Opponent
         </button>
       </Link>
-      <Link to="/chess">
+      <Link to="/BuildGame">
         <button className="play-button">
           Challenge a Friend
         </button>
       </Link>
-      <Link to="/chess">
+      <Link to="/Chess">
         <button className="play-button">
           Train Against a Computer
         </button>
       </Link>
       </div>
       <div className="myFriends">
+
       <h2 className="boxtitle">Factions</h2>
-      <Link to="/chess">
+
+      <Link to="/Chess">
         <button className="play-button">
           My Faction
         </button>
       </Link>
-      <Link to="/chess">
+      <Link to="/Chess">
       <button className="play-button">
         Campaigns
       </button>
       </Link>
 
-      <Link to="/chess">
+      <Link to="/Chess">
       <button className="play-button">
         View Factions
       </button>
       </Link>
 
-      <Link to="/chess">
-      <button className="play-button">
-        Past Wars
-      </button>
-      </Link>
       </div>
+
       <div className="collectibleswrapper">
         <div className="myCollectibles">
-        <h2 className="boxtitle">Today's Challenges</h2>
+        <h2 className="boxtitle">My Profile</h2>
 
         <button className="play-button">
-          Checkmate With a Queen Today!
+          Settings
         </button>
 
         <button className="play-button">
-          Fork a Random Player Today!
+          Achievments
         </button>
 
         </div>
 
         <div className="wallet">
 
-        <h2 className="boxtitle">Your Wallet</h2>
+        <h2 className="boxtitle"> AD </h2>
 
-        <h3 className="balance"> Token Balance: 100 $M</h3>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
+        crossorigin="anonymous"></script>
 
         </div>
 

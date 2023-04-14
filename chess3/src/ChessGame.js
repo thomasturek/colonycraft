@@ -3,6 +3,7 @@ import Chessboard from "chessboardjsx";
 import socketIO from "socket.io-client";
 import { Chess } from "chess.js";
 import "./ChessGame.css";
+import { useLocation } from "react-router-dom";
 
 const socket = socketIO.connect("http://54.163.168.91:3000", {
   transports: ["websocket"],
@@ -10,6 +11,9 @@ const socket = socketIO.connect("http://54.163.168.91:3000", {
 });
 
 const ChessGame = () => {
+  const location = useLocation();
+  const { formData } = location.state || {};
+  console.log(formData)
   const [fen, setFen] = useState(new Chess().fen());
   const [highlight, setHighlight] = useState({});
   const [room, setRoom] = useState("");
@@ -31,41 +35,50 @@ const ChessGame = () => {
       }
     });
 
-    socket.on("move", movePiece);
-
     socket.on("listen", listen);
 
-    socket.on("setOrientation", setOrientation);
+    socket.on("setOrientation", (color) => setOrientation(color));
 
-    socket.on("turn", (turn) => setIsMyTurn(turn === orientation));
+    socket.on("turn", (isTurn) => setIsMyTurn(isTurn));
 
     socket.on("gameover", (result) => alert(`Game over. ${result}`));
   }, [room, orientation, setIsMyTurn, connected, setOrientation, setConnection]);
 
   const movePiece = (move) => {
-    if (!isMyTurn) return;
 
-    const chess = new Chess(fen);
+  if (!isMyTurn) return;
 
-    chess.turn = orientation;
-    const update = `${move.from}-${move.to}`;
+  const chess = new Chess(fen);
 
-    chess.move(update);
-
-    setFen(chess.fen());
-    chess.load(chess.fen());
-    setHighlight({});
-
-    socket.emit("move", { room: room, move: move, username: username });
+  const newMove = {
+    from: move.from,
+    to: move.to,
   };
 
-  const listen = (move) => {
-    const chess = new Chess(fen);
+  if (chess.move(newMove)===null){
+    return;
+  }
 
-    chess.move(move);
+  const piece = chess.get(move.from);
 
-    setFen(chess.fen());
-  };
+  if (piece && piece.type === 'p' && (move.to[1] === '1' || move.to[1] === '8')) {
+    newMove.promotion = 'q';
+  }
+
+  chess.load(fen);
+
+  chess.move(newMove);
+
+  const newFen = chess.fen();
+  setFen(newFen);
+  socket.emit("move", { room: room, move: move, username: username, fen: newFen });
+  setHighlight({});
+
+};
+
+const listen = ({ move, fen }) => {
+  setFen(fen);
+};
 
   return (
   <div className="chessboard-wrapper">
@@ -88,7 +101,7 @@ const ChessGame = () => {
 
     </div>
 
-    <div className="chessboard">
+      <div className="wrapper">
       <Chessboard
         position={fen}
         orientation={orientation}
@@ -96,14 +109,14 @@ const ChessGame = () => {
           movePiece({
             from: sourceSquare,
             to: targetSquare,
-            promotion: "q",
             color: orientation === "white" ? "w" : "b",
           })
         }
-        squareStyles={highlight}
         dropSquareStyle={{ boxShadow: "inset 0 0 1px 4px #90EE90" }}
+        className="chessboard"
+        calcWidth={({ screenWidth }) => screenWidth * 0.35}
       />
-    </div>
+      </div>
 
     <div className="room-detail">
       <h2 className = "room"> Room: {room}</h2>
@@ -111,10 +124,7 @@ const ChessGame = () => {
 
     <div className="turn">
       <h2 className= "playerturn">
-        {isMyTurn
-          ? `It is ${orientation}'s turn`
-          : `It is ${orientation === "white" ? "black" : "white"}'s turn`
-        }
+        {isMyTurn ? "Your turn" : "Opponent's turn"}
       </h2>
     </div>
   </div>
