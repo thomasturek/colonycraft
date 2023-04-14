@@ -1,5 +1,6 @@
 import "./Dashboard.css";
 import { Link } from "react-router-dom";
+import AdsComponent from "./AdsComponent";
 
 const Dashboard = () => {
 
@@ -68,8 +69,7 @@ const Dashboard = () => {
 
         <h2 className="boxtitle"> AD </h2>
 
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
-        crossorigin="anonymous"></script>
+        <AdsComponent dataAdSlot='X7XXXXXX5X' />
 
         </div>
 
