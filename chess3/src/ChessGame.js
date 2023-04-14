@@ -5,7 +5,7 @@ import { Chess } from "chess.js";
 import "./ChessGame.css";
 import { useLocation } from "react-router-dom";
 
-const socket = socketIO.connect("http://54.163.168.91:3000", {
+const socket = socketIO.connect("https://54.163.168.91:3000", {
   transports: ["websocket"],
   cors: { origin: "*" }
 });
