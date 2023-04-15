@@ -32,6 +32,8 @@ const Home = () => {
 
   return (
     <div className="home">
+    <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
+     crossorigin="anonymous"></script> </head>
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
         <button className="button" onClick={handleSubmit}>

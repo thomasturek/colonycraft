@@ -6,6 +6,8 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
+      <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
+     crossorigin="anonymous"></script> </head> 
       <h1 className="welcomesign">Welcome, Player</h1>
 
       <div className="game">

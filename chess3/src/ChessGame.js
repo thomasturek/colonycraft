@@ -80,6 +80,8 @@ const listen = ({ move, fen }) => {
 
   return (
   <div className="chessboard-wrapper">
+  <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
+     crossorigin="anonymous"></script> </head>
     <div className="room-info">
       <h2> Room Chat </h2> <br /><br />
 
