@@ -5,7 +5,7 @@ import { Chess } from "chess.js";
 import "./ChessGame.css";
 import { useLocation } from "react-router-dom";
 
-const socket = socketIO.connect("http://sjk.napoleonchess.xyz:3000", {
+const socket = socketIO.connect("https://server.napoleonchess.xyz:443", {
   transports: ["websocket"],
   cors: { origin: "*" }
 });
