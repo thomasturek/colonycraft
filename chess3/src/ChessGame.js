@@ -26,10 +26,11 @@ const ChessGame = () => {
 
     socket.on("connect", () => {
       if (!connected) {
-        const roomName = "Room1";
-        setUserName("a");
+        const roomName = prompt("Please enter your room name");
+        const userName = prompt("Please enter your user name");
+        setUserName(userName);
         setRoom(roomName);
-        socket.emit("joinRoom", roomName, "a");
+        socket.emit("joinRoom", roomName, userName);
         setConnection(true);
       }
     });
