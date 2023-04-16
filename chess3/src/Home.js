@@ -34,6 +34,21 @@ const Home = () => {
     <div className="home">
     <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
      crossorigin="anonymous"></script> </head>
+     <form>
+     <button className="headingbutton" formaction="http://docs.napoleonchess.xyz">
+       The Napoleon Docs
+     </button>
+     </form>
+     <form>
+     <button className="headingbutton2" formaction="https://discord.gg/9XhNSdRg">
+       Discord
+     </button>
+     </form>
+     <form>
+     <button className="headingbutton3" formaction="http://docs.napoleonchess.xyz">
+       Twitter
+     </button>
+     </form>
       <h1 className="title">Welcome to Napoleon</h1>
       <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
         <button className="button" onClick={handleSubmit}>

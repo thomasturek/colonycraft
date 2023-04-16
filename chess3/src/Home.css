@@ -36,10 +36,11 @@
 }
 
 .button, .button:visited {
-  padding: 1rem 4rem;
+  padding: 1vw 2vh;
   color: white;
   display: flex;
   align-items: center;
+  width: 20vw;
   justify-content: center;
   font-size: 1rem;
   font-weight: 800;
@@ -51,7 +52,64 @@
   text-decoration: none;
 }
 
-.button:hover {
+.headingbutton, .headingbutton:visited {
+  padding: 1vw 2vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: transparent;
+  border: 0.5vh solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  left: 35%;
+  top: 0%;
+  text-decoration: none;
+}
+
+.headingbutton2, .headingbutton2:visited {
+  padding: 1vw 2vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: transparent;
+  border: 0.5vh solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  text-decoration: none;
+}
+
+.headingbutton3, .headingbutton3:visited {
+  padding: 1vw 2vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 30%;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: transparent;
+  border: 0.5vh solid white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  text-decoration: none;
+}
+
+.button:hover, .headingbutton:hover, .headingbutton2:hover, .headingbutton3:hover {
   transform: scale(1.1);
   background-image: url("./images/soldier.png");
   color: transparent;
