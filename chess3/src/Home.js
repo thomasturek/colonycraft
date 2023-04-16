@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
+import useTypewriterEffect from "./typewriter";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -8,12 +9,19 @@ const Home = () => {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    age: "",
-    favoriteColor: "",
-    favoriteFood: "",
+    name: ""
   });
+
+  const typewriterText = useTypewriterEffect(
+   [
+     "Chess with digital ownership",
+     "Chess with web3",
+     "Chess with community",
+     "Chess with substainable play to earn mechanics",
+     "Chess with dynamic player tournaments"
+   ],
+   100
+ );
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -31,32 +39,27 @@ const Home = () => {
 }
 
   return (
-    <div className="home">
+    <div className="homepage">
     <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
      crossorigin="anonymous"></script> </head>
-     <form>
-     <button className="headingbutton" formaction="http://docs.napoleonchess.xyz">
-       The Napoleon Docs
-     </button>
-     </form>
-     <form>
-     <button className="headingbutton2" formaction="https://discord.gg/9XhNSdRg">
-       Discord
-     </button>
-     </form>
-     <form>
-     <button className="headingbutton3" formaction="http://docs.napoleonchess.xyz">
-       Twitter
-     </button>
-     </form>
-      <h1 className="title">Welcome to Napoleon</h1>
-      <h2 className="subtitle">Chess reimagined on the blockchain.</h2>
+      <h1 className="title">Welcome to Napoleon.</h1>
+      <h2 className="subtitle">{typewriterText}</h2>
         <button className="button" onClick={handleSubmit}>
           Login
         </button>
         <button className="button" onClick={togglePopup}>
           Create an Account
         </button>
+        <form>
+        <button className="button" formaction="http://docs.napoleonchess.xyz">
+          The Napoleon Docs
+        </button>
+        </form>
+        <form>
+        <button className="button" formaction="https://discord.gg/9XhNSdRg">
+          Join Our Discord
+        </button>
+        </form>
         {showPopup && (
           <div className="popup">
             <form>
@@ -79,32 +82,46 @@ const Home = () => {
           </div>
         )}
 
-      <div className="popdown-menu">
-        <div className="popdown-menu-item">
-          <h3>Why Napoleon?</h3>
-          <p>
-          Napoleon is a unique chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
-          <br/> <br/>
-          With an easy-to-use interface and seamless integration of Polygon wallets, you can start playing, collecting, and trading in a player-based economy in no time.
-          </p>
+        <div className = "point" >
+
+        <h2 className="explanation">Why Napoleon?</h2>
+        <h3 className="text"> Napoleon is a unique chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
+
+        <br/> <br/>
+
+        With an easy-to-use interface and seamless integration of blockchain, you can start playing, collecting, and trading in a player-based economy with real digital ownership.
+
+        </h3>
+
         </div>
-        <div className="popdown-menu-item2">
-          <h3>Chess Campaigns</h3>
-          <p>
-            Team up with your friends and defend your empire against enemy armies who want to conquer you! Opposing factions will battle in large-scale tournaments for dynamic territories, adding strategic depth to chess.
-            <br/> <br/>
-            Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
-          </p>
+
+        <div className = "point2" >
+
+        <h2 className="explanation">Chess Campaigns</h2>
+        <h3 className="text"> Team up with your friends and defend your empire against enemy armies who want to conquer you! Opposing factions will battle in large-scale tournaments for dynamic territories, adding strategic depth to chess.
+
+        <br/> <br/>
+
+      Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
+
+        </h3>
+
         </div>
-        <div className="popdown-menu-item3">
-          <h3>Token</h3>
-          <p>
-            Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your guild in tournaments and wars. Token value is derived from advertising on the Napoleon platform.
-            <br/> <br/>
-            For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz.
-          </p>
+
+        <div className = "point3" >
+
+        <h2 className="explanation">The Napoleon Token</h2>
+        <h3 className="text"> Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your faction in tournaments and campaigns. Token value is derived from advertising on the Napoleon platform.
+
+
+        <br/> <br/>
+
+      For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz.
+
+        </h3>
+
         </div>
-      </div>
+
     </div>
   );
 };
