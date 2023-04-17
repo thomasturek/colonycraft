@@ -27,9 +27,9 @@ const ChessGame = () => {
 
     socket.on("connect", () => {
       if (!connected) {
-        const userName = Math.floor(Math.random() * 900) + 100;
+        const userName = prompt("username");
         setUserName(userName);
-        setRoom(formData);
+        setRoom(formData.room);
         console.log(userName);
         socket.emit("joinRoom", formData, userName);
         setConnection(true);
@@ -43,6 +43,15 @@ const ChessGame = () => {
     socket.on("turn", (isTurn) => setIsMyTurn(isTurn));
 
     socket.on("gameover", (result) => alert(`Game over. ${result}`));
+
+    return () => {
+    socket.off("startGame");
+    socket.off("connect");
+    socket.off("listen");
+    socket.off("setOrientation");
+    socket.off("turn");
+    socket.off("gameover");
+    };
   }, [formData, room, orientation, setIsMyTurn, connected, setOrientation, setConnection]);
 
   const movePiece = (move) => {
