@@ -27,7 +27,7 @@ const ChessGame = () => {
 
     socket.on("connect", () => {
       if (!connected) {
-        const userName = prompt("username");
+        const userName = Math.floor(Math.random() * 900) + 100;
         setUserName(userName);
         setRoom(formData.room);
         console.log(userName);
