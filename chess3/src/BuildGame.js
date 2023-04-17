@@ -1,7 +1,6 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./BuildGame.css";
 import { Link } from "react-router-dom";
-import { createContext } from 'react';
 import DataContext from "./datacontext";
 
 const BuildGame = () => {
@@ -13,7 +12,7 @@ const BuildGame = () => {
   };
 
   const handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const { value } = event.target;
     setFormData({ room: value });
   };
 

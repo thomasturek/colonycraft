@@ -3,7 +3,6 @@ import Chessboard from "chessboardjsx";
 import socketIO from "socket.io-client";
 import { Chess } from "chess.js";
 import "./ChessGame.css";
-import { useLocation } from "react-router-dom";
 import { useContext } from 'react';
 import DataContext from './datacontext';
 
@@ -13,9 +12,7 @@ const socket = socketIO.connect("https://server.napoleonchess.xyz:443", {
 });
 
 const ChessGame = () => {
-  const location = useLocation();
   const { formData } = useContext(DataContext);
-  const [localFormData, setLocalFormData] = useState(formData);
   console.log(formData)
   const [fen, setFen] = useState(new Chess().fen());
   const [room, setRoom] = useState("");
@@ -46,7 +43,7 @@ const ChessGame = () => {
     socket.on("turn", (isTurn) => setIsMyTurn(isTurn));
 
     socket.on("gameover", (result) => alert(`Game over. ${result}`));
-  }, [room, orientation, setIsMyTurn, connected, setOrientation, setConnection]);
+  }, [formData, room, orientation, setIsMyTurn, connected, setOrientation, setConnection]);
 
   const movePiece = (move) => {
 
