@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./BuildGame.css";
 import { Link } from "react-router-dom";
+import { createContext } from 'react';
+import DataContext from "./datacontext";
 
 const BuildGame = () => {
-  const [formData, setFormData] = useState({ room: '' });
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
+  const { formData, setFormData } = useContext(DataContext);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData); // do something with the form data
+    console.log(formData.room);
   };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ room: value });
   };
 
   return (
@@ -37,8 +34,9 @@ const BuildGame = () => {
             type="text"
             id="username"
             className="form-input-roomname"
-            value={formData.name}
+            value={formData.room}
             onChange={handleInputChange}
+            name="joinRoom" // Add the "name" attribute
           />
         </form>
 
@@ -50,28 +48,29 @@ const BuildGame = () => {
               type="text"
               id="username"
               className="form-input-createroomname"
-              value={formData.name}
+              value={formData.room}
               onChange={handleInputChange}
+              name="createRoom" // Add the "name" attribute
             />
 
           </form>
 
           <Link to={{
             pathname: "/Chess",
-            state: { formData: formData },
+            state: { formData: formData.room },
           }}
           >
-        <button className="joinroombutton" onClick={handleChange}>
+        <button className="joinroombutton">
           Join Room
         </button>
           </Link>
 
           <Link to={{
             pathname: "/Chess",
-            state: { formData: formData },
+            state: { formData: formData.room },
           }}
           >
-        <button className="createroombutton" onClick={handleChange}>
+        <button className="createroombutton">
           Create Room
         </button>
           </Link>

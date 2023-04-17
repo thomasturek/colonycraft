@@ -74,10 +74,25 @@ const Home = () => {
                 value={formData.name}
                 onChange={handleChange}
               /> <br/> <br/>
+              <label htmlFor="name" className="form-label">
+                Email
+              </label>
+              <input
+                type="text"
+                id="username"
+                className="form-input-username"
+                value={formData.name}
+                onChange={handleChange}
+              /> <br/> <br/>
             <label htmlFor="name" className="form-label">
-              I agree to terms and conditions of Chess3
+              I agree to terms and conditions of Napoleon Chess
             </label>
             <input type="checkbox" id="myCheckbox" name="myCheckbox" value="true"/>
+
+            <button className="button" formaction="https://discord.gg/9XhNSdRg">
+              Submit
+            </button>
+
             </form>
           </div>
         )}
@@ -89,9 +104,15 @@ const Home = () => {
 
         <br/> <br/>
 
-        With an easy-to-use interface and seamless integration of blockchain, you can start playing, collecting, and trading in a player-based economy with real digital ownership.
+        With an easy-to-use interface and seamless integration of blockchain, you can start playing, collecting, and trading in a substainable player-based economy with real digital ownership.
+
+        <br/> <br/>
+
+        Chess has an endured history of 1400 years. It's time to reimagine this classic game with the help of web3.
 
         </h3>
+
+        <div class="chess-piece"></div>
 
         </div>
 
@@ -106,6 +127,8 @@ const Home = () => {
 
         </h3>
 
+        <div className="faction"/>
+
         </div>
 
         <div className = "point3" >
@@ -113,12 +136,17 @@ const Home = () => {
         <h2 className="explanation">The Napoleon Token</h2>
         <h3 className="text"> Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your faction in tournaments and campaigns. Token value is derived from advertising on the Napoleon platform.
 
+        <br/> <br/>
+
+        The token's symbol is inspired by the Napoleonic Imperial Eagle and blockchain technology.
 
         <br/> <br/>
 
-      For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz.
+        For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz/token.
 
         </h3>
+
+        <div className="token"/>
 
         </div>
 

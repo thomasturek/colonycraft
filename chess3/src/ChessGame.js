@@ -4,6 +4,8 @@ import socketIO from "socket.io-client";
 import { Chess } from "chess.js";
 import "./ChessGame.css";
 import { useLocation } from "react-router-dom";
+import { useContext } from 'react';
+import DataContext from './datacontext';
 
 const socket = socketIO.connect("https://server.napoleonchess.xyz:443", {
   transports: ["websocket"],
@@ -12,7 +14,8 @@ const socket = socketIO.connect("https://server.napoleonchess.xyz:443", {
 
 const ChessGame = () => {
   const location = useLocation();
-  const { formData } = location.state || {};
+  const { formData } = useContext(DataContext);
+  const [localFormData, setLocalFormData] = useState(formData);
   console.log(formData)
   const [fen, setFen] = useState(new Chess().fen());
   const [room, setRoom] = useState("");
@@ -22,15 +25,16 @@ const ChessGame = () => {
   const [isMyTurn, setIsMyTurn] = useState(false);
 
   useEffect(() => {
+
     socket.on("startGame", (fen) => setFen(fen));
 
     socket.on("connect", () => {
       if (!connected) {
-        const roomName = prompt("Please enter your room name");
-        const userName = prompt("Please enter your user name");
+        const userName = Math.floor(Math.random() * 900) + 100;
         setUserName(userName);
-        setRoom(roomName);
-        socket.emit("joinRoom", roomName, userName);
+        setRoom(formData);
+        console.log(userName);
+        socket.emit("joinRoom", formData, userName);
         setConnection(true);
       }
     });

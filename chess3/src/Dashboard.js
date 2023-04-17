@@ -7,8 +7,7 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
-     crossorigin="anonymous"></script> </head> 
-      <h1 className="welcomesign">Welcome, Player</h1>
+     crossorigin="anonymous"></script> </head>
 
       <div className="game">
 
@@ -16,7 +15,7 @@ const Dashboard = () => {
 
       <Link className = "link" to="/Chess">
         <button className="play-button">
-          Challenge a Random Opponent
+          Play a Random Opponent
         </button>
       </Link>
       <Link className = "link" to="/BuildGame">
@@ -27,6 +26,11 @@ const Dashboard = () => {
       <Link className = "link" to="/Chess">
         <button className="play-button">
           Train Against a Computer
+        </button>
+      </Link>
+      <Link className = "link" to="/Chess">
+        <button className="play-button">
+          Challenges
         </button>
       </Link>
       </div>
@@ -40,29 +44,43 @@ const Dashboard = () => {
         </button>
       </Link>
       <Link className = "link" to="/Chess">
-      <button className="play-button">
+      <button className="play-button" background-image="./images/factions.png">
         Campaigns
       </button>
       </Link>
 
       <Link className = "link" to="/Chess">
       <button className="play-button">
-        View Factions
+        Classic Tournaments
+      </button>
+      </Link>
+
+      <Link className = "link" to="/Chess">
+      <button className="play-button">
+        Global Leaderboard
       </button>
       </Link>
 
       </div>
 
       <div className="collectibleswrapper">
-        <div className="myCollectibles">
+        <div className="profile">
         <h2 className="boxtitle">My Profile</h2>
+
+        <button className="play-button">
+          Multiplayer Rank: 0
+        </button>
+
+        <button className="play-button">
+          0 Napoleon Tokens
+        </button>
 
         <button className="play-button">
           Settings
         </button>
 
         <button className="play-button">
-          Achievments
+          Medals
         </button>
 
         </div>
