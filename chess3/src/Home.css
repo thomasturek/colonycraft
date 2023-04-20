@@ -133,15 +133,15 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
 .text {
   position: absolute;
-  left: 35%;
+  left: 30%;
   transform: translate(-50%, -50%);
   opacity: 100%;
   top: 55%;
-  width: 30%;
+  width: 30vw;
   padding: 20px;
   line-height: 2;
   z-index: 1;
-  font-size: 0.55em;
+  font-size: 1.25vw;
   color: white;
   justify-content: center;
   align-items: center;
@@ -202,12 +202,14 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
   background-image: url("./images/board.png");
 
-  right: 0%;
+  right: 5%;
 
   top: 30%;
 
   width: 50%;
+  max-width: 50%;
   height: 50%;
+  max-height: 50%;
 
   background-repeat: no-repeat;
   background-size:contain;
@@ -215,6 +217,10 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
   transition: transform 0.3s ease;
 
+}
+
+.board:hover {
+  transform: scale(1.1);
 }
 
 .map:hover {
@@ -298,4 +304,49 @@ html {
   color: black;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 600px) {
+  .text {
+    font-size: 2vw; /* Minimum font size */
+    width: 50%;
+    top: 30%;
+    left: 50%;
+  }
+
+  .board {
+
+    width: 50%;
+    height: 50%;
+
+    top: 50%;
+    right: 25%;
+
+
+
+  }
+
+  .map {
+
+    width: 50%;
+    height: 50%;
+
+    top: 50%;
+    right: 25%;
+
+
+
+  }
+
+  .token {
+
+    width: 50%;
+    height: 50%;
+
+    top: 50%;
+    right: 25%;
+
+
+
+  }
 }
