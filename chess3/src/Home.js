@@ -88,7 +88,7 @@ const Home = () => {
 
         </h3>
 
-        <div class="chess-piece"></div>
+        <div class="board"></div>
 
         </div>
 

@@ -196,6 +196,27 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
 }
 
+.board {
+
+  position: absolute;
+
+  background-image: url("./images/board.png");
+
+  right: 0%;
+
+  top: 30%;
+
+  width: 50%;
+  height: 50%;
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+
+  transition: transform 0.3s ease;
+
+}
+
 .map:hover {
   transform: scale(1.1);
 }
