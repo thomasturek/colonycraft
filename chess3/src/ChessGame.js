@@ -5,7 +5,6 @@ import { Chess } from "chess.js";
 import "./ChessGame.css";
 import { useContext } from 'react';
 import DataContext from './datacontext';
-
 const socket = socketIO.connect("https://server.napoleonchess.xyz:443", {
   transports: ["websocket"],
   cors: { origin: "*" }

@@ -133,11 +133,11 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
 .text {
   position: absolute;
-  left: 25%;
+  left: 35%;
   transform: translate(-50%, -50%);
   opacity: 100%;
-  top: 50%;
-  width: 35%;
+  top: 55%;
+  width: 30%;
   padding: 20px;
   line-height: 2;
   z-index: 1;
@@ -151,13 +151,13 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 .token {
 
   position: absolute;
-  right: 0%;
+  right: 15%;
   background-image: url("./images/token.png");
 
-  top: 27.5%;
+  top: 40%;
 
-  width: 50%;
-  height: 50%;
+  width: 30%;
+  height: 30%;
 
   background-repeat: no-repeat;
   background-size:contain;
@@ -174,9 +174,12 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   transform: scale(1.1);
 }
 
-.faction {
+.map {
 
   position: absolute;
+
+  background-image: url("./images/map.png");
+
   right: 0%;
 
   top: 27.5%;
@@ -188,15 +191,12 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   background-size:contain;
   background-position: center;
 
-  opacity: 0.75;
-
   transition: transform 0.3s ease;
 
 
 }
 
-.faction:hover {
-  opacity: 1;
+.map:hover {
   transform: scale(1.1);
 }
 

@@ -34,7 +34,7 @@ const Home = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(formData);
-    navigate("/dashboard");
+    //navigate("/dashboard");
   };
 
   function togglePopup() {
@@ -63,38 +63,12 @@ const Home = () => {
         <button className="button" formaction="https://discord.gg/9XhNSdRg">
           Join Our Discord
         </button>
+
         </form>
+
         {showPopup && (
             <form className="form">
-            <h2 className="form-title">Create an Account</h2>
-              <label htmlFor="name" className="form-label">
-                Username
-              </label>
-              <input
-                type="text"
-                id="username"
-                className="form-input-username"
-                value={formData.name}
-                onChange={handleChange}
-              /> <br/> <br/>
-              <label htmlFor="name" className="form-label">
-                Email
-              </label>
-              <input
-                type="text"
-                id="username"
-                className="form-input-username"
-                value={formData.name}
-                onChange={handleChange}
-              /> <br/> <br/>
-            <label htmlFor="name" className="form-label">
-              I agree to terms and conditions of Napoleon Chess
-            </label>
-            <input type="checkbox" id="myCheckbox" name="myCheckbox" value="true"/>
-
-            <button className="button" formaction="https://discord.gg/9XhNSdRg">
-              Submit
-            </button>
+            <h2 className="form-title">Coming Soon!</h2>
 
             </form>
         )}
@@ -102,7 +76,7 @@ const Home = () => {
         <div className = "point" >
 
         <h2 className="explanation">Why Napoleon?</h2>
-        <h3 className="text"> Napoleon is a unique chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
+        <h3 className="text"> Napoleon is a unique free to play chess platform that combines traditional chess with the ability to battle and trade others for unique digital chess pieces and tokens, adding an entirely new strategic depth to the game.
 
         <br/> <br/>
 
@@ -110,7 +84,7 @@ const Home = () => {
 
         <br/> <br/>
 
-        Chess has an endured history of 1400 years. The next 1400 years are bright, with the help of web3.
+        Chess has an endured history of 1400 years. The next 1400 years are even brighter, with the help of web3.
 
         </h3>
 
@@ -120,16 +94,20 @@ const Home = () => {
 
         <div className = "point2" >
 
-        <h2 className="explanation">Chess Campaigns</h2>
-        <h3 className="text"> Team up with your friends and defend your empire against enemy armies who want to conquer you! Opposing factions will battle in large-scale tournaments for dynamic territories, adding strategic depth to chess.
+        <h2 className="explanation">Introducing Chess Campaigns</h2>
+        <h3 className="text"> Team up with your friends and battle in factions on a real-world map inspired by Napoleon Bonaparte's campaigns. Opposing factions wage war in large-scale tournaments for dynamic territories powered by player driven decision making and strategy.
 
         <br/> <br/>
 
-        Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
+        Players capture and defend territories for their faction by battling in matches of chess, winning or losing their team tokens.
+
+        <br/> <br/>
+
+        Pay attention when creating or joining your faction - the faction's country will have its own set of strengths and weaknesses for a diverse gameplay experience.
 
         </h3>
 
-        <div className="faction"/>
+        <div className="map"/>
 
         </div>
 
@@ -140,7 +118,11 @@ const Home = () => {
 
         <br/> <br/>
 
-        For more information about $NPLN, you can check out our documentation and FAQs at docs.napoleonchess.xyz/token.
+        Tokens can be used for faction creation, purchases in the Napoleon marketplace, and Napoleon DAO governance.
+
+        <br/> <br/>
+
+        For more information about Napoleon token, you can check out our documentation at docs.napoleonchess.xyz/token.
 
         </h3>
 
