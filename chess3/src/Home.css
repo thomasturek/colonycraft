@@ -39,23 +39,6 @@
 transform: rotate(90deg); /* adding rotation transform on hover */
 }
 
-.horse {
-
-  background-image: url("./images/horse.png");
-  position: absolute;
-  width: 25rem;
-  height: 25rem;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-
-  right: 5%;
-  bottom: 10%;
-
-
-}
-
 .link {
   text-decoration: none;
 }
