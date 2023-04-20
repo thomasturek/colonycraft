@@ -1,7 +1,7 @@
 .dashboard {
-  color: #E84142;
   background-size: cover;
   background-position: top;
+  background-color: rgb(19, 20, 31);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
 .boxtitle {
   padding: 1rem;
   text-align: center;
-  color: #E84142;
+  color: white;
   font-size: 2vw;
 }
 
@@ -23,9 +23,9 @@
   margin: 2rem;
   font-size: 1rem;
   background-color: white;
-  color: black;
+  color: white;
   border-radius: 0.5rem;
-  border: 2px solid #E84142;
+  border: 2px solid white;
   position: absolute;
   bottom: 10%;
 }
@@ -141,14 +141,14 @@
   padding: 3vh;
   width: 80%;
   margin-left: 10%;
-  color: #E84142;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2vw;
   font-weight: 500;
   background-color: transparent;
-  border: 0.2vw solid #E84142;
+  border: 0.2vw solid white;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 10%;
@@ -161,8 +161,6 @@
 
 .play-button:hover {
   transform: scale(1.1);
-  background-image: url("./images/soldier.png");
-  color: transparent;
   background-repeat: no-repeat;
   background-size:contain;
   background-position: bottom;

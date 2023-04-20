@@ -1,5 +1,5 @@
 .chessboard-wrapper {
-  background-image: url("./images/backround.png");
+  background-color: rgb(19, 20, 31);
   background-size: cover;
   background-position: bottom;
   min-height: 100vh;

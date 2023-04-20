@@ -18,7 +18,10 @@ const Home = () => {
      "Chess with web3",
      "Chess with community",
      "Chess with substainable play to earn mechanics",
-     "Chess with dynamic player tournaments"
+     "Chess with dynamic player tournaments",
+     "Chess with blockchain integration",
+     "Chess with skill based rewards",
+     "Chess with blockchain integration",
    ],
    100
  );
@@ -42,6 +45,7 @@ const Home = () => {
     <div className="homepage">
     <head> <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7400163886565608"
      crossorigin="anonymous"></script> </head>
+      <div className="logo"/>
       <h1 className="title">Welcome to Napoleon.</h1>
       <h2 className="subtitle">{typewriterText}</h2>
         <button className="button" onClick={handleSubmit}>
@@ -51,7 +55,7 @@ const Home = () => {
           Create an Account
         </button>
         <form>
-        <button className="button" formaction="http://docs.napoleonchess.xyz">
+        <button className="button" formaction="https://docs.napoleonchess.xyz">
           The Napoleon Docs
         </button>
         </form>
@@ -61,8 +65,7 @@ const Home = () => {
         </button>
         </form>
         {showPopup && (
-          <div className="popup">
-            <form>
+            <form className="form">
             <h2 className="form-title">Create an Account</h2>
               <label htmlFor="name" className="form-label">
                 Username
@@ -94,7 +97,6 @@ const Home = () => {
             </button>
 
             </form>
-          </div>
         )}
 
         <div className = "point" >
@@ -108,7 +110,7 @@ const Home = () => {
 
         <br/> <br/>
 
-        Chess has an endured history of 1400 years. It's time to reimagine this classic game with the help of web3.
+        Chess has an endured history of 1400 years. The next 1400 years are bright, with the help of web3.
 
         </h3>
 
@@ -123,7 +125,7 @@ const Home = () => {
 
         <br/> <br/>
 
-      Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
+        Players contribute to their faction by capturing and holding territories, and factions gain bonuses based on the number of territories they control.
 
         </h3>
 
@@ -135,10 +137,6 @@ const Home = () => {
 
         <h2 className="explanation">The Napoleon Token</h2>
         <h3 className="text"> Earn tokens and unique chess pieces for completing challenges, fighting other players, and contributing to your faction in tournaments and campaigns. Token value is derived from advertising on the Napoleon platform.
-
-        <br/> <br/>
-
-        The token's symbol is inspired by the Napoleonic Imperial Eagle and blockchain technology.
 
         <br/> <br/>
 
