@@ -1,16 +1,9 @@
 import React, { useState } from "react";
 import "./Home.css";
 import useTypewriterEffect from "./typewriter";
-import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
-
-  const navigate = useNavigate();
-
-  const [formData, setFormData] = useState({
-    name: ""
-  });
 
   const typewriterText = useTypewriterEffect(
    [
@@ -26,14 +19,8 @@ const Home = () => {
    100
  );
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
     //navigate("/dashboard");
   };
 
