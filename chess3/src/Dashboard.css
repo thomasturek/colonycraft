@@ -1,7 +1,7 @@
 .dashboard {
   background-size: cover;
   background-position: top;
-  background-color: rgb(19, 20, 31);
+  background-color: #1A1A26;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -46,6 +46,7 @@
   position: relative;
   position: absolute;
   left: 65%;
+  top: 100%;
 
 }
 
@@ -64,11 +65,12 @@
   align-text: center;
   font-size: 2rem;
   position: relative;
+  top: 100%;
   position: absolute;
 
 }
 
-.profile {
+.profiletab {
 
   width:30%;
   height: 50vh;
@@ -83,10 +85,11 @@
   position: relative;
   position: absolute;
   left: 5%;
+  top: 100%;
 
 }
 
-.wallet {
+.ad {
 
   width:90%;
   height: 15%;
@@ -155,22 +158,120 @@
   text-decoration: none;
 }
 
+.material-symbols-outlined {
+
+  margin-right: 10%;
+
+
+}
+
+.wallet {
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  background-image: url("./images/bluesquare.png");
+
+  left: 45%;
+  top: 35%;
+
+  width: 25%;
+  height: 25%;
+}
+
+.battle {
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  background-image: url("./images/whitesquare.png");
+
+  top: 5%;
+
+  right: 30%;
+
+  width: 25%;
+  height: 25%;
+
+}
+
+.factions {
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  background-image: url("./images/whitesquare.png");
+
+  left: 27.5%;
+  top: 35%;
+
+  width: 25%;
+  height: 25%;
+
+}
+
+.profile {
+
+  position: absolute;
+
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center;
+  background-image: url("./images/bluesquare.png");
+
+  top: 5%;
+
+  left: 27.5%;
+
+  width: 25%;
+  height: 25%;
+
+}
+
   html {
   scroll-behavior: smooth;
   }
 
 .play-button:hover {
   transform: scale(1.1);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: bottom;
-  text-decoration: none;
+  background-color: #151521;
 }
 
 .slide-out {
   transform: translateX(100%);
   transition: transform 0.5s ease-out;
 }
+
+.squarecontainer {
+
+  width: 25%;
+  height: 25%;
+  top: 5%;
+  right: 25%;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform 1s ease-out;
+  transform-origin: 50% 50%;
+  border: 2px solid white;
+
+}
+
+.squarecontainer > div {
+  position: absolute;
+  transition: transform 1s ease-out;
+  transform: rotate(0deg);
+}
+
+.squarecontainer > div.active {
+  z-index: 1;
+}
+
 
 .bar {
   display: inline-block;

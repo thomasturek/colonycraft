@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import "./Home.css";
 import useTypewriterEffect from "./typewriter";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const navigate = useNavigate();
+
   const [showPopup, setShowPopup] = useState(false);
 
   const typewriterText = useTypewriterEffect(
@@ -21,7 +25,7 @@ const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //navigate("/dashboard");
+    navigate("/dashboard");
   };
 
   function togglePopup() {
