@@ -16,8 +16,6 @@ const Home = () => {
   const connectToBlockchain = async (e) => {
     e.preventDefault()
 
-    const ethers = require("ethers");
-
     // MetaMask Connection
 
     const provider = new ethers.providers.Web3Provider(window.ethereum);
