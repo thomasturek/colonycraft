@@ -1,5 +1,48 @@
+import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
-import React, { useState } from "react";
+
+const generateRandomCoordinates = (existingSystems) => {
+  const minX = 0; // Minimum X coordinate
+  const maxX = 2000; // Maximum X coordinate
+  const minY = 0; // Minimum Y coordinate
+  const maxY = 2000; // Maximum Y coordinate
+
+  let x, y;
+  let validPosition = false;
+  while (!validPosition) {
+    x = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+    y = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+    validPosition = existingSystems.every((system) => {
+      const distance = Math.sqrt(Math.pow(system.x - x, 2) + Math.pow(system.y - y, 2));
+      return distance > 100; // Check if distance is greater than 100px
+    });
+  }
+
+  return { x, y };
+};
+
+const SolarSystem = ({ name, x, y, zoomLevel, mapPosition }) => {
+  const fontSize = 16 * zoomLevel;
+
+  const transformedX = (x + mapPosition.x) * zoomLevel;
+  const transformedY = (y + mapPosition.y) * zoomLevel;
+
+  return (
+    <div
+      className="solar-system"
+      style={{
+        left: `${transformedX}px`,
+        top: `${transformedY}px`,
+        transform: `scale(${zoomLevel})`,
+      }}
+    >
+      <div className="sun"></div>
+      <div className="circle"></div>
+      <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
+    </div>
+  );
+};
 
 const Dashboard = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -7,13 +50,38 @@ const Dashboard = () => {
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [mapPosition, setMapPosition] = useState({ x: 0, y: 0 });
   const [panelVisible, setPanelVisible] = useState(false);
+  const [solarSystems, setSolarSystems] = useState([]);
+
+  useEffect(() => {
+    generateSolarSystems();
+  }, []);
+
+  const generateSolarSystems = () => {
+    const existingSystems = [];
+    const systems = [];
+
+    for (let i = 1; i <= 100; i++) {
+      const { x, y } = generateRandomCoordinates(existingSystems);
+      const name = i.toString().padStart(4, "0");
+      const system = {
+        id: i,
+        x,
+        y,
+        name,
+      };
+      systems.push(system);
+      existingSystems.push({ x, y });
+    }
+
+    setSolarSystems(systems);
+  };
 
   const handleZoomIn = () => {
-    setZoomLevel((prevZoomLevel) => Math.min(prevZoomLevel + 0.1, 1));
+    setZoomLevel((prevZoomLevel) => Math.min(prevZoomLevel + 0.1, 2));
   };
 
   const handleZoomOut = () => {
-    setZoomLevel((prevZoomLevel) => Math.max(prevZoomLevel - 0.1, 0.1));
+    setZoomLevel((prevZoomLevel) => Math.max(prevZoomLevel - 0.1, 0.5));
   };
 
   const handleButtonClick = () => {
@@ -27,8 +95,8 @@ const Dashboard = () => {
 
   const handleMouseMove = (event) => {
     if (!dragging) return;
-    const offsetX = (event.clientX - dragStart.x) * (1 / zoomLevel);
-    const offsetY = (event.clientY - dragStart.y) * (1 / zoomLevel);
+    const offsetX = (event.clientX - dragStart.x) / zoomLevel;
+    const offsetY = (event.clientY - dragStart.y) / zoomLevel;
     setMapPosition((prevPosition) => ({
       x: prevPosition.x + offsetX,
       y: prevPosition.y + offsetY,
@@ -40,28 +108,9 @@ const Dashboard = () => {
     setDragging(false);
   };
 
-  const SolarSystem = ({ name, x, y, zoomLevel }) => {
-    const fontSize = 16 * zoomLevel;
-
-    return (
-      <div
-        className="solar-system"
-        style={{
-          left: `${x}px`,
-          top: `${y}px`,
-          transform: `scale(${zoomLevel}) translate(${mapPosition.x}px, ${mapPosition.y}px)`,
-        }}
-      >
-        <div className="sun"></div>
-        <div className="circle"></div>
-        <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
-      </div>
-    );
-  };
-
   return (
     <div className="dashboard">
-    <head>
+      <head>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      </head>
       <div className="game">
@@ -97,14 +146,21 @@ const Dashboard = () => {
       </div>
 
       <div
-        className={`map zoom-level-${Math.round(zoomLevel)}`}
+        className="map"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
       >
-        <SolarSystem x={100} y={100} zoomLevel={zoomLevel} name="0001" />
-        <SolarSystem x={400} y={100} zoomLevel={zoomLevel} name="0002" />
-        <SolarSystem x={300} y={300} zoomLevel={zoomLevel} name="0003" />
+        {solarSystems.map((system) => (
+          <SolarSystem
+            key={system.id}
+            x={system.x}
+            y={system.y}
+            zoomLevel={zoomLevel}
+            mapPosition={mapPosition}
+            name={system.name}
+          />
+        ))}
       </div>
 
       <div className={`panel ${panelVisible ? "visible" : "hidden"}`}>

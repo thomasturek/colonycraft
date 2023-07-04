@@ -65,11 +65,13 @@
 .map {
   position: absolute;
   transition: transform 0.3s ease-in-out;
-  width: 75%;
-  left: 25%;
-  height: 82%;
-  top: 8%;
+  width: 100%;
+  left: 0%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
   overflow: hidden;
+  user-select: none;
 }
 
 .panel {
@@ -140,6 +142,7 @@
   position: relative;
   position: absolute;
   font-family: 'Press Start 2P', sans-serif;
+  z-index: 1;
 
 }
 
@@ -203,13 +206,14 @@
   justify-content: center;
   font-size: 0.9vw;
   font-weight: 500;
-  background-color: transparent;
+  background-color: #1A1A26;
   border: 0.2vw solid white;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 23%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
 }
 
 .zoom-button1 {
@@ -230,6 +234,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
 }
 
 .zoom-button2 {
@@ -250,6 +255,7 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
 }
 
 .material-symbols-outlined {
