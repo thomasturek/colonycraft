@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Home.css";
-import { ethers } from "ethers";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -15,6 +14,8 @@ const Home = () => {
 
   const connectToBlockchain = async (e) => {
     e.preventDefault()
+
+    const { ethers } = require("ethers");
 
     // MetaMask Connection
 
