@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { ethers } from "ethers";
-import useTypewriterEffect from "./typewriter";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -22,7 +21,6 @@ const Home = () => {
     const provider = new ethers.providers.Web3Provider(window.ethereum);
     await provider.send('eth_requestAccounts', []);
     const signerAddress = await provider.getSigner().getAddress();
-    const signer = await provider.getSigner();
 
     /*
     // Contract Initiated
@@ -48,7 +46,6 @@ const Home = () => {
     event.preventDefault();
     connectToBlockchain(event);
     navigate("/dashboard");
-
   };
 
   function togglePopup() {
