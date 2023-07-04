@@ -1,161 +1,114 @@
 import "./Dashboard.css";
-import { Link } from "react-router-dom";
-import AdsComponent from "./AdsComponent";
-import { useEffect } from "react";
-
+import React, { useState } from "react";
 
 const Dashboard = () => {
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [dragging, setDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [mapPosition, setMapPosition] = useState({ x: 0, y: 0 });
+  const [panelVisible, setPanelVisible] = useState(false);
 
-  useEffect(() => {
-    const squares = document.querySelectorAll('.squarecontainer > div');
-    let currentRotation = 0;
-    squares.forEach(square => {
-      square.addEventListener('click', () => {
-        squares.forEach(otherSquare => {
-          otherSquare.classList.remove('active');
-        });
-        square.classList.add('active');
-        currentRotation += 90;
-        const squareContainer = document.querySelector('.squarecontainer');
-        squareContainer.style.transform = `rotate(${currentRotation}deg)`;
-      });
-    });
-  }, []);
+  const handleZoomIn = () => {
+    setZoomLevel((prevZoomLevel) => Math.min(prevZoomLevel + 0.1, 1));
+  };
+
+  const handleZoomOut = () => {
+    setZoomLevel((prevZoomLevel) => Math.max(prevZoomLevel - 0.1, 0.1));
+  };
+
+  const handleButtonClick = () => {
+    setPanelVisible(!panelVisible);
+  };
+
+  const handleMouseDown = (event) => {
+    setDragging(true);
+    setDragStart({ x: event.clientX, y: event.clientY });
+  };
+
+  const handleMouseMove = (event) => {
+    if (!dragging) return;
+    const offsetX = (event.clientX - dragStart.x) * (1 / zoomLevel);
+    const offsetY = (event.clientY - dragStart.y) * (1 / zoomLevel);
+    setMapPosition((prevPosition) => ({
+      x: prevPosition.x + offsetX,
+      y: prevPosition.y + offsetY,
+    }));
+    setDragStart({ x: event.clientX, y: event.clientY });
+  };
+
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+
+  const SolarSystem = ({ name, x, y, zoomLevel }) => {
+    const fontSize = 16 * zoomLevel;
+
+    return (
+      <div
+        className="solar-system"
+        style={{
+          left: `${x}px`,
+          top: `${y}px`,
+          transform: `scale(${zoomLevel}) translate(${mapPosition.x}px, ${mapPosition.y}px)`,
+        }}
+      >
+        <div className="sun"></div>
+        <div className="circle"></div>
+        <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
+      </div>
+    );
+  };
 
   return (
-
     <div className="dashboard">
-      <head>
+    <head>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      </head>
-
-     <div className="squarecontainer">
-
-       <div className="profile"/>
-
-       <div className="wallet"/>
-
-       <div className="battle"/>
-
-       <div className="factions"/>
-
-     </div>
-
       <div className="game">
-      
-      <h2 className="boxtitle">Battlefield</h2>
-
-      <Link className = "link" to="/Chess">
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-        swords
-        </span>
-          Play a Random Opponent
+        <button className="play-button" onClick={handleButtonClick}>
+          <span className="material-symbols-outlined">construction</span>
+          Resources
         </button>
-      </Link>
-      <Link className = "link" to="/BuildGame">
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-        group
-        </span>
-          Challenge a Friend
+        <button className="play-button" onClick={handleButtonClick}>
+          <span className="material-symbols-outlined">Engineering</span>
+          Construction
         </button>
-      </Link>
-      <Link className = "link" to="/Chess">
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-          computer
-          </span>
-          Train Against a Computer
+        <button className="play-button" onClick={handleButtonClick}>
+          <span className="material-symbols-outlined">group</span>
+          Diplomacy
         </button>
-      </Link>
-      <Link className = "link" to="/Chess">
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-        task_alt
-        </span>
-          Challenges
+        <button className="play-button" onClick={handleButtonClick}>
+          <span className="material-symbols-outlined">flag_circle</span>
+          Colonies
         </button>
-      </Link>
+        <button className="play-button" onClick={handleButtonClick}>
+          <span className="material-symbols-outlined">rocket_launch</span>
+          Fleets
+        </button>
       </div>
 
-      <div className="myFriends">
-
-      <h2 className="boxtitle">Factions</h2>
-
-      <Link className = "link" to="/Chess">
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-          flag
-          </span>
-          My Faction
+      <div className="zoom-buttons">
+        <button className="zoom-button1" onClick={handleZoomIn}>
+          <span className="material-symbols-outlined">zoom_in</span>
         </button>
-      </Link>
-      <Link className = "link" to="/Chess">
-      <button className="play-button">
-      <span class="material-symbols-outlined">
-      map
-      </span>
-        Campaigns
-      </button>
-      </Link>
-
-      <Link className = "link" to="/Chess">
-      <button className="play-button">
-      <span class="material-symbols-outlined">
-        reorder
-        </span>
-        Classic Tournaments
-      </button>
-      </Link>
-
-      <Link className = "link" to="/Chess">
-      <button className="play-button">
-      <span class="material-symbols-outlined">
-        patient_list
-          </span>
-        Global Leaderboard
-      </button>
-      </Link>
-
+        <button className="zoom-button2" onClick={handleZoomOut}>
+          <span className="material-symbols-outlined">zoom_out</span>
+        </button>
       </div>
 
-      <div className="collectibleswrapper">
-        <div className="profiletab">
-        <h2 className="boxtitle">My Profile</h2>
+      <div
+        className={`map zoom-level-${Math.round(zoomLevel)}`}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+      >
+        <SolarSystem x={100} y={100} zoomLevel={zoomLevel} name="0001" />
+        <SolarSystem x={400} y={100} zoomLevel={zoomLevel} name="0002" />
+        <SolarSystem x={300} y={300} zoomLevel={zoomLevel} name="0003" />
+      </div>
 
-        <button className="play-button">
-          Multiplayer Rank: 0
-        </button>
-
-        <button className="play-button">
-          0 Napoleon Tokens
-        </button>
-
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-        settings
-        </span>
-          Settings
-        </button>
-
-        <button className="play-button">
-        <span class="material-symbols-outlined">
-          military_tech
-          </span>
-          Medals
-        </button>
-
-        </div>
-
-        <div className="ad">
-
-        <h2 className="boxtitle"> AD </h2>
-
-        <AdsComponent dataAdSlot='X7XXXXXX5X' />
-
-        </div>
-
+      <div className={`panel ${panelVisible ? "visible" : "hidden"}`}>
+        {/* Your panel content goes here */}
       </div>
     </div>
   );

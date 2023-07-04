@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 .homepage {
   color: white;
@@ -11,13 +11,13 @@
   font-size: 2rem;
   position: relative;
   overflow-y: scroll;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
   text-decoration: none;
 }
 
 .logo {
 
-  background-image: url("./images/napoleon.png");
+  background-image: url("./images/logo.png");
   position: absolute;
   width: 5rem;
   height: 5rem;
@@ -28,8 +28,6 @@
 
   left: 5%;
   top: 5%;
-
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease; /* adding transition property */
 
 
@@ -45,20 +43,18 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 
 .title {
   color: white;
-  font-size: 5vw;
+  font-size: 3vw;
+  top: 30%;
+  position: absolute;
   font-weight: 1000;
   margin: 0;
 }
 
-.subtitle {
-  color: white;
-  font-size: 2.5vw;
-  font-weight: 300;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: 'Montserrat', sans-serif;
-  border-right: 2px solid white;
-  position: relative;
+.buttonbox {
+
+  top: 40%;
+  position: absolute;
+  z-index: 2;
 }
 
 .button, .button:visited {
@@ -67,15 +63,15 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   display: flex;
   align-items: center;
   width: 20vw;
+  background-color: rgb(19, 20, 31);
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5vw;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 1vw;
   font-weight: 700;
-  background-color: transparent;
   border: 0.5vh solid white;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   text-decoration: none;
 }
 
@@ -93,7 +89,7 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   flex-direction: row;
   position: absolute;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 .point2 {
@@ -105,7 +101,7 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   flex-direction: row;
   position: absolute;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 .point3 {
@@ -117,7 +113,7 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   flex-direction: row;
   position: absolute;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 .explanation {
@@ -128,7 +124,7 @@ transform: rotate(90deg); /* adding rotation transform on hover */
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 .text {
@@ -145,86 +141,7 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   color: white;
   justify-content: center;
   align-items: center;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.token {
-
-  position: absolute;
-  right: 15%;
-  background-image: url("./images/token.png");
-
-  top: 40%;
-
-  width: 30%;
-  height: 30%;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-
-  opacity: 0.9;
-
-  transition: transform 0.3s ease;
-
-}
-
-.token:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-.map {
-
-  position: absolute;
-
-  background-image: url("./images/map.png");
-
-  right: 0%;
-
-  top: 27.5%;
-
-  width: 50%;
-  height: 50%;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-
-  transition: transform 0.3s ease;
-
-
-}
-
-.board {
-
-  position: absolute;
-
-  background-image: url("./images/board.png");
-
-  right: 5%;
-
-  top: 30%;
-
-  width: 50%;
-  max-width: 50%;
-  height: 50%;
-  max-height: 50%;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-
-  transition: transform 0.3s ease;
-
-}
-
-.board:hover {
-  transform: scale(1.1);
-}
-
-.map:hover {
-  transform: scale(1.1);
+  font-family: 'Press Start 2P', sans-serif;
 }
 
 html {
@@ -304,6 +221,38 @@ html {
   color: black;
   justify-content: center;
   align-items: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.planet {
+  position: absolute;
+  top: 25%;
+  left: calc(50% - 100px);
+  width: 500px;
+  height: 500px;
+  border: 5px solid black;
+  background-color: #3864ab; /* Adjust color as desired */
+  border-radius: 50%;
+  animation: planetMovement 20s linear infinite;
+  z-index: 0;
+}
+
+
+@keyframes planetMovement {
+  0% {
+    left: -35%;
+  }
+  100% {
+    left: 125%;
+  }
 }
 
 @media (max-width: 600px) {
