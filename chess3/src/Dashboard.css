@@ -312,22 +312,6 @@
   margin-right: 10%;
 }
 
-.wallet {
-
-  position: absolute;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-  background-image: url("./images/bluesquare.png");
-
-  left: 45%;
-  top: 35%;
-
-  width: 25%;
-  height: 25%;
-}
-
   html {
   scroll-behavior: smooth;
   }

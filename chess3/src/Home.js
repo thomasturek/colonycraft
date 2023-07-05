@@ -60,6 +60,8 @@ const Home = () => {
       <div className="background">
       <div className="planet"></div>
       <div className="waterplanet"></div>
+      <div className="mountainisland"></div>
+      <div className="rockyisland"></div>
       </div>
       <h1 className="title">Welcome to Colonycraft!</h1>
       <div className="buttonbox">

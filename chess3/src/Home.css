@@ -192,8 +192,7 @@ html {
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  transform: scale(1.5);
-  background-image: url("./images/colonycraftlogo.png");
+  background-image: url("./images/roundisland.png");
   background-size: cover;
   z-index: 0;
   transition: transform 0.3s ease;
@@ -201,13 +200,13 @@ html {
 
 .waterplanet {
   position: fixed;
-  top: 50%;
-  left: 75%;
+  top: 10%;
+  left: 85%;
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  transform: scale(1.5);
-  background-image: url("./images/waterplanet.png");
+  background-image: url("./images/roundisland2.png");
+  transform: scale(0.75);
   background-size: cover;
   z-index: 0;
   transition: transform 0.3s ease;
@@ -215,13 +214,25 @@ html {
 
 .mountainisland {
   position: fixed;
-  top: 5%;
-  left: 5%;
+  top: 50%;
+  left: 75%;
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  transform: scale(1.25);
-  background-image: url("./images/mountainisland.png");
+  background-image: url("./images/snakeisland.png");
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.rockyisland {
+  position: fixed;
+  top: 5%;
+  left: 25%;
+  width: 200px;
+  height: 200px;
+  image-rendering: pixelated;
+  background-image: url("./images/rockyisland.png");
   background-size: cover;
   z-index: 0;
   transition: transform 0.3s ease;

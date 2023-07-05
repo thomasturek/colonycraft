@@ -280,7 +280,7 @@ const Dashboard = () => {
 
       <div className={`solar-system-panel ${selectedSystemVisible ? "visible" : "hidden"}`}>
         <div className="solar-panel-row">Island #{selectedSystem}</div>
-        <div className="solar-panel-row">Population: 5</div>
+        <div className="solar-panel-row">Population: 0</div>
       </div>
 
     </div>
