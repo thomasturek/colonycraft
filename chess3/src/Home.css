@@ -2,7 +2,7 @@
 
 .homepage {
   color: white;
-  background-color: rgb(19, 20, 31);
+  background-color: #174688;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -192,7 +192,7 @@ html {
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  transform: scale(2);
+  transform: scale(1.5);
   background-image: url("./images/colonycraftlogo.png");
   background-size: cover;
   z-index: 0;
@@ -206,8 +206,22 @@ html {
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  transform: scale(1);
+  transform: scale(1.5);
   background-image: url("./images/waterplanet.png");
+  background-size: cover;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+.mountainisland {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  width: 200px;
+  height: 200px;
+  image-rendering: pixelated;
+  transform: scale(1.25);
+  background-image: url("./images/mountainisland.png");
   background-size: cover;
   z-index: 0;
   transition: transform 0.3s ease;

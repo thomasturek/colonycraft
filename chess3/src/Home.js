@@ -70,7 +70,7 @@ const Home = () => {
           Mint a New Planet
         </button>
         <form>
-        <button className="button" formaction="https://docs.napoleonchess.xyz">
+        <button className="button" formaction="https://docs.colonycraft.xyz">
           Colonycraft Docs
         </button>
         </form>
