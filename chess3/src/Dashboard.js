@@ -62,7 +62,7 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) =
         transform: `scale(${zoomLevel})`,
       }}
     >
-      <img src={terrainImage} alt={terrain} className="terrain-image" />
+      <img src={terrainImage} className="terrain-image" />
       <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
     </div>
   );
@@ -81,6 +81,7 @@ const Dashboard = () => {
   const [diplomacyPanelVisible, setDiplomacyPanelVisible] = useState(false);
   const [colonyPanelVisible, setColonyPanelVisible] = useState(false);
   const [fleetsPanelVisible, setFleetsPanelVisible] = useState(false);
+  const [tradePanelVisible, setTradePanelVisible] = useState(false);
 
   const [selectedSystem, setSelectedSystem] = useState(null);
   const [selectedSystemVisible, setSelectedSystemVisible] = useState(false);
@@ -129,6 +130,7 @@ const Dashboard = () => {
     setDiplomacyPanelVisible(false);
     setColonyPanelVisible(false);
     setFleetsPanelVisible(false);
+    setTradePanelVisible(false);
   };
   const handleConstructionButtonClick = () => {
     setConstructionPanelVisible(!constructionPanelVisible);
@@ -137,6 +139,7 @@ const Dashboard = () => {
     setDiplomacyPanelVisible(false);
     setColonyPanelVisible(false);
     setFleetsPanelVisible(false);
+    setTradePanelVisible(false);
   };
   const handleDiplomacyButtonClick = () => {
     setDiplomacyPanelVisible(!diplomacyPanelVisible);
@@ -145,6 +148,7 @@ const Dashboard = () => {
     setConstructionPanelVisible(false);
     setColonyPanelVisible(false);
     setFleetsPanelVisible(false);
+    setTradePanelVisible(false);
   };
   const handleColonyButtonClick = () => {
     setColonyPanelVisible(!colonyPanelVisible);
@@ -153,9 +157,21 @@ const Dashboard = () => {
     setConstructionPanelVisible(false);
     setDiplomacyPanelVisible(false);
     setFleetsPanelVisible(false);
+    setTradePanelVisible(false);
   };
   const handleFleetsButtonClick = () => {
     setFleetsPanelVisible(!fleetsPanelVisible);
+    setSelectedSystemVisible(false);
+    setResourcePanelVisible(false);
+    setConstructionPanelVisible(false);
+    setDiplomacyPanelVisible(false);
+    setColonyPanelVisible(false);
+    setTradePanelVisible(false);
+  };
+
+  const handleTradeButtonClick = () => {
+    setTradePanelVisible(!tradePanelVisible);
+    setFleetsPanelVisible(false);
     setSelectedSystemVisible(false);
     setResourcePanelVisible(false);
     setConstructionPanelVisible(false);
@@ -209,7 +225,7 @@ const Dashboard = () => {
           <span className="material-symbols-outlined">rocket_launch</span>
           Fleets
         </button>
-        <button className="play-button" onClick={handleFleetsButtonClick}>
+        <button className="play-button" onClick={handleTradeButtonClick}>
           <span className="material-symbols-outlined">handshake</span>
           Trade
         </button>
@@ -298,6 +314,11 @@ const Dashboard = () => {
       <div className={`panel ${fleetsPanelVisible ? "visible" : "hidden"}`}>
         <div className="panel-row">Fleets</div>
         <div className="panel-row">You Have No Fleets!</div>
+      </div>
+
+      <div className={`panel ${tradePanelVisible ? "visible" : "hidden"}`}>
+        <div className="panel-row">Trade</div>
+        <div className="panel-row">You Have No Trade Routes!</div>
       </div>
 
       <div className={`solar-system-panel ${selectedSystemVisible ? "visible" : "hidden"}`}>
