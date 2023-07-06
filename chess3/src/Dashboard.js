@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
+import islandsData from './islands.json';
+import roundIsland from './images/roundisland.png';
+import plainsIsland from './images/roundisland2.png';
+import rockyIsland from './images/rockyisland.png';
+import dessertIsland from './images/snakeisland.png';
 
 const generateRandomCoordinates = (existingSystems) => {
   const centerX = 2500; // X coordinate of the center of the circle
@@ -25,26 +30,44 @@ const generateRandomCoordinates = (existingSystems) => {
   return { x, y };
 };
 
-const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, onClick }) => {
+const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) => {
   const fontSize = 10 * zoomLevel;
 
   const transformedX = (x + mapPosition.x) * zoomLevel;
   const transformedY = (y + mapPosition.y) * zoomLevel;
 
+  let terrainImage;
+  switch (terrain) {
+    case 'Forest':
+      terrainImage = roundIsland;
+      break;
+    case 'Rock':
+      terrainImage = rockyIsland;
+      break;
+    case 'Desert':
+      terrainImage = dessertIsland;
+      break;
+    case 'Plains':
+      terrainImage = plainsIsland;
+      break;
+  }
+
   return (
     <div
-      className="solar-system" onClick={onClick}
+      className="solar-system"
+      onClick={onClick}
       style={{
         left: `${transformedX}px`,
         top: `${transformedY}px`,
         transform: `scale(${zoomLevel})`,
       }}
     >
-      <div className="sun"></div>
+      <img src={terrainImage} alt={terrain} className="terrain-image" />
       <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
     </div>
   );
 };
+
 
 const Dashboard = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
@@ -61,9 +84,11 @@ const Dashboard = () => {
 
   const [selectedSystem, setSelectedSystem] = useState(null);
   const [selectedSystemVisible, setSelectedSystemVisible] = useState(false);
+  const [selectedIslandTerrain, setSelectedIslandTerrain] = useState(null);
 
-  const handleSolarSystemClick = (systemId) => {
+  const handleSolarSystemClick = (systemId, islandTerrain) => {
     setSelectedSystem(systemId);
+    setSelectedIslandTerrain(islandTerrain);
     setSelectedSystemVisible(!selectedSystemVisible);
     setResourcePanelVisible(false);
     setConstructionPanelVisible(false);
@@ -77,24 +102,17 @@ const Dashboard = () => {
   }, []);
 
   const generateSolarSystems = () => {
-    const existingSystems = [];
-    const systems = [];
+  const systems = islandsData.map((island, index) => ({
+    id: island.id,
+    name: island.id,
+    x: island.x,
+    y: island.y,
+    terrain: island.dominantTerrain,
+  }));
 
-    for (let i = 1; i <= 500; i++) {
-      const { x, y } = generateRandomCoordinates(existingSystems);
-      const name = i.toString().padStart(4, "0");
-      const system = {
-        id: i,
-        x,
-        y,
-        name,
-      };
-      systems.push(system);
-      existingSystems.push({ x, y });
-    }
+  setSolarSystems(systems);
+};
 
-    setSolarSystems(systems);
-  };
 
   const handleZoomIn = () => {
     setZoomLevel((prevZoomLevel) => Math.min(prevZoomLevel + 0.1, 2));
@@ -191,6 +209,10 @@ const Dashboard = () => {
           <span className="material-symbols-outlined">rocket_launch</span>
           Fleets
         </button>
+        <button className="play-button" onClick={handleFleetsButtonClick}>
+          <span className="material-symbols-outlined">handshake</span>
+          Trade
+        </button>
       </div>
 
       <div className="zoom-buttons">
@@ -216,7 +238,7 @@ const Dashboard = () => {
             zoomLevel={zoomLevel}
             mapPosition={mapPosition}
             name={system.name}
-            onClick={() => handleSolarSystemClick(system.id)} // Add this line
+            onClick={() => handleSolarSystemClick(system.id, system.terrain)} // Add this line
           />
         ))}
       </div>
@@ -281,6 +303,7 @@ const Dashboard = () => {
       <div className={`solar-system-panel ${selectedSystemVisible ? "visible" : "hidden"}`}>
         <div className="solar-panel-row">Island #{selectedSystem}</div>
         <div className="solar-panel-row">Population: 0</div>
+        <div className="solar-panel-row">Dominant Terrain: {selectedIslandTerrain}</div>
       </div>
 
     </div>

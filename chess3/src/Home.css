@@ -63,9 +63,12 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   display: flex;
   align-items: center;
   width: 20vw;
-  background-color: rgb(19, 20, 31);
   justify-content: center;
   font-family: 'Press Start 2P', sans-serif;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-image: url("./images/woodboard.png");
   font-size: 1vw;
   font-weight: 700;
   border: 0.5vh solid white;
