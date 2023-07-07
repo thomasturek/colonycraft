@@ -69,7 +69,7 @@ const Home = () => {
           Login
         </button>
         <button className="button" onClick={togglePopup}>
-          Mint a New Planet
+          Buy Island ($1)
         </button>
         <form>
         <button className="button" formaction="https://docs.colonycraft.xyz">
