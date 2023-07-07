@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import islandsData from './islands.json';
-import roundIsland from './images/roundisland.png';
-import plainsIsland from './images/roundisland2.png';
-import rockyIsland from './images/rockyisland.png';
-import dessertIsland from './images/snakeisland.png';
 
 const generateRandomCoordinates = (existingSystems) => {
   const centerX = 2500; // X coordinate of the center of the circle
@@ -36,34 +32,34 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) =
   const transformedX = (x + mapPosition.x) * zoomLevel;
   const transformedY = (y + mapPosition.y) * zoomLevel;
 
-  let terrainImage;
-  switch (terrain) {
-    case 'Forest':
-      terrainImage = roundIsland;
-      break;
-    case 'Rock':
-      terrainImage = rockyIsland;
-      break;
-    case 'Desert':
-      terrainImage = dessertIsland;
-      break;
-    case 'Plains':
-      terrainImage = plainsIsland;
-      break;
+  let islandImage;
+
+  if (terrain === 'Forest') {
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/forest.png)';
+  } else if (terrain === 'Plains') {
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/plains.png)';
+  } else if (terrain === 'Rock') {
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/rock.png)';
+  } else if (terrain === 'Desert') {
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/desert.png)';
   }
 
   return (
     <div
-      className="solar-system"
+      className='solar-system'
       onClick={onClick}
       style={{
         left: `${transformedX}px`,
         top: `${transformedY}px`,
         transform: `scale(${zoomLevel})`,
+        backgroundImage: islandImage,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '40px',
+        height: '40px',
       }}
     >
-      <img src={terrainImage} className="terrain-image" />
-      <h3 style={{ fontSize: `${fontSize}px`, color: "white" }}>{name}</h3>
+      <h3 style={{ fontSize: `${fontSize}px`, color: 'white' }}>{name}</h3>
     </div>
   );
 };
@@ -103,16 +99,18 @@ const Dashboard = () => {
   }, []);
 
   const generateSolarSystems = () => {
-  const systems = islandsData.map((island, index) => ({
-    id: island.id,
-    name: island.id,
-    x: island.x,
-    y: island.y,
-    terrain: island.dominantTerrain,
-  }));
 
-  setSolarSystems(systems);
-};
+    const systems = islandsData.map((island) => ({
+      id: island.id,
+      name: island.id,
+      x: island.x,
+      y: island.y,
+      terrain: island.dominantTerrain,
+    }));
+
+    setSolarSystems(systems);
+    };
+
 
 
   const handleZoomIn = () => {
@@ -254,6 +252,7 @@ const Dashboard = () => {
             zoomLevel={zoomLevel}
             mapPosition={mapPosition}
             name={system.name}
+            terrain={system.terrain}
             onClick={() => handleSolarSystemClick(system.id, system.terrain)} // Add this line
           />
         ))}
