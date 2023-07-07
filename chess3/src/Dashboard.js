@@ -2,30 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import islandsData from './islands.json';
 
-const generateRandomCoordinates = (existingSystems) => {
-  const centerX = 2500; // X coordinate of the center of the circle
-  const centerY = 2500; // Y coordinate of the center of the circle
-  const radius = 2500; // Radius of the circle
-
-  let validPosition = false;
-  let angle, distance, x, y;
-
-  while (!validPosition) {
-    angle = Math.random() * 2 * Math.PI; // Random angle between 0 and 2π
-    distance = Math.sqrt(Math.random()) * radius; // Random distance between 0 and radius
-
-    x = Math.floor(centerX + distance * Math.cos(angle));
-    y = Math.floor(centerY + distance * Math.sin(angle));
-
-    validPosition = existingSystems.every((system) => {
-      const systemDistance = Math.sqrt(Math.pow(system.x - x, 2) + Math.pow(system.y - y, 2));
-      return systemDistance > 100; // Check if distance is greater than 100px
-    });
-  }
-
-  return { x, y };
-};
-
 const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) => {
   const fontSize = 10 * zoomLevel;
 
@@ -59,7 +35,7 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) =
         height: '40px',
       }}
     >
-      <h3 style={{ fontSize: `${fontSize}px`, color: 'white' }}>{name}</h3>
+      <h3 style={{ position: 'absolute', left: '10%', top: '100%', fontSize: `${fontSize}px`, color: 'white' }}>{name}</h3>
     </div>
   );
 };
@@ -69,7 +45,7 @@ const Dashboard = () => {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [dragging, setDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [mapPosition, setMapPosition] = useState({ x: 0, y: 0 });
+  const [mapPosition, setMapPosition] = useState({ x: -2500, y: -2500 });
   const [solarSystems, setSolarSystems] = useState([]);
 
   const [resourcePanelVisible, setResourcePanelVisible] = useState(false);
