@@ -48,6 +48,16 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   position: fixed;
   font-weight: 1000;
   margin: 0;
+  animation: bounce 3s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 .buttonbox {
