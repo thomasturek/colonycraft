@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import islandsData from './islands.json';
+import axios from 'axios';
 
 const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) => {
   const fontSize = 10 * zoomLevel;
@@ -60,9 +61,20 @@ const Dashboard = () => {
   const [selectedIslandTerrain, setSelectedIslandTerrain] = useState(null);
 
   const handleSolarSystemClick = (systemId, islandTerrain) => {
-    setSelectedSystem(systemId);
-    setSelectedIslandTerrain(islandTerrain);
-    setSelectedSystemVisible(!selectedSystemVisible);
+
+    if(systemId===selectedSystem){
+
+      setSelectedSystemVisible(!selectedSystemVisible);
+
+    } else {
+
+      setSelectedSystem(systemId);
+      setSelectedIslandTerrain(islandTerrain);
+
+      setSelectedSystemVisible('visible');
+
+    }
+
     setResourcePanelVisible(false);
     setConstructionPanelVisible(false);
     setDiplomacyPanelVisible(false);
@@ -196,8 +208,8 @@ const Dashboard = () => {
           Colonies
         </button>
         <button className="play-button" onClick={handleFleetsButtonClick}>
-          <span className="material-symbols-outlined">rocket_launch</span>
-          Fleets
+          <span className="material-symbols-outlined">sailing</span>
+          Ships
         </button>
         <button className="play-button" onClick={handleTradeButtonClick}>
           <span className="material-symbols-outlined">handshake</span>

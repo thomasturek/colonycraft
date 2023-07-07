@@ -240,6 +240,7 @@
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .zoom-button1 {
@@ -263,6 +264,7 @@
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .zoom-button2 {
@@ -286,6 +288,7 @@
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .material-symbols-outlined {

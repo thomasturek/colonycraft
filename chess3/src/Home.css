@@ -82,11 +82,11 @@ transform: rotate(90deg); /* adding rotation transform on hover */
   background-image: url("./images/woodboard.png");
   font-size: 1vw;
   font-weight: 700;
-  border: 0.5vh solid white;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 2rem;
   text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .button:hover, .headingbutton:hover, .headingbutton2:hover, .headingbutton3:hover {
