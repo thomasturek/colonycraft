@@ -1,57 +1,57 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import { initializeApp } from "firebase/app";
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 
 const Home = () => {
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD_NhL2SagoMPoWLy4q48FSjcsaxMGZIeQ",
+    authDomain: "colonycraft-a8fc5.firebaseapp.com",
+    projectId: "colonycraft-a8fc5",
+    storageBucket: "colonycraft-a8fc5.appspot.com",
+    messagingSenderId: "964689343361",
+    appId: "1:964689343361:web:f5d06f70456745f12aee80"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
   const navigate = useNavigate();
 
   const [showPopup, setShowPopup] = useState(false);
 
-  const [balanceInfo, setBalanceInfo] = useState({
-    balance: 0
-  });
-
-  const connectToBlockchain = async (e) => {
-    e.preventDefault()
-
-    const { ethers } = require("ethers");
-
-    // MetaMask Connection
-
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    await provider.send('eth_requestAccounts', []);
-    const signerAddress = await provider.getSigner().getAddress();
-
-    /*
-    // Contract Initiated
-
-    const nft_forum_contract = new ethers.Contract(contractInfo.address, abi, signer);
-
-    // Asking Contract For User Balance Of NFT
-
-    const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
-
-    */
-
-    // Fething And Setting Balance
-
-    const balance = await provider.getBalance(signerAddress);
-    const balanceAmount = Math.round(ethers.utils.formatEther(balance) * 100) / 100;
-
-    setBalanceInfo({balance: balanceAmount});
-
-};
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    connectToBlockchain(event);
     navigate("/dashboard");
   };
 
   function togglePopup() {
   setShowPopup(!showPopup);
 }
+
+  async function registerUser(walletAddress) {
+      const usersCollection = collection(db, 'users');
+      const userSnapshot = await getDocs(usersCollection);
+      const userList = userSnapshot.docs.map(doc => doc.data());
+
+      if(userList.includes(walletAddress)) {
+
+        console.log("user already has an island!")
+
+      } else {
+
+        await usersCollection.doc(walletAddress).set({
+          wood: 0,
+          wheat: 0,
+          fish: 0,
+
+        });
+
+      }
+
+  }
 
   return (
     <div className="homepage">
@@ -68,7 +68,7 @@ const Home = () => {
         <button className="button" onClick={handleSubmit}>
           Login
         </button>
-        <button className="button" onClick={togglePopup}>
+        <button className="button" onClick={registerUser('0x')}>
           Buy Island ($1)
         </button>
         <form>
@@ -82,13 +82,6 @@ const Home = () => {
         </button>
         </form>
         </div>
-
-        {showPopup && (
-            <form className="form">
-            <h2 className="form-title">Coming Soon! You have {balanceInfo} planets</h2>
-
-            </form>
-        )}
 
 
         </div>

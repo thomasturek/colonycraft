@@ -15,24 +15,6 @@
   text-decoration: none;
 }
 
-.logo {
-
-  background-image: url("./images/logo.png");
-  position: absolute;
-  width: 5rem;
-  height: 5rem;
-
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center;
-
-  left: 5%;
-  top: 5%;
-  transition: transform 0.5s ease; /* adding transition property */
-
-
-}
-
 .logo:hover {
 transform: rotate(90deg); /* adding rotation transform on hover */
 }
@@ -206,7 +188,7 @@ html {
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  background-image: url("./images/roundisland.png");
+  background-image: url("./images/forest.png");
   background-size: cover;
   z-index: 0;
   transition: transform 0.3s ease;
@@ -219,7 +201,7 @@ html {
   width: 200px;
   height: 200px;
   image-rendering: pixelated;
-  background-image: url("./images/roundisland2.png");
+  background-image: url("./images/plains.png");
   transform: scale(0.75);
   background-size: cover;
   z-index: 0;

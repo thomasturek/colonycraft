@@ -20,7 +20,6 @@
   color: white;
   font-size: 2vw;
 }
-
 .balance {
   padding: 1rem;
   margin: 2rem;
@@ -74,7 +73,31 @@
   align-items: center;
   background-color: #071f36;
   z-index: 10;
+  background-repeat: no-repeat;
+  background-size:1000%;
+  background-position: center;
+  background-image: url("./images/woodboard.png");
+  transition: transform 0.5s;
+  transform-origin: right center;
   transform: translateX(100%);
+}
+
+.solar-system-panel.visible {
+  transform: translateX(0%);
+}
+
+.solar-system-panel.hidden {
+  transform: translateX(100%);
+}
+
+.solar-system-panel.open {
+  transform-origin: left center;
+  transform: translateX(-100%);
+}
+
+.solar-system-panel.close {
+  transform-origin: right center;
+  transform: translateX(0%);
 }
 
 .solar-system-panel.visible {
@@ -164,7 +187,7 @@
 
 .panel-row {
   color: white;
-  padding: 3.5vh;
+  padding: 2vh;
 
 }
 
@@ -187,7 +210,6 @@
 
     .grid-diplomacy {
           display: grid;
-          height:130%;
           width:95%;
           grid-template-columns: repeat(3, 1fr);
           grid-row-gap: 0%; /* Updated row gap value */
@@ -195,13 +217,114 @@
           margin: 2%;
         }
 
+
+
+        .grid-reasources {
+              position: absolute;
+              top: 10%;
+              display: grid;
+              height:85%;
+              width:95%;
+              grid-template-columns: repeat(1, 5fr);
+              margin: 2%;
+            }
+
+        .grid-island-panel {
+              display: grid;
+              position: absolute;
+              top: 60%;
+              height:50%;
+              width:95%;
+              grid-template-columns: repeat(3, 1fr);
+              grid-row-gap: 0%; /* Updated row gap value */
+              grid-column-gap: 2%;
+              margin: 2%;
+            }
+
     .grid-item {
-      border: 5px solid black;
       background-color: grey;
+      align-items: center;
+      text-align: center;
+      font-size: 15px;
+      color: white;
       width: 100%;
-      height: 60%;
+      height: 75%;
       opacity: 0.5;
       transition: opacity 0.3s ease;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid-item-reasources {
+      background-color: grey;
+      text-align: left;
+      font-size: 30px;
+      color: white;
+      width: 100%;
+      height: 80%;
+      transition: opacity 0.3s ease;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .reasource-image {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/wheat.png");
+      width: 50px;
+      height: 50px;
+    }
+
+    .reasource-image-coffee {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/coffee.png");
+      width: 40px;
+      height: 40px;
+    }
+
+    .reasource-image-wood {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/wood.png");
+      width: 50px;
+      height: 50px;
+    }
+
+    .reasource-image-metals {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/metals.png");
+      width: 40px;
+      height: 40px;
+    }
+
+    .reasource-image-fish {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/fish.png");
+      width: 60px;
+      height: 60px;
+    }
+
+    .text {
+      position: absolute;
+        left: 52%;
+        top: 2%;
+        width: 100%;
+        text-align: left;
+        font-size: 30px;
+        color: white;
+        transition: opacity 0.3s ease;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .grid-item:hover {
