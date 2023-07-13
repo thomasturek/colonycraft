@@ -64,12 +64,27 @@
   user-select: none;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .solar-system-panel {
   position: fixed;
   top: 8%;
   right: 0;
   width: 25%;
-  height: 80%;
+  height: 83%;
   border: solid white 5px;
   align-items: center;
   background-color: #071f36;
@@ -99,6 +114,10 @@
 .solar-system-panel.close {
   transform-origin: right center;
   transform: translateX(0%);
+}
+
+.solar-system-panel.switch {
+  animation: pulse 0.3s ease linear;
 }
 
 .solar-system-panel.visible {
@@ -149,6 +168,21 @@
 
 .zoom-level-3 .map {
   transform: scale(1.4);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .game {
@@ -339,6 +373,15 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    .text-user {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+        font-size: 6px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
     .grid-item:hover {
       opacity: 1;
     }
@@ -381,11 +424,11 @@
 .user {
   padding: 2vh;
   position: absolute;
-  width: 25%;
+  width: 20%;
   height: 7.5%;
   color: white;
-  top: 7.5%;
-  left: 70%;
+  top: 8%;
+  left: 75%;
   display: flex;
   align-items: center;
   justify-content: center;

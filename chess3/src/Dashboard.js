@@ -37,11 +37,10 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
 
       //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
 
-      const tokenBalance = await starstoneContract.balanceOf(signerAddress);
-
-      console.log(tokenBalance.toString())
-
-      setStarstones(tokenBalance.toString());
+      const tokenBalance = (await starstoneContract.balanceOf(signerAddress)).toString();
+      const tokenBalanceFormatted = ethers.utils.formatUnits(tokenBalance, 18);
+      const roundedBalance = Math.ceil(parseFloat(tokenBalanceFormatted));
+      setStarstones(roundedBalance);
 
 
     } else {
@@ -61,7 +60,7 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
 
 };
 
-const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) => {
+const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick, selectedSystem}) => {
   const fontSize = 10 * zoomLevel;
 
   const transformedX = (x + mapPosition.x) * zoomLevel;
@@ -95,7 +94,7 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) =
       }}
     >
       <h3 style={{ position: 'absolute', left: '10%', top: '100%', fontSize: `${fontSize}px`, color: 'white' }}>{name}</h3>
-    </div>
+     </div>
   );
 };
 
@@ -121,6 +120,7 @@ const Dashboard = () => {
   const [currentStarstones, setStarstones] = useState('0');
 
   const [selectedSystem, setSelectedSystem] = useState(null);
+  const [selectedSystemOpen, setSelectedSystemOpen] = useState(false);
   const [selectedSystemVisible, setSelectedSystemVisible] = useState(false);
   const [selectedIslandTerrain, setSelectedIslandTerrain] = useState(null);
   const [selectedIslandImage, setSelectedIslandImage] = useState('');
@@ -138,17 +138,26 @@ const Dashboard = () => {
       setSelectedIslandImage('https://storage.cloud.google.com/colonycraftbucket/desert.png');
     }
 
-    if (selectedSystem === systemId) {
-    setPanelAnimation('close');
-    setSelectedSystem(systemId);
-    setSelectedIslandTerrain(islandTerrain);
-  } else {
-    setSelectedSystem(systemId);
-    setPanelAnimation('open');
-    setSelectedIslandTerrain(islandTerrain);
+    if (systemId === selectedSystem) {
+
+      setSelectedSystemVisible(!selectedSystemVisible);
+
+    }
+    else {
+
+      setSelectedSystemVisible(false); // Hide the panel initially
+
+      // Add a timeout to allow the panel to be hidden before applying the animation class
+      setTimeout(() => {
+        setSelectedSystemVisible(true); // Show the panel
+      }, 200);
+
+
+      setSelectedSystem(systemId);
+      setSelectedIslandTerrain(islandTerrain);
+
   }
 
-    setSelectedSystemVisible(!selectedSystemVisible);
     setResourcePanelVisible(false);
     setConstructionPanelVisible(false);
     setDiplomacyPanelVisible(false);
@@ -169,6 +178,7 @@ const Dashboard = () => {
       x: island.x,
       y: island.y,
       terrain: island.dominantTerrain,
+      selectedSystem: selectedSystem
     }));
 
     setSolarSystems(systems);
@@ -294,7 +304,7 @@ const Dashboard = () => {
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      </head>
      <button className="user">
-       {currentUser}
+       <h1 className="text-user">{currentUser}</h1>
      </button>
       <div className="game">
         <button className="play-button" onClick={handleResourceButtonClick}>
@@ -357,32 +367,32 @@ const Dashboard = () => {
       <div class="grid-reasources">
         <div class="grid-item-reasources">
           <h1 style={{top: '3%'}} className="text">Starstones</h1>
-          <h1 style={{top: '3%', left: '140%'}} className="text">{currentStarstones}</h1>
+          <h1 style={{top: '3%', marginLeft: '-5%', textAlign: 'right'}} className="text">{currentStarstones}</h1>
           <div className="reasource-image-starstone" style={{top: '2.5%', left: '34%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '20%'}} className="text">Wood</h1>
-          <h1 style={{top: '20%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '20%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
           <div className="reasource-image-wood" style={{top: '19%', left: '16%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '36%'}} className="text">Wheat</h1>
-          <h1 style={{top: '36%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '36%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
           <div className="reasource-image" style={{top: '35.5%', left: '18%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '53%'}} className="text">Coffee</h1>
-          <h1 style={{top: '53%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '53%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
           <div className="reasource-image-coffee" style={{top: '53%', left: '21%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '70%'}} className="text">Metals</h1>
-          <h1 style={{top: '70%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '70%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
           <div className="reasource-image-metals" style={{top: '70%', left: '21%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '86%'}} className="text">Fish</h1>
-          <h1 style={{top: '86%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '86%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
           <div className="reasource-image-fish" style={{top: '84.5%', left: '15%'}}></div>
         </div>
       </div>
