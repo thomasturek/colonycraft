@@ -69,13 +69,13 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick, sel
   let islandImage;
 
   if (terrain === 'Forest') {
-    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/forest.png)';
+    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/forest.png)';
   } else if (terrain === 'Plains') {
-    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/plains.png)';
+    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/plains.png)';
   } else if (terrain === 'Rock') {
-    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/rock.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/stone.png)';
   } else if (terrain === 'Desert') {
-    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/desert.png)';
+    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/desert.png)';
   }
 
   return (
@@ -116,7 +116,7 @@ const Dashboard = () => {
 
   //blockchain
 
-  const [currentUser, setCurrentUser] = useState('');
+  const [currentUser, setCurrentUser] = useState('Not Logged In!');
   const [currentStarstones, setStarstones] = useState('0');
 
   const [selectedSystem, setSelectedSystem] = useState(null);
