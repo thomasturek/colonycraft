@@ -80,7 +80,7 @@ const Home = () => {
           Login
         </button>
         <button className="button" onClick={buyIsland}>
-          Buy Island
+          Mint an Island
         </button>
         <form>
         <button className="button" formaction="https://docs.colonycraft.xyz">

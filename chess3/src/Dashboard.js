@@ -368,17 +368,17 @@ const Dashboard = () => {
         <div class="grid-item-reasources">
           <h1 style={{top: '3%'}} className="text">Starstones</h1>
           <h1 style={{top: '3%', marginLeft: '-5%', textAlign: 'right'}} className="text">{currentStarstones}</h1>
-          <div className="reasource-image-starstone" style={{top: '2.5%', left: '34%'}}></div>
+          <div className="reasource-image-starstone" style={{top: '2.5%', left: '33%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '20%'}} className="text">Wood</h1>
           <h1 style={{top: '20%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
-          <div className="reasource-image-wood" style={{top: '19%', left: '16%'}}></div>
+          <div className="reasource-image-wood" style={{top: '19%', left: '15%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '36%'}} className="text">Wheat</h1>
           <h1 style={{top: '36%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
-          <div className="reasource-image" style={{top: '35.5%', left: '18%'}}></div>
+          <div className="reasource-image" style={{top: '35.5%', left: '17%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '53%'}} className="text">Coffee</h1>
