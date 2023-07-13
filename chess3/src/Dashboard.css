@@ -373,6 +373,12 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    .solar-system.clicked {
+      border: 2px solid white;
+      animation: pulse 0.5s;
+    }
+
+
     .text-user {
         width: 100%;
         padding: 5%;

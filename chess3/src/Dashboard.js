@@ -80,7 +80,7 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick, sel
 
   return (
     <div
-      className='solar-system'
+      className = 'solar-system'
       onClick={onClick}
       style={{
         left: `${transformedX}px`,
@@ -127,6 +127,8 @@ const Dashboard = () => {
 
 
   const handleSolarSystemClick = (systemId, islandTerrain) => {
+
+      const islandNumber = systemId;
 
       if (islandTerrain === 'Forest') {
       setSelectedIslandImage('https://storage.cloud.google.com/colonycraftbucket/forest.png');
