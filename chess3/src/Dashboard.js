@@ -1,49 +1,65 @@
 import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import islandsData from './islands.json';
-import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import startokenABI from './startokenABI.json';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD_NhL2SagoMPoWLy4q48FSjcsaxMGZIeQ",
-  authDomain: "colonycraft-a8fc5.firebaseapp.com",
-  projectId: "colonycraft-a8fc5",
-  storageBucket: "colonycraft-a8fc5.appspot.com",
-  messagingSenderId: "964689343361",
-  appId: "1:964689343361:web:f5d06f70456745f12aee80"
+const { ethers } = require("ethers");
+
+const connectToBlockchain = async (setCurrentUser, setStarstones) => {
+
+  if (window.ethereum) {
+  try {
+    await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [
+        {
+          chainId: "0xa86a",
+          chainName: "Avalanche C-Chain",
+          nativeCurrency: {
+            name: "AVAX",
+            symbol: "AVAX",
+            decimals: 18,
+          },
+          rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
+          blockExplorerUrls: ["https://cchain.explorer.avax.network/"],
+        },
+      ],
+    });
+
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const accounts = await provider.send("eth_requestAccounts", []);
+
+    if (accounts.length > 0) {
+      const signerAddress = accounts[0];
+      setCurrentUser(signerAddress);
+
+      const starstoneContract = new ethers.Contract('0xcBA5115d74D0634225c7809D197E47FcdF2B690b', startokenABI, provider);
+
+      //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
+
+      const tokenBalance = await starstoneContract.balanceOf(signerAddress);
+
+      console.log(tokenBalance.toString())
+
+      setStarstones(tokenBalance.toString());
+
+
+    } else {
+      // Handle case when no accounts are available
+      console.log("No accounts available");
+    }
+
+    // Rest of your code...
+  } catch (error) {
+    // Handle error if the user rejects the account connection or the network setup
+    console.log("Error connecting to MetaMask or setting up the network:", error);
+  }
+} else {
+  // Handle case when MetaMask is not installed or not detected
+  console.log("MetaMask is not installed or not detected");
+}
+
 };
-
-const connectToBlockchain = async (e) => {
-  e.preventDefault()
-
-  const { ethers } = require("ethers");
-
-  // MetaMask Connection
-
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  await provider.send('eth_requestAccounts', []);
-  const signerAddress = await provider.getSigner().getAddress();
-
-  /*
-  // Contract Initiated
-
-  const nft_forum_contract = new ethers.Contract(contractInfo.address, abi, signer);
-
-  // Asking Contract For User Balance Of NFT
-
-  const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
-
-  */
-
-  // Fething And Setting Balance
-
-  const balance = await provider.getBalance(signerAddress);
-  const balanceAmount = Math.round(ethers.utils.formatEther(balance) * 100) / 100;
-
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) => {
   const fontSize = 10 * zoomLevel;
@@ -54,13 +70,13 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick }) =
   let islandImage;
 
   if (terrain === 'Forest') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/forest.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/forest.png)';
   } else if (terrain === 'Plains') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/plains.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/plains.png)';
   } else if (terrain === 'Rock') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/rock.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/rock.png)';
   } else if (terrain === 'Desert') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/desert.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/desert.png)';
   }
 
   return (
@@ -99,6 +115,11 @@ const Dashboard = () => {
   const [tradePanelVisible, setTradePanelVisible] = useState(false);
   const [panelAnimation, setPanelAnimation] = useState('');
 
+  //blockchain
+
+  const [currentUser, setCurrentUser] = useState('');
+  const [currentStarstones, setStarstones] = useState('0');
+
   const [selectedSystem, setSelectedSystem] = useState(null);
   const [selectedSystemVisible, setSelectedSystemVisible] = useState(false);
   const [selectedIslandTerrain, setSelectedIslandTerrain] = useState(null);
@@ -117,24 +138,15 @@ const Dashboard = () => {
       setSelectedIslandImage('https://storage.cloud.google.com/colonycraftbucket/desert.png');
     }
 
-    if(selectedSystemVisible==='visible'){
-
-      console.log('visible!');
-
-      setPanelAnimation('close');
-      setTimeout(() => {
-       setSelectedSystem(systemId);
-       setSelectedIslandTerrain(islandTerrain);
-       setPanelAnimation('open');
-     }, 500);
-
-    } else {
-
-      setPanelAnimation('open');
-      setSelectedSystem(systemId);
-      setSelectedIslandTerrain(islandTerrain);
-
-    }
+    if (selectedSystem === systemId) {
+    setPanelAnimation('close');
+    setSelectedSystem(systemId);
+    setSelectedIslandTerrain(islandTerrain);
+  } else {
+    setSelectedSystem(systemId);
+    setPanelAnimation('open');
+    setSelectedIslandTerrain(islandTerrain);
+  }
 
     setSelectedSystemVisible(!selectedSystemVisible);
     setResourcePanelVisible(false);
@@ -146,7 +158,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     generateSolarSystems();
-    connectToBlockchain();
+    connectToBlockchain(setCurrentUser, setStarstones);
   }, []);
 
   const generateSolarSystems = () => {
@@ -281,6 +293,9 @@ const Dashboard = () => {
       <head>
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
      </head>
+     <button className="user">
+       {currentUser}
+     </button>
       <div className="game">
         <button className="play-button" onClick={handleResourceButtonClick}>
           <span className="material-symbols-outlined">construction</span>
@@ -342,7 +357,8 @@ const Dashboard = () => {
       <div class="grid-reasources">
         <div class="grid-item-reasources">
           <h1 style={{top: '3%'}} className="text">Starstones</h1>
-          <h1 style={{top: '3%', left: '140%'}} className="text">0</h1>
+          <h1 style={{top: '3%', left: '140%'}} className="text">{currentStarstones}</h1>
+          <div className="reasource-image-starstone" style={{top: '2.5%', left: '34%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '20%'}} className="text">Wood</h1>
