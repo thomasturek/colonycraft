@@ -406,7 +406,7 @@ const Dashboard = () => {
         <div className="panel-row">Construction</div>
 
         <div class="grid">
-          <div class="grid-item" onClick={constructLumberMill}>Lumbermill</div>
+          <div class="grid-item lumbermill" onClick={constructLumberMill}>Lumbermill</div>
           <div class="grid-item" onClick={constructWheatFarm}>Wheat Farm</div>
           <div class="grid-item" onClick={constructCornFarm}>Coffee Farm</div>
           <div class="grid-item" onClick={constructMine}>Mine</div>

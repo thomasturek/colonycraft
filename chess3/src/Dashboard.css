@@ -98,6 +98,14 @@
   transform: translateX(100%);
 }
 
+.lumbermill {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/lumbermill.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
 .solar-system-panel.visible {
   transform: translateX(0%);
 }
@@ -371,6 +379,22 @@
         color: white;
         transition: opacity 0.3s ease;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .reasource-link {
+
+      position: absolute;
+      font-family: 'Press Start 2P', sans-serif;
+      left: 60%;
+      color: black;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      z-index: 10000;
+
     }
 
     .solar-system.clicked {
