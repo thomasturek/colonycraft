@@ -106,6 +106,39 @@
   image-rendering: pixelated;
 }
 
+.wheatfarm {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/wheatfarm.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
+.coffeefarm {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/coffeefarm.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
+.mine {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/mine.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
+.fishinghut {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/fishinghut.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
+
 .solar-system-panel.visible {
   transform: translateX(0%);
 }

@@ -69,13 +69,13 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick, sel
   let islandImage;
 
   if (terrain === 'Forest') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/forest.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/forest.png)';
   } else if (terrain === 'Plains') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/plains.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/plains.png)';
   } else if (terrain === 'Rock') {
     islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/stone.png)';
   } else if (terrain === 'Desert') {
-    islandImage = 'url(https://storage.cloud.google.com/colonycraftbucket/desert.png)';
+    islandImage = 'url(https://storage.googleapis.com/colonycraftbucket/desert.png)';
   }
 
   return (
@@ -407,10 +407,10 @@ const Dashboard = () => {
 
         <div class="grid">
           <div class="grid-item lumbermill" onClick={constructLumberMill}>Lumbermill</div>
-          <div class="grid-item" onClick={constructWheatFarm}>Wheat Farm</div>
-          <div class="grid-item" onClick={constructCornFarm}>Coffee Farm</div>
-          <div class="grid-item" onClick={constructMine}>Mine</div>
-          <div class="grid-item" onClick={constructFishingHut}>Fishing Hut</div>
+          <div class="grid-item wheatfarm" onClick={constructWheatFarm}>Wheat Farm</div>
+          <div class="grid-item coffeefarm" onClick={constructCornFarm}>Coffee Farm</div>
+          <div class="grid-item mine" onClick={constructMine}>Mine</div>
+          <div class="grid-item fishinghut" onClick={constructFishingHut}>Fishing Hut</div>
           <div class="grid-item" onClick={constructHarbor}>Harbor</div>
           <div class="grid-item" onClick={constructTradeVesel}>Trade Vesel</div>
           <div class="grid-item" onClick={constructShip}>Ship</div>
