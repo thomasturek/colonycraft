@@ -414,7 +414,7 @@ const Dashboard = () => {
           <div class="grid-item" onClick={constructHarbor}>Harbor</div>
           <div class="grid-item" onClick={constructTradeVesel}>Trade Vesel</div>
           <div class="grid-item" onClick={constructShip}>Ship</div>
-          <div class="grid-item" onClick={constructCannon}>Cannon</div>
+          <div class="grid-item cannon" onClick={constructCannon}>Cannon</div>
           <div class="grid-item" onClick={constructMinuteMen}>Minute Men</div>
         </div>
       </div>

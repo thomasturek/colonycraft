@@ -138,6 +138,14 @@
   image-rendering: pixelated;
 }
 
+.cannon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/cannon.png");
+  background-size: 100%;
+  image-rendering: pixelated;
+}
+
 
 .solar-system-panel.visible {
   transform: translateX(0%);
