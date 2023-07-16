@@ -1,8001 +1,8001 @@
 [
   {
     "id": 1,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1348,
     "y": 1915
   },
   {
     "id": 2,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1826,
     "y": 4273
   },
   {
     "id": 3,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+    
     "x": 4007,
     "y": 869
   },
   {
     "id": 4,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4633,
     "y": 3538
   },
   {
     "id": 5,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3609,
     "y": 1984
   },
   {
     "id": 6,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4619,
     "y": 1888
   },
   {
     "id": 7,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4935,
     "y": 3026
   },
   {
     "id": 8,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 637,
     "y": 1470
   },
   {
     "id": 9,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4630,
     "y": 1690
   },
   {
     "id": 10,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2570,
     "y": 1563
   },
   {
     "id": 11,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2220,
     "y": 525
   },
   {
     "id": 12,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4743,
     "y": 3490
   },
   {
     "id": 13,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1243,
     "y": 1064
   },
   {
     "id": 14,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1852,
     "y": 3259
   },
   {
     "id": 15,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4032,
     "y": 3467
   },
   {
     "id": 16,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4927,
     "y": 2255
   },
   {
     "id": 17,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2723,
     "y": 4261
   },
   {
     "id": 18,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 344,
     "y": 2849
   },
   {
     "id": 19,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2022,
     "y": 2435
   },
   {
     "id": 20,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2366,
     "y": 3152
   },
   {
     "id": 21,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1885,
     "y": 1117
   },
   {
     "id": 22,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4565,
     "y": 2150
   },
   {
     "id": 23,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2415,
     "y": 4730
   },
   {
     "id": 24,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2218,
     "y": 1777
   },
   {
     "id": 25,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4630,
     "y": 1474
   },
   {
     "id": 26,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3049,
     "y": 876
   },
   {
     "id": 27,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1937,
     "y": 4299
   },
   {
     "id": 28,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2649,
     "y": 1903
   },
   {
     "id": 29,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2828,
     "y": 789
   },
   {
     "id": 30,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3117,
     "y": 1865
   },
   {
     "id": 31,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4191,
     "y": 3011
   },
   {
     "id": 32,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1593,
     "y": 2804
   },
   {
     "id": 33,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2077,
     "y": 2630
   },
   {
     "id": 34,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 724,
     "y": 2201
   },
   {
     "id": 35,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 894,
     "y": 3015
   },
   {
     "id": 36,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 737,
     "y": 1916
   },
   {
     "id": 37,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1031,
     "y": 942
   },
   {
     "id": 38,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2244,
     "y": 4827
   },
   {
     "id": 39,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1073,
     "y": 2892
   },
   {
     "id": 40,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2473,
     "y": 3787
   },
   {
     "id": 41,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4213,
     "y": 702
   },
   {
     "id": 42,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1668,
     "y": 2539
   },
   {
     "id": 43,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3448,
     "y": 4790
   },
   {
     "id": 44,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1012,
     "y": 2385
   },
   {
     "id": 45,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1077,
     "y": 4218
   },
   {
     "id": 46,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2628,
     "y": 1174
   },
   {
     "id": 47,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2135,
     "y": 4293
   },
   {
     "id": 48,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1467,
     "y": 264
   },
   {
     "id": 49,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 372,
     "y": 1370
   },
   {
     "id": 50,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1132,
     "y": 945
   },
   {
     "id": 51,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1951,
     "y": 1002
   },
   {
     "id": 52,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 505,
     "y": 2198
   },
   {
     "id": 53,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2436,
     "y": 1264
   },
   {
     "id": 54,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1573,
     "y": 3336
   },
   {
     "id": 55,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3094,
     "y": 4058
   },
   {
     "id": 56,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4515,
     "y": 1314
   },
   {
     "id": 57,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2648,
     "y": 2372
   },
   {
     "id": 58,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3252,
     "y": 2836
   },
   {
     "id": 59,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1716,
     "y": 677
   },
   {
     "id": 60,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 826,
     "y": 2445
   },
   {
     "id": 61,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4338,
     "y": 4078
   },
   {
     "id": 62,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4343,
     "y": 2484
   },
   {
     "id": 63,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4143,
     "y": 3388
   },
   {
     "id": 64,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3636,
     "y": 2100
   },
   {
     "id": 65,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1020,
     "y": 2243
   },
   {
     "id": 66,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3517,
     "y": 583
   },
   {
     "id": 67,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1898,
     "y": 207
   },
   {
     "id": 68,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3248,
     "y": 3302
   },
   {
     "id": 69,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 900,
     "y": 2830
   },
   {
     "id": 70,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2950,
     "y": 2785
   },
   {
     "id": 71,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2255,
     "y": 748
   },
   {
     "id": 72,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1395,
     "y": 818
   },
   {
     "id": 73,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4155,
     "y": 2579
   },
   {
     "id": 74,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 912,
     "y": 3608
   },
   {
     "id": 75,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3528,
     "y": 4709
   },
   {
     "id": 76,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1775,
     "y": 2031
   },
   {
     "id": 77,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3802,
     "y": 2259
   },
   {
     "id": 78,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3816,
     "y": 4116
   },
   {
     "id": 79,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2851,
     "y": 4621
   },
   {
     "id": 80,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4004,
     "y": 3574
   },
   {
     "id": 81,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3167,
     "y": 2159
   },
   {
     "id": 82,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4854,
     "y": 1689
   },
   {
     "id": 83,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2729,
     "y": 4844
   },
   {
     "id": 84,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2071,
     "y": 3706
   },
   {
     "id": 85,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1567,
     "y": 990
   },
   {
     "id": 86,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2778,
     "y": 349
   },
   {
     "id": 87,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4720,
     "y": 1938
   },
   {
     "id": 88,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4285,
     "y": 3964
   },
   {
     "id": 89,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2911,
     "y": 409
   },
   {
     "id": 90,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2905,
     "y": 961
   },
   {
     "id": 91,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4080,
     "y": 1945
   },
   {
     "id": 92,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3711,
     "y": 3285
   },
   {
     "id": 93,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1514,
     "y": 3863
   },
   {
     "id": 94,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1551,
     "y": 708
   },
   {
     "id": 95,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1957,
     "y": 1862
   },
   {
     "id": 96,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2215,
     "y": 3636
   },
   {
     "id": 97,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1686,
     "y": 2116
   },
   {
     "id": 98,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3413,
     "y": 2696
   },
   {
     "id": 99,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1917,
     "y": 3056
   },
   {
     "id": 100,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3801,
     "y": 583
   },
   {
     "id": 101,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3756,
     "y": 1819
   },
   {
     "id": 102,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3708,
     "y": 4509
   },
   {
     "id": 103,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 539,
     "y": 3016
   },
   {
     "id": 104,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1748,
     "y": 1024
   },
   {
     "id": 105,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2144,
     "y": 1264
   },
   {
     "id": 106,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2730,
     "y": 181
   },
   {
     "id": 107,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1510,
     "y": 2272
   },
   {
     "id": 108,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 696,
     "y": 4000
   },
   {
     "id": 109,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1917,
     "y": 2370
   },
   {
     "id": 110,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2682,
     "y": 1386
   },
   {
     "id": 111,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3056,
     "y": 732
   },
   {
     "id": 112,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2326,
     "y": 4016
   },
   {
     "id": 113,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4349,
     "y": 1746
   },
   {
     "id": 114,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1644,
     "y": 1665
   },
   {
     "id": 115,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1407,
     "y": 3725
   },
   {
     "id": 116,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3812,
     "y": 3833
   },
   {
     "id": 117,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3487,
     "y": 2309
   },
   {
     "id": 118,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3600,
     "y": 2733
   },
   {
     "id": 119,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2965,
     "y": 2444
   },
   {
     "id": 120,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3317,
     "y": 3427
   },
   {
     "id": 121,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4435,
     "y": 4048
   },
   {
     "id": 122,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2369,
     "y": 1450
   },
   {
     "id": 123,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3372,
     "y": 1930
   },
   {
     "id": 124,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2075,
     "y": 268
   },
   {
     "id": 125,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2870,
     "y": 3989
   },
   {
     "id": 126,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3245,
     "y": 845
   },
   {
     "id": 127,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4541,
     "y": 1581
   },
   {
     "id": 128,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3617,
     "y": 3602
   },
   {
     "id": 129,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2078,
     "y": 868
   },
   {
     "id": 130,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1800,
     "y": 3089
   },
   {
     "id": 131,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3648,
     "y": 1175
   },
   {
     "id": 132,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1931,
     "y": 2938
   },
   {
     "id": 133,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1176,
     "y": 2916
   },
   {
     "id": 134,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3993,
     "y": 697
   },
   {
     "id": 135,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1831,
     "y": 1334
   },
   {
     "id": 136,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4976,
     "y": 2678
   },
   {
     "id": 137,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3456,
     "y": 1490
   },
   {
     "id": 138,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3185,
     "y": 3467
   },
   {
     "id": 139,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2343,
     "y": 1328
   },
   {
     "id": 140,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2611,
     "y": 2944
   },
   {
     "id": 141,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3918,
     "y": 2500
   },
   {
     "id": 142,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1122,
     "y": 4020
   },
   {
     "id": 143,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3118,
     "y": 3181
   },
   {
     "id": 144,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2238,
     "y": 4345
   },
   {
     "id": 145,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1672,
     "y": 3504
   },
   {
     "id": 146,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 796,
     "y": 3340
   },
   {
     "id": 147,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4884,
     "y": 3233
   },
   {
     "id": 148,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1284,
     "y": 3861
   },
   {
     "id": 149,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1866,
     "y": 1470
   },
   {
     "id": 150,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2519,
     "y": 4477
   },
   {
     "id": 151,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2821,
     "y": 2861
   },
   {
     "id": 152,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 455,
     "y": 1551
   },
   {
     "id": 153,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3032,
     "y": 1441
   },
   {
     "id": 154,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 482,
     "y": 3520
   },
   {
     "id": 155,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3409,
     "y": 3581
   },
   {
     "id": 156,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3221,
     "y": 2469
   },
   {
     "id": 157,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1211,
     "y": 3785
   },
   {
     "id": 158,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 323,
     "y": 3515
   },
   {
     "id": 159,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1640,
     "y": 1886
   },
   {
     "id": 160,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 647,
     "y": 2306
   },
   {
     "id": 161,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3141,
     "y": 2326
   },
   {
     "id": 162,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1157,
     "y": 1906
   },
   {
     "id": 163,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3170,
     "y": 775
   },
   {
     "id": 164,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3843,
     "y": 1655
   },
   {
     "id": 165,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2047,
     "y": 1405
   },
   {
     "id": 166,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2564,
     "y": 3911
   },
   {
     "id": 167,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4357,
     "y": 1345
   },
   {
     "id": 168,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1606,
     "y": 4284
   },
   {
     "id": 169,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1595,
     "y": 4754
   },
   {
     "id": 170,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3413,
     "y": 2935
   },
   {
     "id": 171,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3349,
     "y": 245
   },
   {
     "id": 172,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2147,
     "y": 2038
   },
   {
     "id": 173,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2813,
     "y": 4117
   },
   {
     "id": 174,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3617,
     "y": 3886
   },
   {
     "id": 175,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1742,
     "y": 2434
   },
   {
     "id": 176,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 516,
     "y": 2081
   },
   {
     "id": 177,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3317,
     "y": 3189
   },
   {
     "id": 178,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3875,
     "y": 2990
   },
   {
     "id": 179,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2556,
     "y": 2690
   },
   {
     "id": 180,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2152,
     "y": 4024
   },
   {
     "id": 181,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3178,
     "y": 4600
   },
   {
     "id": 182,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1123,
     "y": 2364
   },
   {
     "id": 183,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1825,
     "y": 4429
   },
   {
     "id": 184,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2879,
     "y": 2309
   },
   {
     "id": 185,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 298,
     "y": 1477
   },
   {
     "id": 186,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3155,
     "y": 174
   },
   {
     "id": 187,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4096,
     "y": 3244
   },
   {
     "id": 188,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3682,
     "y": 1896
   },
   {
     "id": 189,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 575,
     "y": 1261
   },
   {
     "id": 190,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2660,
     "y": 2187
   },
   {
     "id": 191,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3584,
     "y": 963
   },
   {
     "id": 192,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3194,
     "y": 2693
   },
   {
     "id": 193,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 987,
     "y": 3257
   },
   {
     "id": 194,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 494,
     "y": 3953
   },
   {
     "id": 195,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2593,
     "y": 156
   },
   {
     "id": 196,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1539,
     "y": 4653
   },
   {
     "id": 197,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4317,
     "y": 2774
   },
   {
     "id": 198,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2881,
     "y": 4483
   },
   {
     "id": 199,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 532,
     "y": 2359
   },
   {
     "id": 200,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3861,
     "y": 3131
   },
   {
     "id": 201,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4182,
     "y": 3995
   },
   {
     "id": 202,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3947,
     "y": 1830
   },
   {
     "id": 203,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1461,
     "y": 2076
   },
   {
     "id": 204,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3935,
     "y": 3371
   },
   {
     "id": 205,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 730,
     "y": 3594
   },
   {
     "id": 206,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3500,
     "y": 3862
   },
   {
     "id": 207,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3909,
     "y": 1105
   },
   {
     "id": 208,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2341,
     "y": 3347
   },
   {
     "id": 209,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 956,
     "y": 1559
   },
   {
     "id": 210,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1131,
     "y": 512
   },
   {
     "id": 211,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1629,
     "y": 2942
   },
   {
     "id": 212,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2996,
     "y": 167
   },
   {
     "id": 213,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3435,
     "y": 4166
   },
   {
     "id": 214,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1159,
     "y": 1354
   },
   {
     "id": 215,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2880,
     "y": 1895
   },
   {
     "id": 216,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1192,
     "y": 2621
   },
   {
     "id": 217,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2293,
     "y": 3878
   },
   {
     "id": 218,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3353,
     "y": 3316
   },
   {
     "id": 219,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4336,
     "y": 1643
   },
   {
     "id": 220,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2463,
     "y": 2243
   },
   {
     "id": 221,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1570,
     "y": 3712
   },
   {
     "id": 222,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1454,
     "y": 3615
   },
   {
     "id": 223,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4661,
     "y": 2244
   },
   {
     "id": 224,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1716,
     "y": 3880
   },
   {
     "id": 225,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3457,
     "y": 2440
   },
   {
     "id": 226,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1856,
     "y": 4805
   },
   {
     "id": 227,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4425,
     "y": 976
   },
   {
     "id": 228,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1231,
     "y": 3535
   },
   {
     "id": 229,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4040,
     "y": 1475
   },
   {
     "id": 230,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3215,
     "y": 1724
   },
   {
     "id": 231,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1377,
     "y": 4105
   },
   {
     "id": 232,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2940,
     "y": 2181
   },
   {
     "id": 233,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 946,
     "y": 695
   },
   {
     "id": 234,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2125,
     "y": 2274
   },
   {
     "id": 235,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3079,
     "y": 4723
   },
   {
     "id": 236,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4435,
     "y": 2919
   },
   {
     "id": 237,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 643,
     "y": 2777
   },
   {
     "id": 238,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2954,
     "y": 3813
   },
   {
     "id": 239,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2284,
     "y": 2166
   },
   {
     "id": 240,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 998,
     "y": 1781
   },
   {
     "id": 241,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3574,
     "y": 1628
   },
   {
     "id": 242,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2182,
     "y": 1139
   },
   {
     "id": 243,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1264,
     "y": 1192
   },
   {
     "id": 244,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1468,
     "y": 4334
   },
   {
     "id": 245,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1889,
     "y": 4517
   },
   {
     "id": 246,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 729,
     "y": 1798
   },
   {
     "id": 247,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3065,
     "y": 438
   },
   {
     "id": 248,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 202,
     "y": 2745
   },
   {
     "id": 249,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 48,
     "y": 2599
   },
   {
     "id": 250,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3631,
     "y": 4370
   },
   {
     "id": 251,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1914,
     "y": 2542
   },
   {
     "id": 252,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1653,
     "y": 1508
   },
   {
     "id": 253,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1425,
     "y": 3478
   },
   {
     "id": 254,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1026,
     "y": 1346
   },
   {
     "id": 255,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4267,
     "y": 2672
   },
   {
     "id": 256,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3257,
     "y": 1107
   },
   {
     "id": 257,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2825,
     "y": 1226
   },
   {
     "id": 258,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 587,
     "y": 3272
   },
   {
     "id": 259,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4576,
     "y": 3780
   },
   {
     "id": 260,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3694,
     "y": 920
   },
   {
     "id": 261,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2012,
     "y": 2300
   },
   {
     "id": 262,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2793,
     "y": 1492
   },
   {
     "id": 263,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 991,
     "y": 1110
   },
   {
     "id": 264,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 830,
     "y": 1117
   },
   {
     "id": 265,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2204,
     "y": 3462
   },
   {
     "id": 266,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2402,
     "y": 2366
   },
   {
     "id": 267,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2073,
     "y": 2904
   },
   {
     "id": 268,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 566,
     "y": 2656
   },
   {
     "id": 269,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4141,
     "y": 4174
   },
   {
     "id": 270,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3486,
     "y": 761
   },
   {
     "id": 271,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1866,
     "y": 3515
   },
   {
     "id": 272,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2362,
     "y": 638
   },
   {
     "id": 273,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1512,
     "y": 1833
   },
   {
     "id": 274,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1893,
     "y": 3997
   },
   {
     "id": 275,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2312,
     "y": 1704
   },
   {
     "id": 276,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1100,
     "y": 746
   },
   {
     "id": 277,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4913,
     "y": 2109
   },
   {
     "id": 278,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1373,
     "y": 2431
   },
   {
     "id": 279,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2379,
     "y": 1884
   },
   {
     "id": 280,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4663,
     "y": 3073
   },
   {
     "id": 281,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 804,
     "y": 3147
   },
   {
     "id": 282,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4464,
     "y": 2071
   },
   {
     "id": 283,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3032,
     "y": 545
   },
   {
     "id": 284,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1898,
     "y": 2693
   },
   {
     "id": 285,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3209,
     "y": 1529
   },
   {
     "id": 286,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4173,
     "y": 3522
   },
   {
     "id": 287,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3214,
     "y": 4488
   },
   {
     "id": 288,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3357,
     "y": 4101
   },
   {
     "id": 289,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3296,
     "y": 585
   },
   {
     "id": 290,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4093,
     "y": 3846
   },
   {
     "id": 291,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 412,
     "y": 1823
   },
   {
     "id": 292,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3589,
     "y": 310
   },
   {
     "id": 293,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2054,
     "y": 3347
   },
   {
     "id": 294,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3263,
     "y": 1882
   },
   {
     "id": 295,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3432,
     "y": 1083
   },
   {
     "id": 296,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 799,
     "y": 748
   },
   {
     "id": 297,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3752,
     "y": 2990
   },
   {
     "id": 298,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 230,
     "y": 1563
   },
   {
     "id": 299,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4008,
     "y": 1688
   },
   {
     "id": 300,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1599,
     "y": 1316
   },
   {
     "id": 301,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 704,
     "y": 4224
   },
   {
     "id": 302,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1480,
     "y": 567
   },
   {
     "id": 303,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4513,
     "y": 2281
   },
   {
     "id": 304,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3636,
     "y": 4646
   },
   {
     "id": 305,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1656,
     "y": 2378
   },
   {
     "id": 306,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2349,
     "y": 2773
   },
   {
     "id": 307,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2417,
     "y": 2523
   },
   {
     "id": 308,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3502,
     "y": 2204
   },
   {
     "id": 309,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3783,
     "y": 2786
   },
   {
     "id": 310,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4871,
     "y": 2507
   },
   {
     "id": 311,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 813,
     "y": 2618
   },
   {
     "id": 312,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3926,
     "y": 2169
   },
   {
     "id": 313,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4428,
     "y": 1207
   },
   {
     "id": 314,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3961,
     "y": 3239
   },
   {
     "id": 315,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2289,
     "y": 3019
   },
   {
     "id": 316,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2585,
     "y": 3049
   },
   {
     "id": 317,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4071,
     "y": 3971
   },
   {
     "id": 318,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3405,
     "y": 4522
   },
   {
     "id": 319,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2113,
     "y": 3543
   },
   {
     "id": 320,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 111,
     "y": 2123
   },
   {
     "id": 321,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1232,
     "y": 4606
   },
   {
     "id": 322,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 175,
     "y": 3395
   },
   {
     "id": 323,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1501,
     "y": 4126
   },
   {
     "id": 324,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3063,
     "y": 3080
   },
   {
     "id": 325,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1724,
     "y": 1373
   },
   {
     "id": 326,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 373,
     "y": 3322
   },
   {
     "id": 327,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 711,
     "y": 2490
   },
   {
     "id": 328,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2510,
     "y": 3570
   },
   {
     "id": 329,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 900,
     "y": 1920
   },
   {
     "id": 330,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2911,
     "y": 3651
   },
   {
     "id": 331,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4506,
     "y": 2506
   },
   {
     "id": 332,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1521,
     "y": 2734
   },
   {
     "id": 333,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1368,
     "y": 4308
   },
   {
     "id": 334,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3775,
     "y": 4262
   },
   {
     "id": 335,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2002,
     "y": 4672
   },
   {
     "id": 336,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 162,
     "y": 3228
   },
   {
     "id": 337,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1235,
     "y": 3021
   },
   {
     "id": 338,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2192,
     "y": 897
   },
   {
     "id": 339,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 509,
     "y": 3653
   },
   {
     "id": 340,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3122,
     "y": 4207
   },
   {
     "id": 341,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2941,
     "y": 1110
   },
   {
     "id": 342,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3429,
     "y": 2027
   },
   {
     "id": 343,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 335,
     "y": 3076
   },
   {
     "id": 344,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 237,
     "y": 1985
   },
   {
     "id": 345,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4284,
     "y": 930
   },
   {
     "id": 346,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2819,
     "y": 3519
   },
   {
     "id": 347,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1497,
     "y": 2853
   },
   {
     "id": 348,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2700,
     "y": 1796
   },
   {
     "id": 349,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4751,
     "y": 2507
   },
   {
     "id": 350,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1137,
     "y": 4403
   },
   {
     "id": 351,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1102,
     "y": 1597
   },
   {
     "id": 352,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1454,
     "y": 1510
   },
   {
     "id": 353,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3023,
     "y": 4164
   },
   {
     "id": 354,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 610,
     "y": 1758
   },
   {
     "id": 355,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2407,
     "y": 4852
   },
   {
     "id": 356,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2797,
     "y": 2156
   },
   {
     "id": 357,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3412,
     "y": 680
   },
   {
     "id": 358,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3121,
     "y": 2893
   },
   {
     "id": 359,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1733,
     "y": 3385
   },
   {
     "id": 360,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4918,
     "y": 2361
   },
   {
     "id": 361,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1883,
     "y": 1610
   },
   {
     "id": 362,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3023,
     "y": 3677
   },
   {
     "id": 363,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2586,
     "y": 4558
   },
   {
     "id": 364,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1606,
     "y": 3045
   },
   {
     "id": 365,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1432,
     "y": 3231
   },
   {
     "id": 366,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4003,
     "y": 4230
   },
   {
     "id": 367,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 531,
     "y": 1411
   },
   {
     "id": 368,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 799,
     "y": 4165
   },
   {
     "id": 369,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2520,
     "y": 4742
   },
   {
     "id": 370,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2360,
     "y": 981
   },
   {
     "id": 371,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2602,
     "y": 2069
   },
   {
     "id": 372,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2456,
     "y": 3659
   },
   {
     "id": 373,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2071,
     "y": 3158
   },
   {
     "id": 374,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3425,
     "y": 3106
   },
   {
     "id": 375,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2540,
     "y": 4267
   },
   {
     "id": 376,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4677,
     "y": 2368
   },
   {
     "id": 377,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4439,
     "y": 2731
   },
   {
     "id": 378,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2313,
     "y": 1158
   },
   {
     "id": 379,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4320,
     "y": 2353
   },
   {
     "id": 380,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1996,
     "y": 3480
   },
   {
     "id": 381,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2812,
     "y": 3905
   },
   {
     "id": 382,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1521,
     "y": 1956
   },
   {
     "id": 383,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1282,
     "y": 4030
   },
   {
     "id": 384,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4054,
     "y": 2048
   },
   {
     "id": 385,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4695,
     "y": 3688
   },
   {
     "id": 386,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3356,
     "y": 1472
   },
   {
     "id": 387,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3490,
     "y": 4028
   },
   {
     "id": 388,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2822,
     "y": 2435
   },
   {
     "id": 389,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 615,
     "y": 2563
   },
   {
     "id": 390,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2909,
     "y": 3289
   },
   {
     "id": 391,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1874,
     "y": 4104
   },
   {
     "id": 392,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1169,
     "y": 1759
   },
   {
     "id": 393,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3777,
     "y": 3412
   },
   {
     "id": 394,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1336,
     "y": 1739
   },
   {
     "id": 395,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3786,
     "y": 2024
   },
   {
     "id": 396,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2128,
     "y": 4402
   },
   {
     "id": 397,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1748,
     "y": 2854
   },
   {
     "id": 398,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2242,
     "y": 4703
   },
   {
     "id": 399,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1804,
     "y": 2975
   },
   {
     "id": 400,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1788,
     "y": 1876
   },
   {
     "id": 401,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2423,
     "y": 38
   },
   {
     "id": 402,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 366,
     "y": 2706
   },
   {
     "id": 403,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3892,
     "y": 2610
   },
   {
     "id": 404,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3403,
     "y": 1643
   },
   {
     "id": 405,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3817,
     "y": 3608
   },
   {
     "id": 406,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1042,
     "y": 2535
   },
   {
     "id": 407,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3798,
     "y": 1360
   },
   {
     "id": 408,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2436,
     "y": 3414
   },
   {
     "id": 409,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2900,
     "y": 4918
   },
   {
     "id": 410,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2537,
     "y": 4974
   },
   {
     "id": 411,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4378,
     "y": 3724
   },
   {
     "id": 412,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4117,
     "y": 1032
   },
   {
     "id": 413,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2969,
     "y": 809
   },
   {
     "id": 414,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 830,
     "y": 1312
   },
   {
     "id": 415,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1903,
     "y": 640
   },
   {
     "id": 416,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 962,
     "y": 4226
   },
   {
     "id": 417,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2522,
     "y": 4133
   },
   {
     "id": 418,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 870,
     "y": 2072
   },
   {
     "id": 419,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1315,
     "y": 1467
   },
   {
     "id": 420,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4281,
     "y": 1435
   },
   {
     "id": 421,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2064,
     "y": 4922
   },
   {
     "id": 422,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2414,
     "y": 2893
   },
   {
     "id": 423,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2590,
     "y": 2501
   },
   {
     "id": 424,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4148,
     "y": 1333
   },
   {
     "id": 425,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2878,
     "y": 613
   },
   {
     "id": 426,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3854,
     "y": 4374
   },
   {
     "id": 427,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4169,
     "y": 3734
   },
   {
     "id": 428,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 929,
     "y": 1029
   },
   {
     "id": 429,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 871,
     "y": 2301
   },
   {
     "id": 430,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 862,
     "y": 3942
   },
   {
     "id": 431,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1656,
     "y": 4587
   },
   {
     "id": 432,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3631,
     "y": 3350
   },
   {
     "id": 433,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 538,
     "y": 2773
   },
   {
     "id": 434,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3986,
     "y": 3794
   },
   {
     "id": 435,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1368,
     "y": 3027
   },
   {
     "id": 436,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2782,
     "y": 3389
   },
   {
     "id": 437,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3520,
     "y": 1337
   },
   {
     "id": 438,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4833,
     "y": 3353
   },
   {
     "id": 439,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4734,
     "y": 2829
   },
   {
     "id": 440,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2734,
     "y": 3994
   },
   {
     "id": 441,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3788,
     "y": 2562
   },
   {
     "id": 442,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2131,
     "y": 2155
   },
   {
     "id": 443,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3046,
     "y": 980
   },
   {
     "id": 444,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 156,
     "y": 1756
   },
   {
     "id": 445,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1782,
     "y": 1241
   },
   {
     "id": 446,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 492,
     "y": 3827
   },
   {
     "id": 447,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 765,
     "y": 2740
   },
   {
     "id": 448,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1013,
     "y": 3022
   },
   {
     "id": 449,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2931,
     "y": 1654
   },
   {
     "id": 450,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2794,
     "y": 3080
   },
   {
     "id": 451,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1076,
     "y": 2791
   },
   {
     "id": 452,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1301,
     "y": 2587
   },
   {
     "id": 453,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3059,
     "y": 1672
   },
   {
     "id": 454,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3372,
     "y": 2135
   },
   {
     "id": 455,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1561,
     "y": 1561
   },
   {
     "id": 456,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2378,
     "y": 4443
   },
   {
     "id": 457,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4303,
     "y": 2184
   },
   {
     "id": 458,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4749,
     "y": 1654
   },
   {
     "id": 459,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1158,
     "y": 2031
   },
   {
     "id": 460,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3305,
     "y": 4252
   },
   {
     "id": 461,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2698,
     "y": 2624
   },
   {
     "id": 462,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3162,
     "y": 3717
   },
   {
     "id": 463,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1327,
     "y": 2139
   },
   {
     "id": 464,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1234,
     "y": 729
   },
   {
     "id": 465,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2787,
     "y": 3651
   },
   {
     "id": 466,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1745,
     "y": 4745
   },
   {
     "id": 467,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2867,
     "y": 2564
   },
   {
     "id": 468,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3487,
     "y": 1853
   },
   {
     "id": 469,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4437,
     "y": 2368
   },
   {
     "id": 470,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1567,
     "y": 3967
   },
   {
     "id": 471,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1269,
     "y": 4174
   },
   {
     "id": 472,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3045,
     "y": 2006
   },
   {
     "id": 473,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4601,
     "y": 3204
   },
   {
     "id": 474,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 48,
     "y": 2855
   },
   {
     "id": 475,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4612,
     "y": 2862
   },
   {
     "id": 476,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1919,
     "y": 3340
   },
   {
     "id": 477,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2510,
     "y": 3163
   },
   {
     "id": 478,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1474,
     "y": 910
   },
   {
     "id": 479,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2564,
     "y": 522
   },
   {
     "id": 480,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1936,
     "y": 1233
   },
   {
     "id": 481,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2456,
     "y": 3295
   },
   {
     "id": 482,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4199,
     "y": 3112
   },
   {
     "id": 483,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3555,
     "y": 3494
   },
   {
     "id": 484,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3181,
     "y": 3581
   },
   {
     "id": 485,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4068,
     "y": 4319
   },
   {
     "id": 486,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1456,
     "y": 1707
   },
   {
     "id": 487,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1711,
     "y": 4437
   },
   {
     "id": 488,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 901,
     "y": 2555
   },
   {
     "id": 489,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2973,
     "y": 3512
   },
   {
     "id": 490,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3974,
     "y": 4115
   },
   {
     "id": 491,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2012,
     "y": 2714
   },
   {
     "id": 492,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1050,
     "y": 2659
   },
   {
     "id": 493,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1715,
     "y": 4002
   },
   {
     "id": 494,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2308,
     "y": 4169
   },
   {
     "id": 495,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2122,
     "y": 3050
   },
   {
     "id": 496,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3441,
     "y": 3768
   },
   {
     "id": 497,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4022,
     "y": 521
   },
   {
     "id": 498,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4205,
     "y": 1860
   },
   {
     "id": 499,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3455,
     "y": 4624
   },
   {
     "id": 500,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4765,
     "y": 2226
   },
   {
     "id": 501,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4449,
     "y": 2604
   },
   {
     "id": 502,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 596,
     "y": 3796
   },
   {
     "id": 503,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1562,
     "y": 2423
   },
   {
     "id": 504,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3269,
     "y": 2974
   },
   {
     "id": 505,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2895,
     "y": 4758
   },
   {
     "id": 506,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3294,
     "y": 383
   },
   {
     "id": 507,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 639,
     "y": 1139
   },
   {
     "id": 508,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2688,
     "y": 3254
   },
   {
     "id": 509,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3768,
     "y": 362
   },
   {
     "id": 510,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2544,
     "y": 2327
   },
   {
     "id": 511,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1497,
     "y": 1356
   },
   {
     "id": 512,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 147,
     "y": 2963
   },
   {
     "id": 513,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1325,
     "y": 3376
   },
   {
     "id": 514,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3550,
     "y": 4175
   },
   {
     "id": 515,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 311,
     "y": 1882
   },
   {
     "id": 516,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3011,
     "y": 3305
   },
   {
     "id": 517,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4678,
     "y": 2724
   },
   {
     "id": 518,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 105,
     "y": 2682
   },
   {
     "id": 519,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1000,
     "y": 1892
   },
   {
     "id": 520,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2383,
     "y": 482
   },
   {
     "id": 521,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3502,
     "y": 3282
   },
   {
     "id": 522,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2598,
     "y": 268
   },
   {
     "id": 523,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2003,
     "y": 4012
   },
   {
     "id": 524,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4153,
     "y": 2417
   },
   {
     "id": 525,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2636,
     "y": 4049
   },
   {
     "id": 526,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3140,
     "y": 1367
   },
   {
     "id": 527,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1311,
     "y": 2942
   },
   {
     "id": 528,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 240,
     "y": 2883
   },
   {
     "id": 529,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3311,
     "y": 4763
   },
   {
     "id": 530,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2218,
     "y": 27
   },
   {
     "id": 531,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4441,
     "y": 1485
   },
   {
     "id": 532,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3604,
     "y": 1482
   },
   {
     "id": 533,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2132,
     "y": 1461
   },
   {
     "id": 534,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1077,
     "y": 3471
   },
   {
     "id": 535,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4152,
     "y": 2887
   },
   {
     "id": 536,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2099,
     "y": 626
   },
   {
     "id": 537,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2117,
     "y": 2531
   },
   {
     "id": 538,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 651,
     "y": 1017
   },
   {
     "id": 539,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4621,
     "y": 2029
   },
   {
     "id": 540,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2156,
     "y": 3322
   },
   {
     "id": 541,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 662,
     "y": 906
   },
   {
     "id": 542,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3280,
     "y": 2280
   },
   {
     "id": 543,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4387,
     "y": 3417
   },
   {
     "id": 544,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1415,
     "y": 683
   },
   {
     "id": 545,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4060,
     "y": 4453
   },
   {
     "id": 546,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2100,
     "y": 34
   },
   {
     "id": 547,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3599,
     "y": 2455
   },
   {
     "id": 548,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2788,
     "y": 1740
   },
   {
     "id": 549,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1911,
     "y": 328
   },
   {
     "id": 550,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1822,
     "y": 1708
   },
   {
     "id": 551,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3151,
     "y": 4322
   },
   {
     "id": 552,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 323,
     "y": 2417
   },
   {
     "id": 553,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1640,
     "y": 2250
   },
   {
     "id": 554,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4481,
     "y": 3175
   },
   {
     "id": 555,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 472,
     "y": 3209
   },
   {
     "id": 556,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2493,
     "y": 1968
   },
   {
     "id": 557,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3076,
     "y": 2438
   },
   {
     "id": 558,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2382,
     "y": 4562
   },
   {
     "id": 559,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3391,
     "y": 470
   },
   {
     "id": 560,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2735,
     "y": 2497
   },
   {
     "id": 561,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4202,
     "y": 3879
   },
   {
     "id": 562,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3959,
     "y": 1538
   },
   {
     "id": 563,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3507,
     "y": 409
   },
   {
     "id": 564,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4376,
     "y": 3086
   },
   {
     "id": 565,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2600,
     "y": 3497
   },
   {
     "id": 566,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1721,
     "y": 324
   },
   {
     "id": 567,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1951,
     "y": 1351
   },
   {
     "id": 568,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3081,
     "y": 1571
   },
   {
     "id": 569,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1354,
     "y": 1327
   },
   {
     "id": 570,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 975,
     "y": 3757
   },
   {
     "id": 571,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1275,
     "y": 2700
   },
   {
     "id": 572,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2175,
     "y": 2762
   },
   {
     "id": 573,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2506,
     "y": 438
   },
   {
     "id": 574,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3414,
     "y": 1274
   },
   {
     "id": 575,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1917,
     "y": 3856
   },
   {
     "id": 576,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3305,
     "y": 761
   },
   {
     "id": 577,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2163,
     "y": 2389
   },
   {
     "id": 578,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1003,
     "y": 3880
   },
   {
     "id": 579,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2607,
     "y": 871
   },
   {
     "id": 580,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2004,
     "y": 1592
   },
   {
     "id": 581,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3721,
     "y": 4079
   },
   {
     "id": 582,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3522,
     "y": 4337
   },
   {
     "id": 583,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2784,
     "y": 4700
   },
   {
     "id": 584,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3565,
     "y": 2618
   },
   {
     "id": 585,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3121,
     "y": 1255
   },
   {
     "id": 586,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4019,
     "y": 1345
   },
   {
     "id": 587,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 650,
     "y": 1328
   },
   {
     "id": 588,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2964,
     "y": 4037
   },
   {
     "id": 589,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1452,
     "y": 4596
   },
   {
     "id": 590,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2975,
     "y": 3177
   },
   {
     "id": 591,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1440,
     "y": 1135
   },
   {
     "id": 592,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3864,
     "y": 1455
   },
   {
     "id": 593,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 956,
     "y": 3468
   },
   {
     "id": 594,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1259,
     "y": 2799
   },
   {
     "id": 595,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2937,
     "y": 4231
   },
   {
     "id": 596,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 633,
     "y": 2110
   },
   {
     "id": 597,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1208,
     "y": 1549
   },
   {
     "id": 598,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4831,
     "y": 2702
   },
   {
     "id": 599,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2455,
     "y": 866
   },
   {
     "id": 600,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2663,
     "y": 4710
   },
   {
     "id": 601,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3962,
     "y": 2812
   },
   {
     "id": 602,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1424,
     "y": 4431
   },
   {
     "id": 603,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2329,
     "y": 4271
   },
   {
     "id": 604,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2524,
     "y": 2814
   },
   {
     "id": 605,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4183,
     "y": 1135
   },
   {
     "id": 606,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3840,
     "y": 4478
   },
   {
     "id": 607,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 940,
     "y": 873
   },
   {
     "id": 608,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2213,
     "y": 162
   },
   {
     "id": 609,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2482,
     "y": 4034
   },
   {
     "id": 610,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2393,
     "y": 2105
   },
   {
     "id": 611,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2588,
     "y": 1310
   },
   {
     "id": 612,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1387,
     "y": 434
   },
   {
     "id": 613,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1945,
     "y": 3580
   },
   {
     "id": 614,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 327,
     "y": 2132
   },
   {
     "id": 615,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2986,
     "y": 4603
   },
   {
     "id": 616,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4796,
     "y": 2053
   },
   {
     "id": 617,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2759,
     "y": 1934
   },
   {
     "id": 618,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 409,
     "y": 1215
   },
   {
     "id": 619,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4382,
     "y": 3231
   },
   {
     "id": 620,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2096,
     "y": 1817
   },
   {
     "id": 621,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3195,
     "y": 517
   },
   {
     "id": 622,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3543,
     "y": 4521
   },
   {
     "id": 623,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4576,
     "y": 1209
   },
   {
     "id": 624,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1357,
     "y": 576
   },
   {
     "id": 625,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2590,
     "y": 1041
   },
   {
     "id": 626,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2026,
     "y": 2120
   },
   {
     "id": 627,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1989,
     "y": 3244
   },
   {
     "id": 628,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3806,
     "y": 796
   },
   {
     "id": 629,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3509,
     "y": 2886
   },
   {
     "id": 630,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4711,
     "y": 2141
   },
   {
     "id": 631,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4206,
     "y": 3621
   },
   {
     "id": 632,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2204,
     "y": 1896
   },
   {
     "id": 633,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2873,
     "y": 3001
   },
   {
     "id": 634,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3771,
     "y": 1028
   },
   {
     "id": 635,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 737,
     "y": 2962
   },
   {
     "id": 636,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 90,
     "y": 1914
   },
   {
     "id": 637,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4380,
     "y": 3932
   },
   {
     "id": 638,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 223,
     "y": 2194
   },
   {
     "id": 639,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2443,
     "y": 2658
   },
   {
     "id": 640,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2261,
     "y": 2555
   },
   {
     "id": 641,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4188,
     "y": 2055
   },
   {
     "id": 642,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1020,
     "y": 4005
   },
   {
     "id": 643,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1042,
     "y": 4443
   },
   {
     "id": 644,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2424,
     "y": 4314
   },
   {
     "id": 645,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1140,
     "y": 3259
   },
   {
     "id": 646,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4166,
     "y": 2206
   },
   {
     "id": 647,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3187,
     "y": 662
   },
   {
     "id": 648,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2355,
     "y": 3639
   },
   {
     "id": 649,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4735,
     "y": 3002
   },
   {
     "id": 650,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1135,
     "y": 1452
   },
   {
     "id": 651,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 975,
     "y": 2001
   },
   {
     "id": 652,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3221,
     "y": 3063
   },
   {
     "id": 653,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3683,
     "y": 2371
   },
   {
     "id": 654,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 177,
     "y": 2505
   },
   {
     "id": 655,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2546,
     "y": 1824
   },
   {
     "id": 656,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3105,
     "y": 1102
   },
   {
     "id": 657,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4871,
     "y": 1812
   },
   {
     "id": 658,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3364,
     "y": 4410
   },
   {
     "id": 659,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3711,
     "y": 1577
   },
   {
     "id": 660,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3650,
     "y": 1737
   },
   {
     "id": 661,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2690,
     "y": 940
   },
   {
     "id": 662,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3810,
     "y": 459
   },
   {
     "id": 663,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2737,
     "y": 563
   },
   {
     "id": 664,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4566,
     "y": 3649
   },
   {
     "id": 665,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2987,
     "y": 2943
   },
   {
     "id": 666,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2488,
     "y": 2425
   },
   {
     "id": 667,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4214,
     "y": 3245
   },
   {
     "id": 668,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2972,
     "y": 1294
   },
   {
     "id": 669,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2656,
     "y": 51
   },
   {
     "id": 670,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1605,
     "y": 2631
   },
   {
     "id": 671,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1528,
     "y": 3143
   },
   {
     "id": 672,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3660,
     "y": 740
   },
   {
     "id": 673,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2300,
     "y": 3541
   },
   {
     "id": 674,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2737,
     "y": 2075
   },
   {
     "id": 675,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3709,
     "y": 3800
   },
   {
     "id": 676,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4120,
     "y": 1672
   },
   {
     "id": 677,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2252,
     "y": 3161
   },
   {
     "id": 678,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2190,
     "y": 4574
   },
   {
     "id": 679,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 726,
     "y": 3885
   },
   {
     "id": 680,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1271,
     "y": 4486
   },
   {
     "id": 681,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 820,
     "y": 1516
   },
   {
     "id": 682,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3443,
     "y": 3376
   },
   {
     "id": 683,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1333,
     "y": 4572
   },
   {
     "id": 684,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4588,
     "y": 3306
   },
   {
     "id": 685,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2700,
     "y": 4435
   },
   {
     "id": 686,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1731,
     "y": 1137
   },
   {
     "id": 687,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 500,
     "y": 2476
   },
   {
     "id": 688,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 896,
     "y": 1417
   },
   {
     "id": 689,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 519,
     "y": 1037
   },
   {
     "id": 690,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1337,
     "y": 318
   },
   {
     "id": 691,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 821,
     "y": 2171
   },
   {
     "id": 692,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2399,
     "y": 3508
   },
   {
     "id": 693,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4803,
     "y": 3087
   },
   {
     "id": 694,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3680,
     "y": 1279
   },
   {
     "id": 695,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1777,
     "y": 915
   },
   {
     "id": 696,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3565,
     "y": 3099
   },
   {
     "id": 697,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2418,
     "y": 4965
   },
   {
     "id": 698,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2094,
     "y": 4765
   },
   {
     "id": 699,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1134,
     "y": 2135
   },
   {
     "id": 700,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1735,
     "y": 3255
   },
   {
     "id": 701,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1713,
     "y": 4224
   },
   {
     "id": 702,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3755,
     "y": 3948
   },
   {
     "id": 703,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1759,
     "y": 3574
   },
   {
     "id": 704,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4051,
     "y": 2224
   },
   {
     "id": 705,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1729,
     "y": 2678
   },
   {
     "id": 706,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2234,
     "y": 4943
   },
   {
     "id": 707,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4353,
     "y": 1096
   },
   {
     "id": 708,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1947,
     "y": 2027
   },
   {
     "id": 709,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3103,
     "y": 2763
   },
   {
     "id": 710,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3783,
     "y": 2134
   },
   {
     "id": 711,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2079,
     "y": 4553
   },
   {
     "id": 712,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 328,
     "y": 2952
   },
   {
     "id": 713,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3880,
     "y": 3460
   },
   {
     "id": 714,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1560,
     "y": 3582
   },
   {
     "id": 715,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2321,
     "y": 195
   },
   {
     "id": 716,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2080,
     "y": 1167
   },
   {
     "id": 717,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 901,
     "y": 1756
   },
   {
     "id": 718,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 387,
     "y": 1725
   },
   {
     "id": 719,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3440,
     "y": 3480
   },
   {
     "id": 720,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1242,
     "y": 611
   },
   {
     "id": 721,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1277,
     "y": 913
   },
   {
     "id": 722,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2507,
     "y": 757
   },
   {
     "id": 723,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2825,
     "y": 2691
   },
   {
     "id": 724,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1856,
     "y": 784
   },
   {
     "id": 725,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2700,
     "y": 2878
   },
   {
     "id": 726,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4481,
     "y": 3512
   },
   {
     "id": 727,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4098,
     "y": 3051
   },
   {
     "id": 728,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3293,
     "y": 965
   },
   {
     "id": 729,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4025,
     "y": 2695
   },
   {
     "id": 730,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2250,
     "y": 1468
   },
   {
     "id": 731,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4463,
     "y": 1852
   },
   {
     "id": 732,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2669,
     "y": 4935
   },
   {
     "id": 733,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3060,
     "y": 3933
   },
   {
     "id": 734,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1891,
     "y": 463
   },
   {
     "id": 735,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3309,
     "y": 1687
   },
   {
     "id": 736,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2517,
     "y": 641
   },
   {
     "id": 737,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2984,
     "y": 2287
   },
   {
     "id": 738,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4055,
     "y": 3677
   },
   {
     "id": 739,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3264,
     "y": 2019
   },
   {
     "id": 740,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1721,
     "y": 493
   },
   {
     "id": 741,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1969,
     "y": 4446
   },
   {
     "id": 742,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 491,
     "y": 1683
   },
   {
     "id": 743,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2101,
     "y": 379
   },
   {
     "id": 744,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2760,
     "y": 4557
   },
   {
     "id": 745,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 849,
     "y": 4263
   },
   {
     "id": 746,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2516,
     "y": 4634
   },
   {
     "id": 747,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3326,
     "y": 2404
   },
   {
     "id": 748,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3347,
     "y": 2773
   },
   {
     "id": 749,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3598,
     "y": 1078
   },
   {
     "id": 750,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1666,
     "y": 784
   },
   {
     "id": 751,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1919,
     "y": 2810
   },
   {
     "id": 752,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 179,
     "y": 2337
   },
   {
     "id": 753,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2703,
     "y": 1093
   },
   {
     "id": 754,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2207,
     "y": 654
   },
   {
     "id": 755,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4787,
     "y": 2365
   },
   {
     "id": 756,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 260,
     "y": 1788
   },
   {
     "id": 757,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 332,
     "y": 2266
   },
   {
     "id": 758,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3893,
     "y": 919
   },
   {
     "id": 759,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3843,
     "y": 1258
   },
   {
     "id": 760,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4749,
     "y": 3225
   },
   {
     "id": 761,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3111,
     "y": 3845
   },
   {
     "id": 762,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2508,
     "y": 1458
   },
   {
     "id": 763,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1580,
     "y": 276
   },
   {
     "id": 764,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2452,
     "y": 1136
   },
   {
     "id": 765,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4131,
     "y": 905
   },
   {
     "id": 766,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3872,
     "y": 4207
   },
   {
     "id": 767,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1605,
     "y": 4093
   },
   {
     "id": 768,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3344,
     "y": 1170
   },
   {
     "id": 769,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1995,
     "y": 3787
   },
   {
     "id": 770,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3625,
     "y": 435
   },
   {
     "id": 771,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2991,
     "y": 2606
   },
   {
     "id": 772,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4708,
     "y": 1804
   },
   {
     "id": 773,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 225,
     "y": 3052
   },
   {
     "id": 774,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1993,
     "y": 790
   },
   {
     "id": 775,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2063,
     "y": 1928
   },
   {
     "id": 776,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1337,
     "y": 2281
   },
   {
     "id": 777,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3191,
     "y": 1028
   },
   {
     "id": 778,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2127,
     "y": 4147
   },
   {
     "id": 779,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1317,
     "y": 3136
   },
   {
     "id": 780,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3729,
     "y": 2875
   },
   {
     "id": 781,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3481,
     "y": 964
   },
   {
     "id": 782,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1785,
     "y": 1565
   },
   {
     "id": 783,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1881,
     "y": 2157
   },
   {
     "id": 784,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2020,
     "y": 1700
   },
   {
     "id": 785,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 46,
     "y": 2426
   },
   {
     "id": 786,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1667,
     "y": 3761
   },
   {
     "id": 787,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2836,
     "y": 191
   },
   {
     "id": 788,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4158,
     "y": 1554
   },
   {
     "id": 789,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 439,
     "y": 3021
   },
   {
     "id": 790,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3050,
     "y": 3401
   },
   {
     "id": 791,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3309,
     "y": 1585
   },
   {
     "id": 792,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 697,
     "y": 3101
   },
   {
     "id": 793,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4707,
     "y": 3346
   },
   {
     "id": 794,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4837,
     "y": 2984
   },
   {
     "id": 795,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1193,
     "y": 4301
   },
   {
     "id": 796,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2789,
     "y": 1632
   },
   {
     "id": 797,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3816,
     "y": 2422
   },
   {
     "id": 798,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3180,
     "y": 4867
   },
   {
     "id": 799,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2397,
     "y": 3853
   },
   {
     "id": 800,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 690,
     "y": 3379
   },
   {
     "id": 801,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4530,
     "y": 3010
   },
   {
     "id": 802,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2865,
     "y": 52
   },
   {
     "id": 803,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3940,
     "y": 4526
   },
   {
     "id": 804,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 615,
     "y": 4063
   },
   {
     "id": 805,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4481,
     "y": 3928
   },
   {
     "id": 806,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4061,
     "y": 1587
   },
   {
     "id": 807,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1497,
     "y": 2955
   },
   {
     "id": 808,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1813,
     "y": 3725
   },
   {
     "id": 809,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2820,
     "y": 4386
   },
   {
     "id": 810,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3453,
     "y": 2601
   },
   {
     "id": 811,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3864,
     "y": 3283
   },
   {
     "id": 812,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2465,
     "y": 3048
   },
   {
     "id": 813,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2701,
     "y": 3495
   },
   {
     "id": 814,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1947,
     "y": 101
   },
   {
     "id": 815,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4508,
     "y": 1068
   },
   {
     "id": 816,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 757,
     "y": 848
   },
   {
     "id": 817,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1131,
     "y": 1056
   },
   {
     "id": 818,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1451,
     "y": 3346
   },
   {
     "id": 819,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4080,
     "y": 1223
   },
   {
     "id": 820,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4575,
     "y": 2410
   },
   {
     "id": 821,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 849,
     "y": 4067
   },
   {
     "id": 822,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1100,
     "y": 3853
   },
   {
     "id": 823,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3019,
     "y": 4402
   },
   {
     "id": 824,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3300,
     "y": 3604
   },
   {
     "id": 825,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2467,
     "y": 550
   },
   {
     "id": 826,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1401,
     "y": 4006
   },
   {
     "id": 827,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1371,
     "y": 4207
   },
   {
     "id": 828,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2115,
     "y": 759
   },
   {
     "id": 829,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3112,
     "y": 2562
   },
   {
     "id": 830,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 531,
     "y": 3405
   },
   {
     "id": 831,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4686,
     "y": 1316
   },
   {
     "id": 832,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4268,
     "y": 3395
   },
   {
     "id": 833,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 659,
     "y": 3668
   },
   {
     "id": 834,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2752,
     "y": 2301
   },
   {
     "id": 835,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1980,
     "y": 537
   },
   {
     "id": 836,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2178,
     "y": 309
   },
   {
     "id": 837,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2731,
     "y": 461
   },
   {
     "id": 838,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3910,
     "y": 4037
   },
   {
     "id": 839,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1142,
     "y": 3394
   },
   {
     "id": 840,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 730,
     "y": 2839
   },
   {
     "id": 841,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2206,
     "y": 2963
   },
   {
     "id": 842,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 238,
     "y": 2615
   },
   {
     "id": 843,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3406,
     "y": 336
   },
   {
     "id": 844,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1818,
     "y": 2573
   },
   {
     "id": 845,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2667,
     "y": 3646
   },
   {
     "id": 846,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4177,
     "y": 4271
   },
   {
     "id": 847,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2682,
     "y": 699
   },
   {
     "id": 848,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4937,
     "y": 2922
   },
   {
     "id": 849,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1640,
     "y": 3175
   },
   {
     "id": 850,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4915,
     "y": 1964
   },
   {
     "id": 851,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2991,
     "y": 1775
   },
   {
     "id": 852,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4250,
     "y": 810
   },
   {
     "id": 853,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4407,
     "y": 2164
   },
   {
     "id": 854,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2686,
     "y": 4162
   },
   {
     "id": 855,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1823,
     "y": 2281
   },
   {
     "id": 856,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2305,
     "y": 2897
   },
   {
     "id": 857,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 742,
     "y": 3234
   },
   {
     "id": 858,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3351,
     "y": 882
   },
   {
     "id": 859,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3243,
     "y": 3938
   },
   {
     "id": 860,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2114,
     "y": 3838
   },
   {
     "id": 861,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4995,
     "y": 2484
   },
   {
     "id": 862,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1179,
     "y": 821
   },
   {
     "id": 863,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3672,
     "y": 627
   },
   {
     "id": 864,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 619,
     "y": 2436
   },
   {
     "id": 865,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 642,
     "y": 1658
   },
   {
     "id": 866,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1572,
     "y": 4469
   },
   {
     "id": 867,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1787,
     "y": 197
   },
   {
     "id": 868,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2117,
     "y": 1587
   },
   {
     "id": 869,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 395,
     "y": 3671
   },
   {
     "id": 870,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1087,
     "y": 3696
   },
   {
     "id": 871,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1417,
     "y": 2722
   },
   {
     "id": 872,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2409,
     "y": 369
   },
   {
     "id": 873,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3263,
     "y": 1301
   },
   {
     "id": 874,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1948,
     "y": 4925
   },
   {
     "id": 875,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2289,
     "y": 2682
   },
   {
     "id": 876,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4380,
     "y": 1998
   },
   {
     "id": 877,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1598,
     "y": 479
   },
   {
     "id": 878,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 767,
     "y": 3469
   },
   {
     "id": 879,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2994,
     "y": 291
   },
   {
     "id": 880,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3529,
     "y": 3714
   },
   {
     "id": 881,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4099,
     "y": 717
   },
   {
     "id": 882,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4892,
     "y": 2622
   },
   {
     "id": 883,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3631,
     "y": 1374
   },
   {
     "id": 884,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4483,
     "y": 3291
   },
   {
     "id": 885,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4045,
     "y": 3339
   },
   {
     "id": 886,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1129,
     "y": 4535
   },
   {
     "id": 887,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 354,
     "y": 3191
   },
   {
     "id": 888,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 589,
     "y": 3116
   },
   {
     "id": 889,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 905,
     "y": 4419
   },
   {
     "id": 890,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2333,
     "y": 2291
   },
   {
     "id": 891,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3273,
     "y": 171
   },
   {
     "id": 892,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1195,
     "y": 2519
   },
   {
     "id": 893,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2433,
     "y": 215
   },
   {
     "id": 894,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2395,
     "y": 1779
   },
   {
     "id": 895,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3378,
     "y": 1828
   },
   {
     "id": 896,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1691,
     "y": 4850
   },
   {
     "id": 897,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 991,
     "y": 2113
   },
   {
     "id": 898,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1328,
     "y": 3637
   },
   {
     "id": 899,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3706,
     "y": 2623
   },
   {
     "id": 900,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3691,
     "y": 3091
   },
   {
     "id": 901,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 466,
     "y": 2635
   },
   {
     "id": 902,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4278,
     "y": 1946
   },
   {
     "id": 903,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 959,
     "y": 2715
   },
   {
     "id": 904,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4318,
     "y": 3621
   },
   {
     "id": 905,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2853,
     "y": 1056
   },
   {
     "id": 906,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2794,
     "y": 888
   },
   {
     "id": 907,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 991,
     "y": 3123
   },
   {
     "id": 908,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4160,
     "y": 2730
   },
   {
     "id": 909,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2210,
     "y": 1375
   },
   {
     "id": 910,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 982,
     "y": 553
   },
   {
     "id": 911,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3967,
     "y": 2334
   },
   {
     "id": 912,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1354,
     "y": 2841
   },
   {
     "id": 913,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1418,
     "y": 2608
   },
   {
     "id": 914,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 528,
     "y": 1846
   },
   {
     "id": 915,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3510,
     "y": 2099
   },
   {
     "id": 916,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2619,
     "y": 411
   },
   {
     "id": 917,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3271,
     "y": 3746
   },
   {
     "id": 918,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4234,
     "y": 4135
   },
   {
     "id": 919,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2953,
     "y": 1542
   },
   {
     "id": 920,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1091,
     "y": 1210
   },
   {
     "id": 921,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1135,
     "y": 3014
   },
   {
     "id": 922,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4329,
     "y": 3826
   },
   {
     "id": 923,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2216,
     "y": 4225
   },
   {
     "id": 924,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 458,
     "y": 1124
   },
   {
     "id": 925,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3666,
     "y": 3496
   },
   {
     "id": 926,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1542,
     "y": 2545
   },
   {
     "id": 927,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2753,
     "y": 2777
   },
   {
     "id": 928,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3815,
     "y": 692
   },
   {
     "id": 929,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 680,
     "y": 2011
   },
   {
     "id": 930,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 874,
     "y": 3715
   },
   {
     "id": 931,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1810,
     "y": 590
   },
   {
     "id": 932,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3126,
     "y": 3310
   },
   {
     "id": 933,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3477,
     "y": 3016
   },
   {
     "id": 934,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2853,
     "y": 3805
   },
   {
     "id": 935,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3369,
     "y": 3890
   },
   {
     "id": 936,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 470,
     "y": 2906
   },
   {
     "id": 937,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3915,
     "y": 3637
   },
   {
     "id": 938,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 4506,
     "y": 3415
   },
   {
     "id": 939,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2538,
     "y": 1222
   },
   {
     "id": 940,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 913,
     "y": 3358
   },
   {
     "id": 941,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3163,
     "y": 398
   },
   {
     "id": 942,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1193,
     "y": 376
   },
   {
     "id": 943,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2689,
     "y": 3831
   },
   {
     "id": 944,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1241,
     "y": 2329
   },
   {
     "id": 945,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 3491,
     "y": 1187
   },
   {
     "id": 946,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3160,
     "y": 1981
   },
   {
     "id": 947,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4016,
     "y": 3123
   },
   {
     "id": 948,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4915,
     "y": 2798
   },
   {
     "id": 949,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1847,
     "y": 3624
   },
   {
     "id": 950,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3598,
     "y": 2996
   },
   {
     "id": 951,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3868,
     "y": 1915
   },
   {
     "id": 952,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1676,
     "y": 1236
   },
   {
     "id": 953,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2802,
     "y": 4980
   },
   {
     "id": 954,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2027,
     "y": 4352
   },
   {
     "id": 955,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1528,
     "y": 384
   },
   {
     "id": 956,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1577,
     "y": 1208
   },
   {
     "id": 957,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1367,
     "y": 1216
   },
   {
     "id": 958,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 746,
     "y": 1384
   },
   {
     "id": 959,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1446,
     "y": 2501
   },
   {
     "id": 960,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1915,
     "y": 871
   },
   {
     "id": 961,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 935,
     "y": 1657
   },
   {
     "id": 962,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 2182,
     "y": 2645
   },
   {
     "id": 963,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1839,
     "y": 4684
   },
   {
     "id": 964,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2803,
     "y": 3285
   },
   {
     "id": 965,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2266,
     "y": 3777
   },
   {
     "id": 966,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 780,
     "y": 1020
   },
   {
     "id": 967,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 630,
     "y": 3566
   },
   {
     "id": 968,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1669,
     "y": 887
   },
   {
     "id": 969,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3966,
     "y": 1978
   },
   {
     "id": 970,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3040,
     "y": 4296
   },
   {
     "id": 971,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3318,
     "y": 4658
   },
   {
     "id": 972,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3795,
     "y": 1129
   },
   {
     "id": 973,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2327,
     "y": 310
   },
   {
     "id": 974,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 1012,
     "y": 4341
   },
   {
     "id": 975,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2493,
     "y": 2133
   },
   {
     "id": 976,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2052,
     "y": 1057
   },
   {
     "id": 977,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2903,
     "y": 2082
   },
   {
     "id": 978,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 1723,
     "y": 4107
   },
   {
     "id": 979,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3950,
     "y": 1259
   },
   {
     "id": 980,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3751,
     "y": 3699
   },
   {
     "id": 981,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2252,
     "y": 1013
   },
   {
     "id": 982,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 16,
     "y": 2732
   },
   {
     "id": 983,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1658,
     "y": 575
   },
   {
     "id": 984,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1695,
     "y": 1801
   },
   {
     "id": 985,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 3065,
     "y": 2186
   },
   {
     "id": 986,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4044,
     "y": 2533
   },
   {
     "id": 987,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2317,
     "y": 881
   },
   {
     "id": 988,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 765,
     "y": 3734
   },
   {
     "id": 989,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 2624,
     "y": 1700
   },
   {
     "id": 990,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 3095,
     "y": 4496
   },
   {
     "id": 991,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 1575,
     "y": 1100
   },
   {
     "id": 992,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 676,
     "y": 2660
   },
   {
     "id": 993,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 4628,
     "y": 2626
   },
   {
     "id": 994,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 2412,
     "y": 1545
   },
   {
     "id": 995,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3511,
     "y": 1722
   },
   {
     "id": 996,
-    "population": 0,
+
     "dominantTerrain": "Rock",
-    "buildings": [],
+
     "x": 4224,
     "y": 1714
   },
   {
     "id": 997,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 3262,
     "y": 4349
   },
   {
     "id": 998,
-    "population": 0,
+
     "dominantTerrain": "Desert",
-    "buildings": [],
+
     "x": 2724,
     "y": 3000
   },
   {
     "id": 999,
-    "population": 0,
+
     "dominantTerrain": "Forest",
-    "buildings": [],
+
     "x": 1184,
     "y": 4099
   },
   {
     "id": 1000,
-    "population": 0,
+
     "dominantTerrain": "Plains",
-    "buildings": [],
+
     "x": 4760,
     "y": 1457
   }

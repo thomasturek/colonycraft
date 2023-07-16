@@ -2,8 +2,20 @@ import React, { useState, useEffect } from "react";
 import "./Dashboard.css";
 import islandsData from './islands.json';
 import startokenABI from './startokenABI.json';
+import { initializeApp } from 'firebase/app';
+import { getDocs, collection, getFirestore } from 'firebase/firestore';
+import { formatUnits } from 'ethers';
 
 const { ethers } = require("ethers");
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD_NhL2SagoMPoWLy4q48FSjcsaxMGZIeQ",
+  authDomain: "colonycraft-a8fc5.firebaseapp.com",
+  projectId: "colonycraft-a8fc5",
+  storageBucket: "colonycraft-a8fc5.appspot.com",
+  messagingSenderId: "964689343361",
+  appId: "1:964689343361:web:f5d06f70456745f12aee80"
+};
 
 const connectToBlockchain = async (setCurrentUser, setStarstones) => {
 
@@ -26,7 +38,7 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
       ],
     });
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.BrowserProvider(window.ethereum);
     const accounts = await provider.send("eth_requestAccounts", []);
 
     if (accounts.length > 0) {
@@ -80,7 +92,7 @@ const SolarSystem = ({ name, x, y, zoomLevel, mapPosition, terrain, onClick, sel
 
   return (
     <div
-      className = 'solar-system'
+      className ='solar-system'
       onClick={onClick}
       style={{
         left: `${transformedX}px`,
@@ -114,6 +126,15 @@ const Dashboard = () => {
   const [tradePanelVisible, setTradePanelVisible] = useState(false);
   const [panelAnimation, setPanelAnimation] = useState('');
 
+  // Reasources
+
+  const [wheatValue, setWheatValue] = useState(0);
+  const [starstoneValue, setStarstoneValue] = useState(0);
+  const [coffeeValue, setCoffeeValue] = useState(0);
+  const [woodValue, setWoodValue] = useState(0);
+  const [metalsValue, setMetalsValue] = useState(0);
+  const [fishValue, setFishValue] = useState(0);
+
   //blockchain
 
   const [currentUser, setCurrentUser] = useState('Not Logged In!');
@@ -125,6 +146,37 @@ const Dashboard = () => {
   const [selectedIslandTerrain, setSelectedIslandTerrain] = useState(null);
   const [selectedIslandImage, setSelectedIslandImage] = useState('');
 
+  async function getUsers(db) {
+
+    const usersCol = collection(db,"users");
+
+    const userSnapshot = await getDocs(usersCol);
+
+    const currentUserDocument = userSnapshot.docs.find(
+      (doc) => doc.id.toLowerCase() === currentUser.toLowerCase()
+    );
+
+    if (currentUserDocument) {
+      const userData = currentUserDocument.data();
+
+      setWheatValue(userData.wheat);
+      setStarstoneValue(userData.starstones);
+      setCoffeeValue(userData.coffee);
+      setMetalsValue(userData.metals);
+      setFishValue(userData.fish);
+      setWoodValue(userData.wood);
+
+    } else {
+      console.log("User document not found.");
+    }
+
+  }
+
+  const app = initializeApp(firebaseConfig);
+
+  const db = getFirestore(app);
+
+  getUsers(db);
 
   const handleSolarSystemClick = (systemId, islandTerrain) => {
 
@@ -204,7 +256,7 @@ const Dashboard = () => {
     const constructHarbor = () => {
     };
 
-    const constructTradeVesel = () => {
+    const constructTradeVessel = () => {
     };
 
     const constructShip = () => {
@@ -374,27 +426,27 @@ const Dashboard = () => {
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '20%'}} className="text">Wood</h1>
-          <h1 style={{top: '20%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
+          <h1 style={{top: '20%', marginLeft: '-5%', textAlign: 'right'}} className="text">{woodValue}</h1>
           <div className="reasource-image-wood" style={{top: '19%', left: '15%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '36%'}} className="text">Wheat</h1>
-          <h1 style={{top: '36%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
+          <h1 style={{top: '36%', marginLeft: '-5%', textAlign: 'right'}} className="text">{wheatValue}</h1>
           <div className="reasource-image" style={{top: '35.5%', left: '17%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '53%'}} className="text">Coffee</h1>
-          <h1 style={{top: '53%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
+          <h1 style={{top: '53%', marginLeft: '-5%', textAlign: 'right'}} className="text">{coffeeValue}</h1>
           <div className="reasource-image-coffee" style={{top: '53%', left: '21%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '70%'}} className="text">Metals</h1>
-          <h1 style={{top: '70%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
+          <h1 style={{top: '70%', marginLeft: '-5%', textAlign: 'right'}} className="text">{metalsValue}</h1>
           <div className="reasource-image-metals" style={{top: '70%', left: '21%'}}></div>
         </div>
         <div class="grid-item-reasources">
           <h1 style={{top: '86%'}} className="text">Fish</h1>
-          <h1 style={{top: '86%', marginLeft: '-5%', textAlign: 'right'}} className="text">0</h1>
+          <h1 style={{top: '86%', marginLeft: '-5%', textAlign: 'right'}} className="text">{fishValue}</h1>
           <div className="reasource-image-fish" style={{top: '84.5%', left: '15%'}}></div>
         </div>
       </div>
@@ -411,8 +463,8 @@ const Dashboard = () => {
           <div class="grid-item coffeefarm" onClick={constructCornFarm}>Coffee Farm</div>
           <div class="grid-item mine" onClick={constructMine}>Mine</div>
           <div class="grid-item fishinghut" onClick={constructFishingHut}>Fishing Hut</div>
-          <div class="grid-item" onClick={constructHarbor}>Harbor</div>
-          <div class="grid-item" onClick={constructTradeVesel}>Trade Vesel</div>
+          <div class="grid-item harbor" onClick={constructHarbor}>Harbor</div>
+          <div class="grid-item" onClick={constructTradeVessel}>Trade Vessel</div>
           <div class="grid-item" onClick={constructShip}>Ship</div>
           <div class="grid-item cannon" onClick={constructCannon}>Cannon</div>
           <div class="grid-item" onClick={constructMinuteMen}>Minute Men</div>
