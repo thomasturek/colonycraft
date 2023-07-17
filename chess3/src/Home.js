@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
+import contractABI from "./contract.js";
 const { ethers } = require("ethers");
+
 
 const buyIsland= async () => {
 
   if (window.ethereum) {
+
   try {
     await window.ethereum.request({
       method: "wallet_addEthereumChain",
@@ -24,10 +27,19 @@ const buyIsland= async () => {
       ],
     });
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
-    const accounts = await provider.send("eth_requestAccounts", []);
+    const provider = new ethers.BrowserProvider(window.ethereum);
 
     // Mint Island Code Here
+
+    const contractAddress = "0x0659dCDcDeE0FF13dB37DF134C40D711E5965f2b";
+
+    const signer = await provider.getSigner();
+    const contract = new ethers.Contract(contractAddress, contractABI, signer);
+
+    const nameInput = String(window.prompt("Island Name!"));
+
+    const transaction = await contract.createIsland(nameInput);
+    await transaction.wait();
 
   } catch (error) {
     console.log("Error connecting to MetaMask or setting up the network:", error);
@@ -70,9 +82,7 @@ const Home = () => {
      crossorigin="anonymous"></script> </head>
       <div className="background">
       <div className="planet"></div>
-      <div className="waterplanet"></div>
-      <div className="mountainisland"></div>
-      <div className="rockyisland"></div>
+      <div className="cloud"></div>
       </div>
       <h1 className="title">Welcome to Colonycraft!</h1>
       <div className="buttonbox">
