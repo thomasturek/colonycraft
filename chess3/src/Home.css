@@ -24,14 +24,19 @@ transform: rotate(90deg); /* adding rotation transform on hover */
 }
 
 .title {
-  color: white;
-  font-size: 3vw;
-  top: 30%;
+  top: 25%;
+  width: 50%;
+  height:10%;
   position: fixed;
   font-weight: 1000;
   margin: 0;
   animation: bounce 3s infinite ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./images/gamelogo.png");
+  image-rendering: pixelated;
 }
 
 @keyframes bounce {

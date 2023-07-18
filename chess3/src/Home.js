@@ -84,17 +84,17 @@ const Home = () => {
       <div className="planet"></div>
       <div className="cloud"></div>
       </div>
-      <h1 className="title">Welcome to Colonycraft!</h1>
+      <div className="title"></div>
       <div className="buttonbox">
         <button className="button" onClick={handleSubmit}>
-          Login
+          Play
         </button>
         <button className="button" onClick={buyIsland}>
-          Mint an Island
+          Mint a Character
         </button>
         <form>
         <button className="button" formaction="https://docs.colonycraft.xyz">
-          Colonycraft Docs
+          Archipeligo Docs
         </button>
         </form>
         <form>

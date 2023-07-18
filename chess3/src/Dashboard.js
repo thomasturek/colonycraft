@@ -1,6 +1,62 @@
 import './Dashboard.css';
 import MovingCircle from "./movingcircle.js";
 import React, { useState, useEffect } from "react";
+import startokenABI from './startokenABI.json';
+
+const { ethers } = require("ethers");
+
+const connectToBlockchain = async (setCurrentUser, setStarstones) => {
+
+  if (window.ethereum) {
+  try {
+    await window.ethereum.request({
+      method: "wallet_addEthereumChain",
+      params: [
+        {
+          chainId: "0xa86a",
+          chainName: "Avalanche C-Chain",
+          nativeCurrency: {
+            name: "AVAX",
+            symbol: "AVAX",
+            decimals: 18,
+          },
+          rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
+          blockExplorerUrls: ["https://cchain.explorer.avax.network/"],
+        },
+      ],
+    });
+
+    const provider = new ethers.BrowserProvider(window.ethereum);
+    const accounts = await provider.send("eth_requestAccounts", []);
+
+    if (accounts.length > 0) {
+      const signerAddress = accounts[0];
+      setCurrentUser(signerAddress);
+
+      const starstoneContract = new ethers.Contract('0xcBA5115d74D0634225c7809D197E47FcdF2B690b', startokenABI, provider);
+
+      //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
+
+      const tokenBalance = (await starstoneContract.balanceOf(signerAddress)).toString();
+      const tokenBalanceFormatted = ethers.utils.formatUnits(tokenBalance, 18);
+      const roundedBalance = Math.ceil(parseFloat(tokenBalanceFormatted));
+      setStarstones(roundedBalance);
+
+
+
+    } else {
+      console.log("No accounts available");
+    }
+
+    // Rest of your code...
+  } catch (error) {
+    console.log("Error connecting to MetaMask or setting up the network:", error);
+  }
+} else {
+  console.log("MetaMask is not installed or not detected");
+}
+
+};
 
 const Dashboard = () => {
 
@@ -29,6 +85,7 @@ const Dashboard = () => {
   const [staminaValue, setStaminaValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
   const [className, setClassName] = useState("Character");
+  const [isStaminaTimerActive, setStaminaTimerActive] = useState(true);
 
   const constructLumberMill = () => {
   };
@@ -59,6 +116,18 @@ const Dashboard = () => {
 
   const constructMinuteMen = () => {
   };
+
+  useEffect(() => {
+
+  connectToBlockchain(setCurrentUser, setStarstones);
+
+  if (staminaValue < 100) {
+    setTimeout(() => {
+      increaseStamina();
+    }, 200);
+  }
+
+}, [staminaValue]);
 
   const handleResourceButtonClick = () => {
     setResourcePanelVisible(!resourcePanelVisible);
@@ -112,9 +181,14 @@ const Dashboard = () => {
 
   const takeDamange = (damageTaken) => {
     setHealthValue((prevHealth) => prevHealth - damageTaken);
-  }
+  };
 
-;
+  const increaseStamina = () => {
+    setStaminaValue((prevStamina) => {
+      const newStamina = Math.min(prevStamina + 0.1, 100);
+      return newStamina;
+    });
+  };
 
   return (
     <div className="Dashboard">
@@ -123,12 +197,17 @@ const Dashboard = () => {
    </head>
 
    <button className="user">
-     <h1 className="text-user">//</h1>
+     <h1 className="text-user">{currentUser}</h1>
    </button>
+   <button className="starstones">
+     <h1 className="text-user">Starstones Earned: {currentStarstones}</h1>
+   </button>
+
+
     <div className="game">
       <button className="play-button" onClick={handleResourceButtonClick}>
         <span className="material-symbols-outlined">construction</span>
-        Resources
+        Inventory
       </button>
       <button className="play-button" onClick={handleConstructionButtonClick}>
         <span className="material-symbols-outlined">Engineering</span>
@@ -138,11 +217,15 @@ const Dashboard = () => {
         <span className="material-symbols-outlined">group</span>
         Weapons
       </button>
-      <div className="health-bar" style={{ width: `${healthValue}%` }} >Health</div>
+      <div className="health-bar" style={{ width: `${healthValue}%` }} ></div>
 
-      <div className="stamina-bar" style={{ width: `${staminaValue}%` }} >Stamina</div>
+      <div className="stamina-bar" >
 
-      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} >Hunger</div>
+      <div className="stamina-level" style={{ width: `${staminaValue}%` }}></div>
+
+      </div>
+
+      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} ></div>
     </div>
 
     <div className={`panel ${resourcePanelVisible ? "visible" : "hidden"}`}>
@@ -217,7 +300,7 @@ const Dashboard = () => {
     </div>
 
       <div className={className}/>
-      <MovingCircle circleClassName={className} setCircleClassName={setClassName} />
+      <MovingCircle circleClassName={className} setCircleClassName={setClassName} setStaminaValue={setStaminaValue} staminaValue={staminaValue}/>
     </div>
   );
 };

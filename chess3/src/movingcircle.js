@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-const MovingCircle = ({ circleClassName, setCircleClassName }) => {
+const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, staminaValue}) => {
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
-  const moveStep = 50; // Adjust this value to control the movement speed
+
+  let moveStep;
+
+  if(staminaValue<10) {
+
+      moveStep = 10; // Adjust this value to control the movement speed
+
+  } else {
+    moveStep = 50;
+  }
 
   const maxy = 350;
   const maxx = 650;
@@ -49,7 +58,13 @@ const MovingCircle = ({ circleClassName, setCircleClassName }) => {
 
        setCirclePosition({ x: newX, y: newY });
 
-       console.log(circlePosition);
+       if(staminaValue<=0) {
+
+         setStaminaValue(0);
+       } else {
+
+          setStaminaValue(staminaValue - 1);
+       }
 
     };
 
@@ -101,26 +116,27 @@ const MovingCircle = ({ circleClassName, setCircleClassName }) => {
   }
 
   const renderGridSquares = () => {
-    const gridSquares = [];
+  const gridSquares = [];
 
-    for (let row = 0; row < gridSize; row++) {
-      for (let col = 0; col < gridSize; col++) {
-        gridSquares.push(
-          <div
-            key={`${row}-${col}`}
-            style={{
-              width: `${squareSize}px`,
-              height: `${squareSize}px`,
-              backgroundColor: islandMap[row][col],
-              border: "1px solid black",
-            }}
-          />
-        );
-      }
+  for (let row = 0; row < gridSize; row++) {
+    for (let col = 0; col < gridSize; col++) {
+
+      gridSquares.push(
+        <div
+          key={`${row}-${col}`}
+          className={islandMap[row][col]} // Use the class name based on islandMap data
+          style={{
+            width: `${squareSize}px`,
+            height: `${squareSize}px`,
+            border: "0.2px solid black",
+          }}
+        />
+      );
     }
+  }
 
-    return gridSquares;
-  };
+  return gridSquares;
+};
 
   return <div style={gridStyles}>{renderGridSquares()}</div>;
 };

@@ -26,9 +26,46 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-image: url("./images/fight.gif");
   image-rendering: pixelated;
+  animation: fighting 1s steps(4) infinite;
 }
+
+.green {
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./images/grassblock.png");
+
+}
+
+.yellow {
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./images/sand.png");
+
+}
+
+
+
+
+@keyframes fighting {
+  0% {
+    background-image: url("./images/fight/fight1.png");
+  }
+  25% {
+    background-image: url("./images/fight/fight2.png");
+  }
+  50% {
+    background-image: url("./images/fight/fight3.png");
+  }
+  75% {
+    background-image: url("./images/fight/fight4.png");
+  }
+}
+
 
 .Running {
   position: absolute;
@@ -93,8 +130,8 @@
 }
 
 .health-bar {
-  padding: 2vh;
-  width: 100%;
+  padding-top: 7%;
+  padding-bottom: 7%;
   margin-left: 10%;
   color: white;
   display: flex;
@@ -105,9 +142,8 @@
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center;
-  background-color: green;
-  border: 4px solid black;
-  cursor: pointer;
+  background-color: #eb4034;
+  border: 2px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 23%;
   text-decoration: none;
@@ -117,7 +153,8 @@
 }
 
 .stamina-bar {
-    padding: 2vh;
+    padding-top: 7%;
+    padding-bottom: 7%;
     width: 100%;
     margin-left: 10%;
     color: white;
@@ -129,9 +166,8 @@
     background-repeat: no-repeat;
     background-size:cover;
     background-position: center;
-    background-color: blue;
-    border: 4px solid black;
-    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid black;
     transition: transform 0.3s ease, background-color 0.3s ease;
     margin-top: 23%;
     text-decoration: none;
@@ -140,8 +176,25 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.stamina-level {
+  position:absolute;
+    width: 100%;
+    height:25%;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-color: blue;
+    transition: transform 1s ease, background-color 1s ease;
+    text-decoration: none;
+    font-family: 'Press Start 2P', sans-serif;
+    user-select: none;
+     transform-origin: right;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .hunger-bar {
-  padding: 2vh;
+  padding-top: 7%;
+  padding-bottom: 7%;
   width: 100%;
   margin-left: 10%;
   color: white;
@@ -154,8 +207,7 @@
   background-size:cover;
   background-position: center;
   background-color: orange;
-  border: 4px solid black;
-  cursor: pointer;
+  border: 2px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 23%;
   text-decoration: none;
@@ -683,6 +735,32 @@
   height: 7.5%;
   color: white;
   top: 8%;
+  left: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5vw;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-image: url("./images/woodboard.png");
+  text-decoration: none;
+  font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.starstones {
+  padding: 2vh;
+  position: absolute;
+  width: 20%;
+  height: 7.5%;
+  color: white;
+  top: 24%;
   left: 75%;
   display: flex;
   align-items: center;
