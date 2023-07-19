@@ -8,7 +8,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
 
   if(staminaValue<10) {
 
-      moveStep = 10; // Adjust this value to control the movement speed
+      moveStep = 25; // Adjust this value to control the movement speed
 
   } else {
     moveStep = 50;
@@ -20,8 +20,11 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
   const minx = -4200;
 
   const [circlePosition, setCirclePosition] = useState({ x: -1530, y: -1550 });
+  const [treesRendered, setTreesRendered] = useState(false);
+
 
   useEffect(() => {
+
     const handleKeyDown = (event) => {
 
       let newX = circlePosition.x;
@@ -59,8 +62,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
        setCirclePosition({ x: newX, y: newY });
 
        if(staminaValue<=0) {
-
-         setStaminaValue(0);
+         setStaminaValue(0.1);
        } else {
 
           setStaminaValue(staminaValue - 1);
@@ -80,7 +82,8 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("keyup", handleKeyUp);
     };
-  }, [moveStep, circlePosition]); // Include `moveStep` in the dependency array to prevent stale values
+
+  }, [moveStep, circlePosition, staminaValue]); // Include `moveStep` in the dependency array to prevent stale values
 
   const gridStyles = {
     position: "absolute",

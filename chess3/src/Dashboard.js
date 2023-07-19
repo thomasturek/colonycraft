@@ -1,5 +1,6 @@
 import './Dashboard.css';
 import MovingCircle from "./movingcircle.js";
+import Zombie from "./Zombie.js";
 import React, { useState, useEffect } from "react";
 import startokenABI from './startokenABI.json';
 
@@ -36,13 +37,6 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
       const starstoneContract = new ethers.Contract('0xcBA5115d74D0634225c7809D197E47FcdF2B690b', startokenABI, provider);
 
       //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
-
-      const tokenBalance = (await starstoneContract.balanceOf(signerAddress)).toString();
-      const tokenBalanceFormatted = ethers.utils.formatUnits(tokenBalance, 18);
-      const roundedBalance = Math.ceil(parseFloat(tokenBalanceFormatted));
-      setStarstones(roundedBalance);
-
-
 
     } else {
       console.log("No accounts available");
@@ -85,7 +79,12 @@ const Dashboard = () => {
   const [staminaValue, setStaminaValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
   const [className, setClassName] = useState("Character");
+  const [zombieClassName, setZombieClassName] = useState("Zombie");
   const [isStaminaTimerActive, setStaminaTimerActive] = useState(true);
+
+  // blockchain
+
+  const [blockchainConnected, setBlockchainConnected] = useState(false);
 
   const constructLumberMill = () => {
   };
@@ -117,17 +116,40 @@ const Dashboard = () => {
   const constructMinuteMen = () => {
   };
 
-  useEffect(() => {
-
-  connectToBlockchain(setCurrentUser, setStarstones);
-
-  if (staminaValue < 100) {
-    setTimeout(() => {
-      increaseStamina();
-    }, 200);
+  if(!blockchainConnected) {
+    connectToBlockchain(setCurrentUser, setStarstones);
+    setBlockchainConnected(true);
   }
 
+  useEffect(() => {
+
+    if (treeElements.length === 0) {
+      generateRandomTreeElements();
+    }
+
+    if (staminaValue < 100) {
+      increaseStamina();
+    }
+
 }, [staminaValue]);
+
+
+const [treeElements, setTreeElements] = useState([]);
+
+const generateRandomTreeElements = () => {
+    const numberOfTrees = 10; // Adjust this to change the number of trees
+    const maxX = 100; // Adjust this to set the maximum X coordinate
+    const maxY = 100; // Adjust this to set the maximum Y coordinate
+    const trees = [];
+
+    for (let i = 0; i < numberOfTrees; i++) {
+      const x = Math.random() * maxX;
+      const y = Math.random() * maxY;
+      trees.push({ x, y });
+    }
+
+    setTreeElements(trees);
+  };
 
   const handleResourceButtonClick = () => {
     setResourcePanelVisible(!resourcePanelVisible);
@@ -184,11 +206,9 @@ const Dashboard = () => {
   };
 
   const increaseStamina = () => {
-    setStaminaValue((prevStamina) => {
-      const newStamina = Math.min(prevStamina + 0.1, 100);
-      return newStamina;
-    });
-  };
+    const newStaminaValue = Math.min(staminaValue + 0.1, 100);
+    setStaminaValue(newStaminaValue);
+};
 
   return (
     <div className="Dashboard">
@@ -301,6 +321,7 @@ const Dashboard = () => {
 
       <div className={className}/>
       <MovingCircle circleClassName={className} setCircleClassName={setClassName} setStaminaValue={setStaminaValue} staminaValue={staminaValue}/>
+      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} staminaValue={staminaValue}/>
     </div>
   );
 };

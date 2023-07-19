@@ -39,6 +39,15 @@
 
 }
 
+.tree {
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./images/tree.png");
+
+}
+
 .yellow {
 
   background-repeat: no-repeat;
@@ -680,12 +689,23 @@
 
     }
 
+    .Zombie {
+
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/zombie.png");
+
+
+    }
+
 
     .text-user {
         width: 100%;
         padding: 5%;
         text-align: center;
-        font-size: 6px;
+        font-size: 10px;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
