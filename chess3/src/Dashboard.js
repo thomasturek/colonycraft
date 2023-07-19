@@ -33,7 +33,7 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
     if (accounts.length > 0) {
       const signerAddress = accounts[0];
       setCurrentUser(signerAddress);
-      
+
       //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
 
     } else {
@@ -135,6 +135,15 @@ const Dashboard = () => {
     const zombieY = zombiePosition.y;
 
     const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
+
+    const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
+
+    const moveSpeed = 1;
+
+    const newX = zombieX + moveSpeed * Math.cos(angle);
+    const newY = zombieY + moveSpeed * Math.sin(angle);
+
+    setZombiePosition({ x: newX, y: newY });
 
     if (distance <= 100) {
       setZombieClassName("Zombie-Fighting")
