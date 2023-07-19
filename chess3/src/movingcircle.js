@@ -62,10 +62,10 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
        setCirclePosition({ x: newX, y: newY });
 
        if(staminaValue<=0) {
-         setStaminaValue(0.1);
+         setStaminaValue(1);
        } else {
 
-          setStaminaValue(staminaValue - 1);
+          setStaminaValue(staminaValue - 5);
        }
 
     };
