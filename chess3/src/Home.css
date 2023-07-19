@@ -2,7 +2,10 @@
 
 .homepage {
   color: white;
-  background-color: #23437e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./images/backround.png");
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,6 +16,7 @@
   overflow-y: scroll;
   font-family: 'Press Start 2P', sans-serif;
   text-decoration: none;
+  image-rendering: pixelated;
 }
 
 .logo:hover {

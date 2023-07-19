@@ -696,6 +696,7 @@
       background-size:cover;
       background-position: center;
       background-image: url("./images/zombie.png");
+      z-index: 6;
 
     }
 
@@ -705,8 +706,18 @@
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;
-      background-image: url("./images/zombie.png");
+      animation: zombie-fighting 1s steps(2) infinite;
+      z-index: 6;
 
+    }
+
+    @keyframes zombie-fighting {
+      0% {
+        background-image: url("./images/zombie-fighting/fightingzombie1.png");
+      }
+      100% {
+        background-image: url("./images/zombie-fighting/fightingzombie2.png");
+      }
     }
 
     .you-died-overlay {
@@ -727,6 +738,8 @@
 
     .you-died-text {
       position:absolute;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       top: 25%;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -866,6 +879,32 @@
   color: white;
   top: 55%;
   right: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5vw;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-image: url("./images/woodboard.png");
+  text-decoration: none;
+  font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.starstones-death-3 {
+  padding: 2vh;
+  position: absolute;
+  width: 20%;
+  height: 7.5%;
+  color: white;
+  top: 75%;
+  right: 40%;
   display: flex;
   align-items: center;
   justify-content: center;

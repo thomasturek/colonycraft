@@ -157,6 +157,11 @@ const Dashboard = () => {
    }
   };
 
+  function refreshPage() {
+      // Reload the current page
+      window.location.reload();
+    }
+
   const renderYouDiedOverlay = () => {
   return (
     <div className="you-died-overlay">
@@ -168,6 +173,10 @@ const Dashboard = () => {
 
       <button className="starstones-death-2">
         <h1 className="text-user">Share Your Score!</h1>
+      </button>
+
+      <button className="starstones-death-3">
+        <h1 className="text-user" onClick={refreshPage}>Try Again!</h1>
       </button>
 
     </div>
