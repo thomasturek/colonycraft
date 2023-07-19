@@ -147,7 +147,12 @@ const Dashboard = () => {
 
     if (distance <= 100) {
       setZombieClassName("Zombie-Fighting")
-      setHealthValue(healthValue-0.25);
+
+      setTimeout(() => {
+      setHealthValue(healthValue-5);
+    }, 1000);
+
+
     } else {
       setZombieClassName("Zombie")
     }
