@@ -128,6 +128,7 @@ const Dashboard = () => {
   }
 
   const handleZombieAttack = (zombieHealth) => {
+
     const playerX = 650;
     const playerY = 340;
 
@@ -135,17 +136,6 @@ const Dashboard = () => {
     const zombieY = zombiePosition.y;
 
     const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
-
-    const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
-
-    const moveSpeed = 1;
-
-    const newX = zombieX + moveSpeed * Math.cos(angle);
-    const newY = zombieY + moveSpeed * Math.sin(angle);
-
-    setTimeout(() => {
-    setZombiePosition({ x: newX, y: newY });
-  }, 10);
 
     if (distance <= 100) {
       setZombieClassName("Zombie-Fighting")
@@ -157,11 +147,25 @@ const Dashboard = () => {
 
     } else {
       setZombieClassName("Zombie")
+
+      const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
+
+       const moveSpeed = 10; // Adjust the move speed as needed
+
+       const deltaX = moveSpeed * Math.cos(angle);
+       const deltaY = moveSpeed * Math.sin(angle);
+
+       setZombiePosition((prevPosition) => ({
+         x: prevPosition.x + deltaX,
+         y: prevPosition.y + deltaY,
+       }));
+
     }
 
     if (healthValue <= 0) {
      setIsDead(true);
    }
+
   };
 
   function refreshPage() {
@@ -245,7 +249,11 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    handleZombieAttack();
+
+    const zombieInterval = setInterval(handleZombieAttack, 100);
+
+    return () => clearInterval(zombieInterval);
+
 }, [zombiePosition, healthValue]);
 
   return (
@@ -258,7 +266,11 @@ const Dashboard = () => {
      <h1 className="text-user">{currentUser}</h1>
    </button>
    <button className="starstones">
-     <h1 className="text-user">Starstones Earned: {currentStarstones}</h1>
+     <h1 className="text-user" style={{height: '100%', width: '100%', position: 'absolute', left: '1%', top: '5%'}}>
+
+     Starstones Earned: {currentStarstones}</h1>
+
+      <div className="reasource-image-starstone" style={{top: '25%', width: '10%', height:'50%', left: '4%'}}></div>
    </button>
 
 
