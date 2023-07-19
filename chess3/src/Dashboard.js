@@ -33,9 +33,7 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
     if (accounts.length > 0) {
       const signerAddress = accounts[0];
       setCurrentUser(signerAddress);
-
-      const starstoneContract = new ethers.Contract('0xcBA5115d74D0634225c7809D197E47FcdF2B690b', startokenABI, provider);
-
+      
       //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
 
     } else {

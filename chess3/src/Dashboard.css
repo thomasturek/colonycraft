@@ -154,7 +154,7 @@
   background-color: #eb4034;
   border: 2px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 23%;
+  margin-top: 25%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
@@ -188,7 +188,7 @@
 .stamina-level {
   position:absolute;
     width: 100%;
-    height:25%;
+    height:30%;
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;
@@ -218,7 +218,7 @@
   background-color: orange;
   border: 2px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 23%;
+  margin-top: 30%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
@@ -773,7 +773,7 @@
   background-image: url("./images/woodboard.png");
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 23%;
+  margin-top: 30%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
