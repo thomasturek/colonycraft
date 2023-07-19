@@ -333,8 +333,6 @@ const Dashboard = () => {
       <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition}/>
 
       {isDead && renderYouDiedOverlay()}
-
-      }}/>
     </div>
   );
 };

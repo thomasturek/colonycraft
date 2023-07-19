@@ -726,7 +726,9 @@
     }
 
     .you-died-text {
+      position:absolute;
       text-align: center;
+      top: 25%;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -836,7 +838,7 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 65%;
+  top: 55%;
   left: 25%;
   display: flex;
   align-items: center;
@@ -862,7 +864,7 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 65%;
+  top: 55%;
   right: 25%;
   display: flex;
   align-items: center;
