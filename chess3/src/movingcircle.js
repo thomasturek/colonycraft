@@ -1,26 +1,15 @@
 import React, { useState, useEffect } from "react";
 
-const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, staminaValue}) => {
+const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition}) => {
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
 
-  let moveStep;
-
-  if(staminaValue<10) {
-
-      moveStep = 25; // Adjust this value to control the movement speed
-
-  } else {
-    moveStep = 50;
-  }
+  const moveStep = 50;
 
   const maxy = 350;
   const maxx = 650;
   const miny = -4500;
   const minx = -4200;
-
-  const [circlePosition, setCirclePosition] = useState({ x: -1530, y: -1550 });
-  const [treesRendered, setTreesRendered] = useState(false);
 
 
   useEffect(() => {
@@ -61,13 +50,6 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
 
        setCirclePosition({ x: newX, y: newY });
 
-       if(staminaValue<=0) {
-         setStaminaValue(1);
-       } else {
-
-          setStaminaValue(staminaValue - 5);
-       }
-
     };
 
     const handleKeyUp = (event) => {
@@ -83,7 +65,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, setStaminaValue, st
       window.removeEventListener("keyup", handleKeyUp);
     };
 
-  }, [moveStep, circlePosition, staminaValue]); // Include `moveStep` in the dependency array to prevent stale values
+  }, [moveStep, circlePosition]); // Include `moveStep` in the dependency array to prevent stale values
 
   const gridStyles = {
     position: "absolute",

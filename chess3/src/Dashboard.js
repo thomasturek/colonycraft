@@ -76,11 +76,19 @@ const Dashboard = () => {
   // Player Stats
 
   const [healthValue, setHealthValue] = useState(100);
-  const [staminaValue, setStaminaValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
   const [className, setClassName] = useState("Character");
+  const [isDead, setIsDead] = useState(false);
+
+  // Zombie Stats
+
+  const [zombieHealth, setZombieHealth] = useState(100);
+  const [zombiePosition, setZombiePosition] = useState({ x: 650, y: 340 });
   const [zombieClassName, setZombieClassName] = useState("Zombie");
-  const [isStaminaTimerActive, setStaminaTimerActive] = useState(true);
+
+  // islandsData
+
+  const [circlePosition, setCirclePosition] = useState({ x: -1530, y: -1550 });
 
   // blockchain
 
@@ -121,13 +129,43 @@ const Dashboard = () => {
     setBlockchainConnected(true);
   }
 
-  useEffect(() => {
+  const handleZombieAttack = (zombieHealth) => {
+    const playerX = 650;
+    const playerY = 340;
 
-    if (staminaValue < 100) {
-      increaseStamina();
+    const zombieX = zombiePosition.x;
+    const zombieY = zombiePosition.y;
+
+    const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
+
+    if (distance <= 100) {
+      setZombieClassName("Zombie-Fighting")
+      setHealthValue(healthValue-0.25);
+    } else {
+      setZombieClassName("Zombie")
     }
 
-}, [staminaValue]);
+    if (healthValue <= 0) {
+     setIsDead(true);
+   }
+  };
+
+  const renderYouDiedOverlay = () => {
+  return (
+    <div className="you-died-overlay">
+      <h1 className="you-died-text">You Died!</h1>
+
+      <button className="starstones-death">
+        <h1 className="text-user">Collect {currentStarstones} Starstones</h1>
+      </button>
+
+      <button className="starstones-death-2">
+        <h1 className="text-user">Share Your Score!</h1>
+      </button>
+
+    </div>
+  );
+};
 
   const handleResourceButtonClick = () => {
     setResourcePanelVisible(!resourcePanelVisible);
@@ -183,10 +221,9 @@ const Dashboard = () => {
     setHealthValue((prevHealth) => prevHealth - damageTaken);
   };
 
-  const increaseStamina = () => {
-    const newStaminaValue = Math.min(staminaValue + 0.1, 100);
-    setStaminaValue(newStaminaValue);
-};
+  useEffect(() => {
+    handleZombieAttack();
+}, [zombiePosition, healthValue]);
 
   return (
     <div className="Dashboard">
@@ -216,12 +253,6 @@ const Dashboard = () => {
         Weapons
       </button>
       <div className="health-bar" style={{ width: `${healthValue}%` }} ></div>
-
-      <div className="stamina-bar" >
-
-      <div className="stamina-level" style={{ width: `${staminaValue}%` }}></div>
-
-      </div>
 
       <div className="hunger-bar" style={{ width: `${hungerValue}%` }} ></div>
     </div>
@@ -298,8 +329,12 @@ const Dashboard = () => {
     </div>
 
       <div className={className}/>
-      <MovingCircle circleClassName={className} setCircleClassName={setClassName} setStaminaValue={setStaminaValue} staminaValue={staminaValue}/>
-      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} staminaValue={staminaValue}/>
+      <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition}/>
+      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition}/>
+
+      {isDead && renderYouDiedOverlay()}
+
+      }}/>
     </div>
   );
 };

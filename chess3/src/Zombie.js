@@ -1,23 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-const Zombie = ({ zombieClassName, setZombieClassName, staminaValue}) => {
+const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition}) => {
 
-  let moveStep;
-
-  if(staminaValue<10) {
-
-      moveStep = 25; // Adjust this value to control the movement speed
-
-  } else {
-    moveStep = 50;
-  }
+  const moveStep = 50;
 
   const maxy = 3000;
   const maxx = 3000;
   const miny = -3000;
   const minx = -3000;
-
-  const [zombiePosition, setZombiePosition] = useState({ x: 650, y: 340 });
 
   useEffect(() => {
 
