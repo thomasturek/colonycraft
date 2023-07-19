@@ -12,6 +12,7 @@
   background-position: center;
   background-image: url("./images/character.png");
   image-rendering: pixelated;
+  transition: transform 0.3s ease
 }
 
 .Fight {
@@ -698,6 +699,7 @@
       background-size:cover;
       background-position: center;
       background-image: url("./images/zombie.png");
+      transition: transform 0.3s ease;
       z-index: 6;
 
     }

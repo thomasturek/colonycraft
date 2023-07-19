@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition}) => {
 
-  const moveStep = 50;
+  const moveStep = 25;
 
   const maxy = 3000;
   const maxx = 3000;
