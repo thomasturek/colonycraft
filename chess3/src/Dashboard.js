@@ -143,7 +143,9 @@ const Dashboard = () => {
     const newX = zombieX + moveSpeed * Math.cos(angle);
     const newY = zombieY + moveSpeed * Math.sin(angle);
 
+    setTimeout(() => {
     setZombiePosition({ x: newX, y: newY });
+  }, 10);
 
     if (distance <= 100) {
       setZombieClassName("Zombie-Fighting")
