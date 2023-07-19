@@ -123,33 +123,11 @@ const Dashboard = () => {
 
   useEffect(() => {
 
-    if (treeElements.length === 0) {
-      generateRandomTreeElements();
-    }
-
     if (staminaValue < 100) {
       increaseStamina();
     }
 
 }, [staminaValue]);
-
-
-const [treeElements, setTreeElements] = useState([]);
-
-const generateRandomTreeElements = () => {
-    const numberOfTrees = 10; // Adjust this to change the number of trees
-    const maxX = 100; // Adjust this to set the maximum X coordinate
-    const maxY = 100; // Adjust this to set the maximum Y coordinate
-    const trees = [];
-
-    for (let i = 0; i < numberOfTrees; i++) {
-      const x = Math.random() * maxX;
-      const y = Math.random() * maxY;
-      trees.push({ x, y });
-    }
-
-    setTreeElements(trees);
-  };
 
   const handleResourceButtonClick = () => {
     setResourcePanelVisible(!resourcePanelVisible);
