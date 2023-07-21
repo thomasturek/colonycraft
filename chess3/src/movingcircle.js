@@ -35,7 +35,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           break;
         case "d":
           newX -= moveStep;
-          setCircleClassName("Character Running");
+          setCircleClassName("Character RunningRight");
           break;
           case "f":
           setCircleClassName("Character Fight");

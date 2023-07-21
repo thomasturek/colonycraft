@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition}) => {
+const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition, zombieHealth, setZombieHealth, zombieDeath, setZombieDeath}) => {
 
   const moveStep = 25;
 
@@ -31,6 +31,13 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
           newX -= moveStep;
           break;
           case "f":
+          setZombieHealth(zombieHealth - 5);
+
+          if(zombieHealth < 0) {
+
+            setZombieDeath(true);
+
+          }
         default:
           break;
       }
@@ -64,7 +71,11 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
 
   const renderZombie = () => {
 
+    if(!zombieDeath) {
       return(
+
+        <>
+
         <div
           className={zombieClassName}
           style={{
@@ -72,7 +83,13 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
             height: `100px`,
           }}
         />
+
+        <div className="zombie-health-bar" style={{ width: `${zombieHealth}%` }} />
+
+        </>
       );
+
+    }
 
 };
 

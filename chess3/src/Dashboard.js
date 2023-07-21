@@ -6,7 +6,9 @@ import startokenABI from './startokenABI.json';
 
 const { ethers } = require("ethers");
 
-const collectToken = async (currentStarstones, receiverAddress) => {
+const collectToken = async (currentStarstones, receiverAddress, tokenCollected, setTokenCollected) => {
+
+    if(!tokenCollected) {
 
       try {
 
@@ -28,9 +30,15 @@ const collectToken = async (currentStarstones, receiverAddress) => {
 
             const tx = await starstoneContract.mint(amount, receiverAddress, txOptions);
 
+            setTokenCollected(true);
+
         } catch (error) {
           console.log("Error setting up the network:", error);
         }
+
+      } else {
+        window.alert("Tokens Already Connected!")
+      }
 };
 
 const connectToBlockchain = async (setCurrentUser, setStarstones) => {
@@ -84,8 +92,9 @@ const Dashboard = () => {
   const [colonyPanelVisible, setColonyPanelVisible] = useState(false);
   const [fleetsPanelVisible, setFleetsPanelVisible] = useState(false);
   const [tradePanelVisible, setTradePanelVisible] = useState(false);
+  const [tokenCollected, setTokenCollected] = useState(false);
   const [panelAnimation, setPanelAnimation] = useState('');
-  const [currentStarstones, setStarstones] = useState('1');
+  const [currentStarstones, setStarstones] = useState('0');
   const [currentUser, setCurrentUser] = useState('Not Logged In!');
 
   // Reasources
@@ -101,12 +110,15 @@ const Dashboard = () => {
 
   const [healthValue, setHealthValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
+  const [timeValue, setTimeValue] = useState(0);
   const [className, setClassName] = useState("Character");
+  const [lastDirection, setLastDirection] = useState("Right");
   const [isDead, setIsDead] = useState(false);
 
   // Zombie Stats
 
   const [zombieHealth, setZombieHealth] = useState(100);
+  const [zombieDeath, setZombieDeath] = useState(false);
   const [zombiePosition, setZombiePosition] = useState({ x: 650, y: 340 });
   const [zombieClassName, setZombieClassName] = useState("Zombie");
 
@@ -156,6 +168,8 @@ const Dashboard = () => {
 
   const handleZombieAttack = (zombieHealth) => {
 
+    if(!zombieDeath) {
+
     const playerX = 650;
     const playerY = 340;
 
@@ -173,6 +187,7 @@ const Dashboard = () => {
 
 
     } else {
+
       setZombieClassName("Zombie")
 
       const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
@@ -186,6 +201,8 @@ const Dashboard = () => {
          x: prevPosition.x + deltaX,
          y: prevPosition.y + deltaY,
        }));
+
+     }
 
     }
 
@@ -206,7 +223,7 @@ const Dashboard = () => {
       <h1 className="you-died-text">You Died!</h1>
 
       <button className="starstones-death">
-        <h1 className="text-user" onClick={() => collectToken(currentStarstones, currentUser)}>Collect {currentStarstones} Starstones</h1>
+        <h1 className="text-user" onClick={() => collectToken(currentStarstones, currentUser, tokenCollected, setTokenCollected)}>Collect {currentStarstones} Starstones</h1>
       </button>
 
       <button className="starstones-death-2">
@@ -275,11 +292,20 @@ const Dashboard = () => {
     setHealthValue((prevHealth) => prevHealth - damageTaken);
   };
 
+  const updateElapsedTime = () => {
+    setTimeValue((prevTimeValue) => prevTimeValue + 1);
+};
+
   useEffect(() => {
+
+    const timerInterval = setInterval(updateElapsedTime, 1000);
 
     const zombieInterval = setInterval(handleZombieAttack, 100);
 
-    return () => clearInterval(zombieInterval);
+    return () => {
+    clearInterval(timerInterval);
+    clearInterval(zombieInterval);
+  };
 
 }, [zombiePosition, healthValue]);
 
@@ -314,9 +340,11 @@ const Dashboard = () => {
         <span className="material-symbols-outlined">group</span>
         Weapons
       </button>
-      <div className="health-bar" style={{ width: `${healthValue}%` }} ></div>
+      <div className="health-bar" style={{ width: `${healthValue}%` }} > {healthValue}</div>
 
-      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} ></div>
+      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} > {hungerValue}</div>
+
+      <div className="time-bar">Time Survived: {timeValue}</div>
     </div>
 
     <div className={`panel ${resourcePanelVisible ? "visible" : "hidden"}`}>
@@ -333,9 +361,9 @@ const Dashboard = () => {
         <div className="reasource-image-wood" style={{top: '19%', left: '15%'}}></div>
       </div>
       <div class="grid-item-reasources">
-        <h1 style={{top: '36%'}} className="text">Wheat</h1>
+        <h1 style={{top: '36%'}} className="text">Berries</h1>
         <h1 style={{top: '36%', marginLeft: '-5%', textAlign: 'right'}} className="text">{wheatValue}</h1>
-        <div className="reasource-image" style={{top: '35.5%', left: '17%'}}></div>
+        <div className="reasource-image" style={{top: '35%', left: '23%'}}></div>
       </div>
       <div class="grid-item-reasources">
         <h1 style={{top: '53%'}} className="text">Coffee</h1>
@@ -392,7 +420,7 @@ const Dashboard = () => {
 
       <div className={className}/>
       <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition}/>
-      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition}/>
+      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition} zombieHealth={zombieHealth} setZombieHealth={setZombieHealth} zombieDeath={zombieDeath} setZombieDeath={setZombieDeath}/>
 
       {isDead && renderYouDiedOverlay()}
     </div>

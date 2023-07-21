@@ -89,7 +89,7 @@ const Home = () => {
         </button>
         <form>
         <button className="button" formaction="https://traderjoexyz.com/avalanche/pool/v21/0xf1ab2cF80233341CF72bBE7f56A3FED0Cea8C5Dd/AVAX/100">
-          Buy / Sell Token
+          Token Exchange
         </button>
         </form>
         <form>
