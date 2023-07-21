@@ -298,42 +298,23 @@ const Dashboard = () => {
 
   useEffect(() => {
 
-    const timerInterval = setInterval(updateElapsedTime, 1000);
-
     const zombieInterval = setInterval(handleZombieAttack, 100);
 
-    if (timeValue >= 500) {
-
-      const darkness = (timeValue - 500) / 500;
-
-      document.documentElement.style.setProperty("--overlay-opacity", darkness);
-
-    } else {
-
-      document.documentElement.style.setProperty("--overlay-opacity", 0);
-    }
-
     return () => {
-    clearInterval(timerInterval);
     clearInterval(zombieInterval);
   };
 
-}, [zombiePosition, healthValue, timeValue]);
+}, [zombiePosition, healthValue]);
 
-useEffect(() => {
+  useEffect(() => {
+    // Start the interval when the component mounts
+    const timerInterval = setInterval(updateElapsedTime, 1000);
 
-  if (timeValue >= 500) {
-
-    const darkness = (timeValue - 500) / 500;
-
-    document.documentElement.style.setProperty("--overlay-opacity", darkness);
-
-  } else {
-
-    document.documentElement.style.setProperty("--overlay-opacity", 0);
-  }
-
-}, [timeValue]);
+    // Clear the interval when the component is unmounted or when specific dependencies change
+    return () => {
+      clearInterval(timerInterval);
+    };
+  }, [timeValue]);
 
   return (
     <div className="Dashboard">

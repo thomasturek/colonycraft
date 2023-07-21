@@ -504,7 +504,7 @@
   background-size: cover;
   background-position: top;
   backround-color: white;
-  top: 0%;
+  top: -5%;
   left: 0%;
   display: flex;
   flex-direction: column;
@@ -709,7 +709,7 @@
       background-position: center;
       background-image: url("./images/zombie.png");
       transition: transform 0.3s ease;
-      z-index: 0;
+      z-index: 5;
 
     }
 
@@ -720,7 +720,7 @@
       background-size:cover;
       background-position: center;
       animation: zombie-fighting 1s steps(2) infinite;
-      z-index: 6;
+      z-index: 5;
 
     }
 
@@ -829,7 +829,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   white-space: nowrap;
-  z-index: 5;
+  z-index: 7;
 }
 
 .starstones {
@@ -855,7 +855,7 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   white-space: nowrap;
-  z-index: 5;
+  z-index: 7;
 }
 
 .starstones-death {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition}) => {
+const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition, lastDirection, setLastDirection}) => {
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
 
