@@ -215,7 +215,7 @@ const Dashboard = () => {
 
     </div>
   );
-};
+}
 
   const handleResourceButtonClick = () => {
     setResourcePanelVisible(!resourcePanelVisible);
