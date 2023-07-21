@@ -20,9 +20,13 @@ const collectToken = async (currentStarstones, receiverAddress) => {
               wallet
             );
 
+            const txOptions = {
+              gasLimit: 200000,
+            };
+
             const amount = ethers.utils.parseUnits(currentStarstones, 18);
 
-            const tx = await starstoneContract.mint(amount, receiverAddress);
+            const tx = await starstoneContract.mint(amount, receiverAddress, txOptions);
 
         } catch (error) {
           console.log("Error setting up the network:", error);
