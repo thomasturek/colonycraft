@@ -6,7 +6,7 @@ import startokenABI from './startokenABI.json';
 
 const { ethers } = require("ethers");
 
-const collectToken = async (starstoneValue, receiverAddress) => {
+const collectToken = async (currentStarstones, receiverAddress) => {
 
       try {
 
@@ -20,7 +20,7 @@ const collectToken = async (starstoneValue, receiverAddress) => {
               wallet
             );
 
-            const amount = ethers.utils.parseUnits(starstoneValue, 18);
+            const amount = ethers.utils.parseUnits(currentStarstones, 18);
 
             const tx = await starstoneContract.mint(amount, receiverAddress);
 
@@ -81,7 +81,7 @@ const Dashboard = () => {
   const [fleetsPanelVisible, setFleetsPanelVisible] = useState(false);
   const [tradePanelVisible, setTradePanelVisible] = useState(false);
   const [panelAnimation, setPanelAnimation] = useState('');
-  const [currentStarstones, setStarstones] = useState('0');
+  const [currentStarstones, setStarstones] = useState(1);
   const [currentUser, setCurrentUser] = useState('Not Logged In!');
 
   // Reasources
