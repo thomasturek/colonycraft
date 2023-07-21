@@ -81,7 +81,7 @@ const Dashboard = () => {
   const [fleetsPanelVisible, setFleetsPanelVisible] = useState(false);
   const [tradePanelVisible, setTradePanelVisible] = useState(false);
   const [panelAnimation, setPanelAnimation] = useState('');
-  const [currentStarstones, setStarstones] = useState(1);
+  const [currentStarstones, setStarstones] = useState('1');
   const [currentUser, setCurrentUser] = useState('Not Logged In!');
 
   // Reasources
