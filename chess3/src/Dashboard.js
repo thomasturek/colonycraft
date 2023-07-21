@@ -110,7 +110,7 @@ const Dashboard = () => {
 
   const [healthValue, setHealthValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
-  const [timeValue, setTimeValue] = useState(0);
+  const [timeValue, setTimeValue] = useState(500);
   const [className, setClassName] = useState("Character");
   const [lastDirection, setLastDirection] = useState("Right");
   const [isDead, setIsDead] = useState(false);
@@ -302,12 +302,38 @@ const Dashboard = () => {
 
     const zombieInterval = setInterval(handleZombieAttack, 100);
 
+    if (timeValue >= 500) {
+
+      const darkness = (timeValue - 500) / 500;
+
+      document.documentElement.style.setProperty("--overlay-opacity", darkness);
+
+    } else {
+
+      document.documentElement.style.setProperty("--overlay-opacity", 0);
+    }
+
     return () => {
     clearInterval(timerInterval);
     clearInterval(zombieInterval);
   };
 
-}, [zombiePosition, healthValue]);
+}, [zombiePosition, healthValue, timeValue]);
+
+useEffect(() => {
+
+  if (timeValue >= 500) {
+
+    const darkness = (timeValue - 500) / 500;
+
+    document.documentElement.style.setProperty("--overlay-opacity", darkness);
+
+  } else {
+
+    document.documentElement.style.setProperty("--overlay-opacity", 0);
+  }
+
+}, [timeValue]);
 
   return (
     <div className="Dashboard">
@@ -423,6 +449,8 @@ const Dashboard = () => {
       <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition} zombieHealth={zombieHealth} setZombieHealth={setZombieHealth} zombieDeath={zombieDeath} setZombieDeath={setZombieDeath}/>
 
       {isDead && renderYouDiedOverlay()}
+
+      <div className="nighttime-overlay" />
     </div>
   );
 };
