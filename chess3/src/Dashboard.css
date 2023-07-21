@@ -241,6 +241,7 @@
   position: relative;
   overflow-y: hidden;
   font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
 
 }
 

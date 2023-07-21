@@ -6,6 +6,29 @@ import startokenABI from './startokenABI.json';
 
 const { ethers } = require("ethers");
 
+const collectToken = async (starstoneValue, receiverAddress) => {
+
+      try {
+
+            const provider = new ethers.providers.JsonRpcProvider("https://nd-365-974-170.p2pify.com/7b29e3bbfbd67dd528f8022edd1a884f/ext/bc/C/rpc");
+
+            const wallet = new ethers.Wallet("5dcf0464556407679135616ca689055f7e9ace6ebe69a0f3fee3a4032de7d48c", provider);
+
+            const starstoneContract = new ethers.Contract(
+              "0xf1ab2cF80233341CF72bBE7f56A3FED0Cea8C5Dd",
+              startokenABI,
+              wallet
+            );
+
+            const amount = ethers.utils.parseUnits(starstoneValue, 18);
+
+            const tx = await starstoneContract.mint(amount, receiverAddress);
+
+        } catch (error) {
+          console.log("Error setting up the network:", error);
+        }
+};
+
 const connectToBlockchain = async (setCurrentUser, setStarstones) => {
 
   if (window.ethereum) {
@@ -27,14 +50,13 @@ const connectToBlockchain = async (setCurrentUser, setStarstones) => {
       ],
     });
 
-    const provider = new ethers.BrowserProvider(window.ethereum);
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
     const accounts = await provider.send("eth_requestAccounts", []);
 
     if (accounts.length > 0) {
-      const signerAddress = accounts[0];
-      setCurrentUser(signerAddress);
+      const signer = provider.getSigner();
 
-      //const ownsNFT = await nft_forum_contract.IsNFTHolder(signerAddress);
+      setCurrentUser(await signer.getAddress());
 
     } else {
       console.log("No accounts available");
@@ -124,6 +146,7 @@ const Dashboard = () => {
 
   if(!blockchainConnected) {
     connectToBlockchain(setCurrentUser, setStarstones);
+    console.log(currentUser);
     setBlockchainConnected(true);
   }
 
@@ -179,7 +202,7 @@ const Dashboard = () => {
       <h1 className="you-died-text">You Died!</h1>
 
       <button className="starstones-death">
-        <h1 className="text-user">Collect {currentStarstones} Starstones</h1>
+        <h1 className="text-user" onClick={() => collectToken(currentStarstones, currentUser)}>Collect {currentStarstones} Starstones</h1>
       </button>
 
       <button className="starstones-death-2">
