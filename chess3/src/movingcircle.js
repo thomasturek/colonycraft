@@ -23,7 +23,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
       switch (key) {
         case "w":
           newY += moveStep;
-          setCircleClassName("Character Running");
+          setCircleClassName("Character RunningUp");
           break;
         case "a":
           newX += moveStep;

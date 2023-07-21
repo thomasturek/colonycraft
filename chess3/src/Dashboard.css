@@ -4,7 +4,7 @@
   top: 50%;
   width: 128px;
   height: 128px;
-  z-index: 5;
+  z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
   background-repeat: no-repeat;
@@ -83,7 +83,7 @@
   top: 50%;
   width: 128px;
   height: 128px;
-  z-index: 5;
+  z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@
   top: 50%;
   width: 128px;
   height: 128px;
-  z-index: 5;
+  z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
   background-repeat: no-repeat;
@@ -107,6 +107,22 @@
   background-position: center;
   image-rendering: pixelated;
   animation: runningAnimationLeft 0.4s steps(4) infinite;
+}
+
+.RunningUp {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 128px;
+  height: 128px;
+  z-index: 1;
+  margin-top: -50px; /* Half of the square's height */
+  margin-left: -50px; /* Half of the square's width */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  image-rendering: pixelated;
+  animation: runningAnimationUp 0.4s steps(4) infinite;
 }
 
 @keyframes runningAnimationRight {
@@ -139,10 +155,24 @@
   }
 }
 
+@keyframes runningAnimationUp {
+  0% {
+    background-image: url("./images/running/runningup/runningup1.png");
+  }
+  25% {
+    background-image: url("./images/running/runningup/runningup2.png");
+  }
+  50% {
+    background-image: url("./images/running/runningup/runningup3.png");
+  }
+  100% {
+    background-image: url("./images/running/runningup/runningup4.png");
+  }
+}
+
 .health-bar {
   padding-top: 5%;
   padding-bottom: 5%;
-  margin-left: 10%;
   color: white;
   display: flex;
   align-items: center;
@@ -160,7 +190,7 @@
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  z-index: 7;
 }
 
 .zombie-health-bar {
@@ -183,14 +213,13 @@
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 2;
 }
 
 .hunger-bar {
   padding-top: 5%;
   padding-bottom: 5%;
   width: 100%;
-  margin-left: 10%;
   color: white;
   display: flex;
   align-items: center;
@@ -208,14 +237,14 @@
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 .time-bar {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 7%;
+  padding-bottom: 7%;
   width: 100%;
   bottom: 10%;
-  margin-left: 10%;
   color: white;
   display: flex;
   align-items: center;
@@ -709,7 +738,7 @@
       background-position: center;
       background-image: url("./images/zombie.png");
       transition: transform 0.3s ease;
-      z-index: 5;
+      z-index: 2;
 
     }
 
@@ -720,7 +749,7 @@
       background-size:cover;
       background-position: center;
       animation: zombie-fighting 1s steps(2) infinite;
-      z-index: 5;
+      z-index: 2;
 
     }
 
@@ -786,7 +815,6 @@
 .play-button {
   padding: 2vh;
   width: 100%;
-  margin-left: 10%;
   color: white;
   display: flex;
   align-items: center;
@@ -812,7 +840,7 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 8%;
+  top: 5.5%;
   left: 75%;
   display: flex;
   align-items: center;
@@ -838,7 +866,7 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 24%;
+  top: 23%;
   left: 75%;
   display: flex;
   align-items: center;

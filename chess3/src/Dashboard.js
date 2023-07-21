@@ -110,7 +110,7 @@ const Dashboard = () => {
 
   const [healthValue, setHealthValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
-  const [timeValue, setTimeValue] = useState(500);
+  const [timeValue, setTimeValue] = useState(0);
   const [className, setClassName] = useState("Character");
   const [lastDirection, setLastDirection] = useState("Right");
   const [isDead, setIsDead] = useState(false);
@@ -294,6 +294,8 @@ const Dashboard = () => {
 
   const updateElapsedTime = () => {
     setTimeValue((prevTimeValue) => prevTimeValue + 1);
+
+    setStarstones(Math.floor((timeValue + 1) / 500).toString());
 };
 
   useEffect(() => {
@@ -347,9 +349,9 @@ const Dashboard = () => {
         <span className="material-symbols-outlined">group</span>
         Weapons
       </button>
-      <div className="health-bar" style={{ width: `${healthValue}%` }} > {healthValue}</div>
+      <div className="health-bar" style={{ width: `${healthValue}%` }} > <span className="material-symbols-outlined">health_and_safety</span></div>
 
-      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} > {hungerValue}</div>
+      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} > <span className="material-symbols-outlined">restaurant</span></div>
 
       <div className="time-bar">Time Survived: {timeValue}</div>
     </div>
