@@ -738,7 +738,7 @@
       background-position: center;
       background-image: url("./images/zombie.png");
       transition: transform 0.3s ease;
-      z-index: 2;
+      z-index:0;
 
     }
 
@@ -749,7 +749,7 @@
       background-size:cover;
       background-position: center;
       animation: zombie-fighting 1s steps(2) infinite;
-      z-index: 2;
+      z-index: 0;
 
     }
 
