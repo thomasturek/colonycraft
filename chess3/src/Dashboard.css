@@ -306,6 +306,41 @@
   z-index: 1;
 }
 
+.loading-bar {
+  position:absolute;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  width: 0%;
+  top: 55%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9vw;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-color: #34a8eb;
+  border: 1px solid black;
+  transition: width 2s ease;
+  animation: loadingAnimation 5s ease-in-out;
+  text-decoration: none;
+  font-family: 'Press Start 2P', sans-serif;
+  user-select: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
 
 .Dashboard {
   background-size: cover;

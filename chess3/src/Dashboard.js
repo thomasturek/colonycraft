@@ -122,12 +122,16 @@ const Dashboard = () => {
 
   const [zombieHealth, setZombieHealth] = useState(100);
   const [zombieDeath, setZombieDeath] = useState(false);
-  const [zombiePosition, setZombiePosition] = useState({ x: 650, y: 340 });
+  const [zombiePosition, setZombiePosition] = useState({ x: 400, y: 100 });
   const [zombieClassName, setZombieClassName] = useState("Zombie");
 
   // islandsData
 
   const [circlePosition, setCirclePosition] = useState({ x: -1530, y: -1550 });
+
+  // Game Data
+
+  const [notLoaded, setNotLoaded] = useState(true);
 
   // blockchain
 
@@ -240,6 +244,25 @@ const Dashboard = () => {
 
     </div>
   );
+}
+
+const renderLoading = () => {
+
+  /*
+
+  return (
+  <div className="you-died-overlay">
+
+    <h1 className="you-died-text">Loading...</h1>
+
+    <div className="loading-bar" ></div>
+
+  </div>
+  );
+
+  */
+
+setNotLoaded(false);
 }
 
   const handleResourceButtonClick = () => {
@@ -440,6 +463,8 @@ const Dashboard = () => {
       <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition} zombieHealth={zombieHealth} setZombieHealth={setZombieHealth} zombieDeath={zombieDeath} setZombieDeath={setZombieDeath}/>
 
       {isDead && renderYouDiedOverlay()}
+
+      {notLoaded && renderLoading()}
 
       <div className="nighttime-overlay" />
     </div>
