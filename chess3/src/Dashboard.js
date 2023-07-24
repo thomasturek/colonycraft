@@ -12,23 +12,26 @@ const collectToken = async (currentStarstones, receiverAddress, tokenCollected, 
 
       try {
 
-            const provider = new ethers.providers.JsonRpcProvider("https://nd-365-974-170.p2pify.com/7b29e3bbfbd67dd528f8022edd1a884f/ext/bc/C/rpc");
+            // Mint Tokens
 
-            const wallet = new ethers.Wallet("5dcf0464556407679135616ca689055f7e9ace6ebe69a0f3fee3a4032de7d48c", provider);
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const accounts = await provider.send("eth_requestAccounts", []);
+
+            const signer = provider.getSigner();
 
             const starstoneContract = new ethers.Contract(
-              "0xf1ab2cF80233341CF72bBE7f56A3FED0Cea8C5Dd",
+              "0x1DAE10715B28f711EDEc1ecbBaa868274814A5ce",
               startokenABI,
-              wallet
+              signer
             );
 
             const txOptions = {
-              gasLimit: 200000,
+              gasLimit: 100000,
             };
 
             const amount = ethers.utils.parseUnits(currentStarstones, 18);
 
-            const tx = await starstoneContract.mint(amount, receiverAddress, txOptions);
+            const tx = await starstoneContract.mint(amount, txOptions);
 
             setTokenCollected(true);
 
@@ -221,6 +224,7 @@ const Dashboard = () => {
   return (
     <div className="you-died-overlay">
       <h1 className="you-died-text">You Died!</h1>
+      <h3 className="time-text">Time: {timeValue} Seconds</h3>
 
       <button className="starstones-death">
         <h1 className="text-user" onClick={() => collectToken(currentStarstones, currentUser, tokenCollected, setTokenCollected)}>Collect {currentStarstones} Starstones</h1>
@@ -295,10 +299,12 @@ const Dashboard = () => {
   const updateElapsedTime = () => {
     setTimeValue((prevTimeValue) => prevTimeValue + 1);
 
-    setStarstones(Math.floor((timeValue + 1) / 500).toString());
+    setStarstones(Math.floor((timeValue + 1) / 50).toString());
 };
 
   useEffect(() => {
+
+    if(!isDead){
 
     const zombieInterval = setInterval(handleZombieAttack, 100);
 
@@ -306,16 +312,22 @@ const Dashboard = () => {
     clearInterval(zombieInterval);
   };
 
+  }
+
 }, [zombiePosition, healthValue]);
 
   useEffect(() => {
-    // Start the interval when the component mounts
+
+    if(!isDead){
+
     const timerInterval = setInterval(updateElapsedTime, 1000);
 
     // Clear the interval when the component is unmounted or when specific dependencies change
     return () => {
       clearInterval(timerInterval);
     };
+
+  }
   }, [timeValue]);
 
   return (
@@ -325,7 +337,7 @@ const Dashboard = () => {
    </head>
 
    <button className="user">
-     <h1 className="text-user">{currentUser}</h1>
+     <h1 className="text-user-wallet">{currentUser}</h1>
    </button>
    <button className="starstones">
      <h1 className="text-user" style={{height: '100%', width: '100%', position: 'absolute', left: '1%', top: '5%'}}>
@@ -346,15 +358,16 @@ const Dashboard = () => {
         Construction
       </button>
       <button className="play-button" onClick={handleDiplomacyButtonClick}>
-        <span className="material-symbols-outlined">group</span>
+        <span className="material-symbols-outlined">swords</span>
         Weapons
       </button>
-      <div className="health-bar" style={{ width: `${healthValue}%` }} > <span className="material-symbols-outlined">health_and_safety</span></div>
+      <div className="health-bar heart" style={{ width: `${healthValue}%` }} ></div>
 
-      <div className="hunger-bar" style={{ width: `${hungerValue}%` }} > <span className="material-symbols-outlined">restaurant</span></div>
+      <div className="hunger-bar porkchop" style={{ width: `${hungerValue}%` }} ></div>
 
-      <div className="time-bar">Time Survived: {timeValue}</div>
     </div>
+
+    <div className="time-bar">Time Survived: {timeValue}</div>
 
     <div className={`panel ${resourcePanelVisible ? "visible" : "hidden"}`}>
 
@@ -414,16 +427,11 @@ const Dashboard = () => {
     <div className={`panel ${diplomacyPanelVisible ? "visible" : "hidden"}`}>
     <div className="panel-row">Weapons</div>
     <div class="grid">
-      <div class="grid-item lumbermill" onClick={constructLumberMill}>Lumbermill</div>
-      <div class="grid-item wheatfarm" onClick={constructWheatFarm}>Wheat Farm</div>
-      <div class="grid-item coffeefarm" onClick={constructCornFarm}>Coffee Farm</div>
-      <div class="grid-item mine" onClick={constructMine}>Mine</div>
-      <div class="grid-item fishinghut" onClick={constructFishingHut}>Fishing Hut</div>
-      <div class="grid-item harbor" onClick={constructHarbor}>Harbor</div>
-      <div class="grid-item" onClick={constructTradeVessel}>Trade Vessel</div>
-      <div class="grid-item" onClick={constructShip}>Ship</div>
-      <div class="grid-item cannon" onClick={constructCannon}>Cannon</div>
-      <div class="grid-item" onClick={constructMinuteMen}>Minute Men</div>
+      <div class="grid-item" onClick={constructLumberMill}>Spear</div>
+      <div class="grid-item" onClick={constructWheatFarm}>Sword</div>
+      <div class="grid-item" onClick={constructCornFarm}>Dagger</div>
+      <div class="grid-item" onClick={constructMine}>Bow</div>
+      <div class="grid-item" onClick={constructFishingHut}>Shield</div>
     </div>
     </div>
 

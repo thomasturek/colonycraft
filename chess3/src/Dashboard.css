@@ -2,8 +2,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
@@ -19,8 +19,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   z-index: 5;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
@@ -46,6 +46,15 @@
   background-size: contain;
   background-position: center;
   background-image: url("./images/tree.png");
+
+}
+
+.bush {
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-image: url("./images/bush.png");
 
 }
 
@@ -81,8 +90,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
@@ -97,8 +106,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
@@ -113,8 +122,8 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 128px;
-  height: 128px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
@@ -123,6 +132,22 @@
   background-position: center;
   image-rendering: pixelated;
   animation: runningAnimationUp 0.4s steps(4) infinite;
+}
+
+.RunningDown {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  margin-top: -50px; /* Half of the square's height */
+  margin-left: -50px; /* Half of the square's width */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  image-rendering: pixelated;
+  animation: runningAnimationDown 0.4s steps(4) infinite;
 }
 
 @keyframes runningAnimationRight {
@@ -170,9 +195,24 @@
   }
 }
 
+@keyframes runningAnimationDown {
+  0% {
+    background-image: url("./images/running/runningdown/runningdown1.png");
+  }
+  25% {
+    background-image: url("./images/running/runningdown/runningdown2.png");
+  }
+  50% {
+    background-image: url("./images/running/runningdown/runningdown3.png");
+  }
+  75% {
+    background-image: url("./images/running/runningdown/runningdown4.png");
+  }
+}
+
 .health-bar {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   color: white;
   display: flex;
   align-items: center;
@@ -183,14 +223,14 @@
   background-size:cover;
   background-position: center;
   background-color: #eb4034;
-  border: 2px solid black;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 25%;
+  border: 1px solid black;
+  margin-top: 29%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 7;
+  transition: width 0.5s ease;
 }
 
 .zombie-health-bar {
@@ -213,12 +253,12 @@
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 0;
 }
 
 .hunger-bar {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   width: 100%;
   color: white;
   display: flex;
@@ -230,7 +270,7 @@
   background-size:cover;
   background-position: center;
   background-color: orange;
-  border: 2px solid black;
+  border: 1px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
   margin-top: 30%;
   text-decoration: none;
@@ -241,10 +281,12 @@
 }
 
 .time-bar {
-  padding-top: 7%;
-  padding-bottom: 7%;
-  width: 100%;
-  bottom: 10%;
+  position:absolute;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+  right: 5%;
+  width: 20%;
+  top: 47.5%;
   color: white;
   display: flex;
   align-items: center;
@@ -255,9 +297,8 @@
   background-size:cover;
   background-position: center;
   background-color: #34a8eb;
-  border: 2px solid black;
+  border: 1px solid black;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  margin-top: 25%;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
@@ -406,6 +447,26 @@
   image-rendering: pixelated;
 }
 
+.heart {
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/heart.png");
+  background-size: 60px 60px;
+  image-rendering: pixelated;
+
+}
+
+.porkchop {
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/porkchop.png");
+  background-size: 50px 50px;
+  image-rendering: pixelated;
+
+}
+
 .coffeefarm {
   background-repeat: no-repeat;
   background-position: center;
@@ -529,11 +590,12 @@
 .game {
 
   width:20%;
-  height: 20vh;
+  height:100%;
   background-size: cover;
   background-position: top;
   backround-color: white;
-  top: -5%;
+  margin-left: 2%;
+  top: 0;
   left: 0%;
   display: flex;
   flex-direction: column;
@@ -787,12 +849,31 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
+    .time-text {
+      font-size: 30px;
+      position:absolute;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      top: 15%;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
 
     .text-user {
         width: 100%;
         padding: 5%;
         text-align: center;
         font-size: 10px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-user-wallet {
+        width: 100%;
+        padding: 5%;
+        text-align: center;
+        font-size: 6px;
         color: white;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
@@ -840,12 +921,11 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 5.5%;
+  top: 11%;
   left: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.5vw;
   font-weight: 500;
   background-repeat: no-repeat;
   background-size:cover;
@@ -866,7 +946,7 @@
   width: 20%;
   height: 7.5%;
   color: white;
-  top: 23%;
+  top: 29%;
   left: 75%;
   display: flex;
   align-items: center;

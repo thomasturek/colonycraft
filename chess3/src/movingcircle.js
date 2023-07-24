@@ -4,6 +4,8 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
 
+  const [islandMap, setIslandMap] = useState([]);
+
   const moveStep = 25;
 
   const maxy = 350;
@@ -31,7 +33,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           break;
         case "s":
           newY -= moveStep;
-          setCircleClassName("Character Running");
+          setCircleClassName("Character RunningDown");
           break;
         case "d":
           newX -= moveStep;
@@ -80,27 +82,78 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
     transition: "left 0.1s, top 0.1s",
   };
 
-  const islandMap = Array.from({ length: gridSize }, () =>
-    Array(gridSize).fill("green")
-  );
-  // Set the top row as sand
-  for (let i = 0; i < gridSize; i++) {
-    islandMap[0][i] = "yellow";
-  }
-  // Set the bottom row as sand
-  for (let i = 0; i < gridSize; i++) {
-    islandMap[gridSize - 1][i] = "yellow";
-  }
-  // Set the leftmost column as sand
-  for (let i = 0; i < gridSize; i++) {
-    islandMap[i][0] = "yellow";
-  }
-  // Set the rightmost column as sand
-  for (let i = 0; i < gridSize; i++) {
-    islandMap[i][gridSize - 1] = "yellow";
-  }
+  useEffect(() => {
+      const generateIslandMap = () => {
+        const newIslandMap = Array.from({ length: gridSize }, () =>
+          Array(gridSize).fill("green")
+        );
+
+        for (let i = 0; i < gridSize; i++) {
+          for (let y = 0; y < gridSize; y++) {
+            if (Math.random() < 0.20) {
+              newIslandMap[i][y] = "tree";
+            }
+          }
+        }
+
+        for (let i = 0; i < gridSize; i++) {
+          for (let y = 0; y < gridSize; y++) {
+            if (Math.random() < 0.10) {
+              newIslandMap[i][y] = "bush";
+            }
+          }
+        }
+
+        // Set the top row as sand
+        for (let i = 0; i < gridSize; i++) {
+          newIslandMap[0][i] = "yellow";
+        }
+        // Set the sec. top row as sand
+        for (let i = 0; i < gridSize; i++) {
+          if (Math.random() < 0.45) {
+          newIslandMap[1][i] = "yellow";
+          }
+        }
+        // Set the bottom row as sand
+        for (let i = 0; i < gridSize; i++) {
+          newIslandMap[gridSize - 1][i] = "yellow";
+        }
+        for (let i = 0; i < gridSize; i++) {
+          if (Math.random() < 0.45) {
+          newIslandMap[gridSize-2][i] = "yellow";
+          }
+        }
+        // Set the leftmost column as sand
+        for (let i = 0; i < gridSize; i++) {
+          newIslandMap[i][0] = "yellow";
+        }
+        for (let i = 0; i < gridSize; i++) {
+          if (Math.random() < 0.45) {
+          newIslandMap[i][1] = "yellow";
+          }
+        }
+        // Set the rightmost column as sand
+        for (let i = 0; i < gridSize; i++) {
+          newIslandMap[i][gridSize - 1] = "yellow";
+        }
+        for (let i = 0; i < gridSize; i++) {
+          if (Math.random() < 0.45) {
+          newIslandMap[i][gridSize-2] = "yellow";
+          }
+        }
+
+        setIslandMap(newIslandMap);
+      };
+
+      generateIslandMap();
+    }, []);
 
   const renderGridSquares = () => {
+
+    if (!islandMap || islandMap.length === 0) {
+      return null; // Return null if islandMap is not ready yet
+    }
+
   const gridSquares = [];
 
   for (let row = 0; row < gridSize; row++) {

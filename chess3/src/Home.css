@@ -230,19 +230,6 @@ html {
   transition: transform 0.3s ease;
 }
 
-.rockyisland {
-  position: fixed;
-  top: 5%;
-  left: 25%;
-  width: 200px;
-  height: 200px;
-  image-rendering: pixelated;
-  background-image: url("./images/rockyisland.png");
-  background-size: cover;
-  z-index: 0;
-  transition: transform 0.3s ease;
-}
-
 
 @keyframes planetMovement {
   0% {

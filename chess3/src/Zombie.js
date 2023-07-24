@@ -87,6 +87,7 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
         <div className="zombie-health-bar" style={{ width: `${zombieHealth}%` }} />
 
         </>
+
       );
 
     }
