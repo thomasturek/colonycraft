@@ -9,10 +9,10 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
 
   const moveStep = 25;
 
-  const maxy = 3000;
-  const maxx = 1500;
-  const miny = -3000;
-  const minx = -3500;
+  const maxy = 4000;
+  const maxx = 1000;
+  const miny = -1000;
+  const minx = -4000;
 
   useEffect(() => {
 
