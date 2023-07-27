@@ -30,10 +30,10 @@ const Tree = ({ position: initialPosition }) => {
           break;
       }
 
-      const maxy = 300;
-      const maxx = 400;
-      const miny = -4500;
-      const minx = -4200;
+      const maxy = -4500;
+      const maxx = 2100;
+      const miny = 300;
+      const minx = -2100;
 
       if (newX > maxx) newX = maxx;
       if (newX < minx) newX = minx;
