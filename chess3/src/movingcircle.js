@@ -169,7 +169,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           style={{
             width: `${squareSize}px`,
             height: `${squareSize}px`,
-            border: "0.2px solid black",
+            border: "0px solid black",
           }}
         />
       );
