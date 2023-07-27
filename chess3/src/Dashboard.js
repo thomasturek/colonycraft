@@ -181,7 +181,7 @@ const Dashboard = () => {
 
         const maxY = 3500;
         const maxX = 3000;
-        const minY = -1500;
+        const minY = -1350;
         const minX = -1900;
 
         do {
