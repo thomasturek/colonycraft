@@ -9,7 +9,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
 
   const moveStep = 25;
 
-  const maxy = 450;
+  const maxy = 430;
   const maxx = 700;
   const miny = -4550;
   const minx = -4200;

@@ -179,10 +179,10 @@ const Dashboard = () => {
         let newPosition;
         let distance;
 
-        const maxY = 3500;
-        const maxX = 3000;
-        const minY = -1350;
-        const minX = -1900;
+        const maxY = 3550;
+        const maxX = 2800;
+        const minY = -1200;
+        const minX = -2100;
 
         do {
           newPosition = {
@@ -260,10 +260,10 @@ const Dashboard = () => {
 
   const generateRandomPosition = () => {
 
-    const maxY = 2800;
-    const maxX = 3000;
-    const minY = -200;
-    const minX = -2200;
+    const maxY = 430;
+    const maxX = 700;
+    const minY = -4550;
+    const minX = -4200;
 
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
