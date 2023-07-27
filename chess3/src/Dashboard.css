@@ -847,6 +847,27 @@
       background-position: center;
       animation: zombie-fighting 1s steps(2) infinite;
       z-index: 0;
+    }
+
+    .Zombie-Running-Right {
+
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      animation: zombie-running-right 0.4s steps(5) infinite;
+      z-index: 0;
+
+    }
+
+    .Zombie-Running-Left {
+
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      animation: zombie-running-left 0.4s steps(5) infinite;
+      z-index: 0;
 
     }
 
@@ -856,6 +877,42 @@
       }
       100% {
         background-image: url("./images/zombie-fighting/fightingzombie2.png");
+      }
+    }
+
+    @keyframes zombie-running-right {
+      0% {
+        background-image: url("./images/zombie-fighting/zombierunning/zombierunning1.png");
+      }
+      25% {
+        background-image: url("./images/zombie-fighting/zombierunning/zombierunning2.png");
+      }
+      50% {
+        background-image: url("./images/zombie-fighting/zombierunning/zombierunning3.png");
+      }
+      75% {
+        background-image: url("./images/zombie-fighting/zombierunning/zombierunning4.png");
+      }
+      100% {
+        background-image: url("./images/zombie-fighting/zombierunning/zombierunning5.png");
+      }
+    }
+
+    @keyframes zombie-running-left {
+      0% {
+        background-image: url("./images/zombie-fighting/zombierunningleft/zombierunning1.png");
+      }
+      25% {
+        background-image: url("./images/zombie-fighting/zombierunningleft/zombierunning2.png");
+      }
+      50% {
+        background-image: url("./images/zombie-fighting/zombierunningleft/zombierunning3.png");
+      }
+      75% {
+        background-image: url("./images/zombie-fighting/zombierunningleft/zombierunning4.png");
+      }
+      100% {
+        background-image: url("./images/zombie-fighting/zombierunningleft/zombierunning5.png");
       }
     }
 

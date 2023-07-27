@@ -173,50 +173,103 @@ const Dashboard = () => {
     setBlockchainConnected(true);
   }
 
-  const handleZombieAttack = (zombieHealth) => {
+  const generateRandomPosition = () => {
+  const minX = -1500; // Set your minimum X coordinate value
+  const maxX = 1500;  // Set your maximum X coordinate value
+  const minY = -1500; // Set your minimum Y coordinate value
+  const maxY = 1500;  // Set your maximum Y coordinate value
 
-    if(!zombieDeath) {
+  const x = Math.random() * (maxX - minX) + minX;
+  const y = Math.random() * (maxY - minY) + minY;
+  return { x, y };
+};
 
-    const playerX = 650;
-    const playerY = 340;
+  const [zombies, setZombies] = useState([]);
 
-    const zombieX = zombiePosition.x;
-    const zombieY = zombiePosition.y;
+  // Function to spawn a new zombie at a random position
+  const spawnZombie = () => {
+    const randomPosition = generateRandomPosition();
+    setZombies((prevZombies) => [
+      ...prevZombies,
+      {
+        position: randomPosition,
+        health: 100, // Set initial zombie health here
+        death: false, // Set initial zombie death status here
+        className: "Zombie", // Set initial zombie class name here
+      },
+    ]);
+  };
 
-    const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
+  useEffect(() => {
+    const spawnInterval = setInterval(spawnZombie, 10000); // Spawn a new zombie every 5 seconds
 
-    if (distance <= 100) {
-      setZombieClassName("Zombie-Fighting")
+    return () => clearInterval(spawnInterval);
+  }, []);
 
-      setTimeout(() => {
-      setHealthValue(healthValue-5);
-    }, 1000);
+  const handleZombieAttack = () => {
+    if (!isDead) {
+
+      const playerX = 650;
+      const playerY = 340;
+      setZombies((prevZombies) => {
+        let closestZombieIndex = -1;
+        let closestDistance = Number.MAX_VALUE;
+
+        // Find the closest zombie to the player
+        prevZombies.forEach((zombie, index) => {
+          const zombieX = zombie.position.x;
+          const zombieY = zombie.position.y;
 
 
-    } else {
+          const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
 
-      setZombieClassName("Zombie")
+          if (distance <= 100 && distance < closestDistance) {
+            closestZombieIndex = index;
+            closestDistance = distance;
+          }
+        });
 
-      const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
+        if (closestZombieIndex !== -1) {
+          const closestZombie = prevZombies[closestZombieIndex];
+          const zombieX = closestZombie.position.x;
+          const zombieY = closestZombie.position.y;
 
-       const moveSpeed = 10; // Adjust the move speed as needed
+          setZombieClassName("Zombie-Fighting");
 
-       const deltaX = moveSpeed * Math.cos(angle);
-       const deltaY = moveSpeed * Math.sin(angle);
+          setTimeout(() => {
+            setHealthValue((prevHealth) => prevHealth - 0.5);
+          }, 1000);
 
-       setZombiePosition((prevPosition) => ({
-         x: prevPosition.x + deltaX,
-         y: prevPosition.y + deltaY,
-       }));
+          const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
+          const moveSpeed = 10;
 
-     }
+          const deltaX = moveSpeed * Math.cos(angle);
+          const deltaY = moveSpeed * Math.sin(angle);
 
+          return prevZombies.map((zombie, index) =>
+            index === closestZombieIndex
+              ? {
+                  ...zombie,
+                  position: {
+                    x: zombie.position.x + deltaX,
+                    y: zombie.position.y + deltaY,
+                  },
+                  className:
+                    angle < Math.PI / 2 && angle > -Math.PI / 2
+                      ? "Zombie-Running-Right"
+                      : "Zombie-Running-Left",
+                }
+              : zombie
+          );
+        }
+
+        return prevZombies;
+      });
     }
 
     if (healthValue <= 0) {
-     setIsDead(true);
-   }
-
+      setIsDead(true);
+    }
   };
 
   function refreshPage() {
@@ -329,15 +382,12 @@ setNotLoaded(false);
 
     if(!isDead){
 
-    const zombieInterval = setInterval(handleZombieAttack, 100);
-
-    return () => {
-    clearInterval(zombieInterval);
-  };
+      const zombieAttackInterval = setInterval(handleZombieAttack, 100);
+      return () => clearInterval(zombieAttackInterval);
 
   }
 
-}, [zombiePosition, healthValue]);
+}, [zombiePosition, healthValue, zombieDeath]);
 
   useEffect(() => {
 
@@ -345,7 +395,6 @@ setNotLoaded(false);
 
     const timerInterval = setInterval(updateElapsedTime, 1000);
 
-    // Clear the interval when the component is unmounted or when specific dependencies change
     return () => {
       clearInterval(timerInterval);
     };
@@ -459,8 +508,45 @@ setNotLoaded(false);
     </div>
 
       <div className={className}/>
-      <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition}/>
-      <Zombie zombieClassName={zombieClassName} setZombieClassName={setZombieClassName} zombiePosition={zombiePosition} setZombiePosition={setZombiePosition} zombieHealth={zombieHealth} setZombieHealth={setZombieHealth} zombieDeath={zombieDeath} setZombieDeath={setZombieDeath}/>
+      <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition} isDead={isDead}/>
+
+      {zombies.map((zombie, index) => (
+        <Zombie
+          key={index}
+          zombieClassName="Zombie"
+          setZombieClassName={(className) =>
+            setZombies((prevZombies) =>
+              prevZombies.map((prevZombie, i) =>
+                i === index ? { ...prevZombie, className } : prevZombie
+              )
+            )
+          }
+          zombiePosition={zombie.position}
+          setZombiePosition={(position) =>
+            setZombies((prevZombies) =>
+              prevZombies.map((prevZombie, i) =>
+                i === index ? { ...prevZombie, position } : prevZombie
+              )
+            )
+          }
+          zombieHealth={zombie.health}
+          setZombieHealth={(health) =>
+            setZombies((prevZombies) =>
+              prevZombies.map((prevZombie, i) =>
+                i === index ? { ...prevZombie, health } : prevZombie
+              )
+            )
+          }
+          zombieDeath={zombie.death}
+          setZombieDeath={(death) =>
+            setZombies((prevZombies) =>
+              prevZombies.map((prevZombie, i) =>
+                i === index ? { ...prevZombie, death } : prevZombie
+              )
+            )
+          }
+        />
+      ))}
 
       {isDead && renderYouDiedOverlay()}
 

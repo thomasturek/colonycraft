@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition, lastDirection, setLastDirection}) => {
+const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition, lastDirection, setLastDirection,isDead}) => {
+
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
 
@@ -51,8 +52,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
        if (newY < miny) newY = miny;
 
        setCirclePosition({ x: newX, y: newY });
-
-    };
+    }
 
     const handleKeyUp = (event) => {
       setCircleClassName("Character");
@@ -83,15 +83,18 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
   };
 
   useEffect(() => {
+
       const generateIslandMap = () => {
+
         const newIslandMap = Array.from({ length: gridSize }, () =>
           Array(gridSize).fill("green")
         );
 
+
         for (let i = 0; i < gridSize; i++) {
           for (let y = 0; y < gridSize; y++) {
-            if (Math.random() < 0.20) {
-              newIslandMap[i][y] = "tree";
+              if (Math.random() < 0.20) {
+                newIslandMap[i][y] = "tree";
             }
           }
         }
