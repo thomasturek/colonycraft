@@ -121,9 +121,7 @@ const Dashboard = () => {
   // Zombie Stats
 
   const [zombieHealth, setZombieHealth] = useState(100);
-  const [zombieDeath, setZombieDeath] = useState(false);
   const [zombiePosition, setZombiePosition] = useState({ x: 400, y: 100 });
-  const [zombieClassName, setZombieClassName] = useState("Zombie");
 
   // islandsData
 
@@ -132,6 +130,7 @@ const Dashboard = () => {
   // Game Data
 
   const [notLoaded, setNotLoaded] = useState(true);
+  const [attackTimeout, setAttackTimeout] = useState();
 
   // blockchain
 
@@ -186,7 +185,6 @@ const Dashboard = () => {
 
   const [zombies, setZombies] = useState([]);
 
-  // Function to spawn a new zombie at a random position
   const spawnZombie = () => {
     const randomPosition = generateRandomPosition();
     setZombies((prevZombies) => [
@@ -240,16 +238,24 @@ const Dashboard = () => {
         };
       });
 
-      // Handle player-zombie attack when zombies are near the player
       if (closestZombieIndex !== -1) {
         const closestZombie = updatedZombies[closestZombieIndex];
         const zombieX = closestZombie.position.x;
         const zombieY = closestZombie.position.y;
         const distanceToClosestZombie = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
 
-        setTimeout(() => {
-        setHealthValue(healthValue-5);
-        }, 1000);
+        let attackTimeout;
+
+        if (attackTimeout) {
+         clearTimeout(attackTimeout);
+       }
+
+       // Set a new attack timeout
+       attackTimeout = setTimeout(() => {
+         setHealthValue(healthValue - 5);
+       }, 1000);
+
+       setAttackTimeout(attackTimeout);
 
       }
 
@@ -263,7 +269,6 @@ const Dashboard = () => {
 };
 
   function refreshPage() {
-      // Reload the current page
       window.location.reload();
     }
 
@@ -377,7 +382,7 @@ setNotLoaded(false);
 
   }
 
-}, [zombiePosition, healthValue, zombieDeath]);
+}, [zombiePosition, healthValue]);
 
   useEffect(() => {
 
@@ -457,7 +462,7 @@ setNotLoaded(false);
       <div class="grid-item-reasources">
         <h1 style={{top: '70%'}} className="text">Metals</h1>
         <h1 style={{top: '70%', marginLeft: '-5%', textAlign: 'right'}} className="text">{metalsValue}</h1>
-        <div className="reasource-image-metals" style={{top: '70%', left: '21%'}}></div>
+        <div className="reasource-image-metals" style={{top: '67%', left: '21%'}}></div>
       </div>
       <div class="grid-item-reasources">
         <h1 style={{top: '86%'}} className="text">Fish</h1>
