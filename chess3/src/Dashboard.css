@@ -419,7 +419,7 @@
   background-size:500%;
   background-position: center;
   background-image: url("./images/woodboard.png");
-  z-index: 10;
+  z-index: 10000;
   transform: translateX(100%);
   user-select: none;
 }
