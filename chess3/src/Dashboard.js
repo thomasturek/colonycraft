@@ -179,10 +179,10 @@ const Dashboard = () => {
         let newPosition;
         let distance;
 
-        const maxY = 4000;
-        const maxX = 4000;
-        const minY = -900;
-        const minX = -900;
+        const maxY = 3200;
+        const maxX = 3300;
+        const minY = -1400;
+        const minX = -1400;
 
         do {
           newPosition = {
