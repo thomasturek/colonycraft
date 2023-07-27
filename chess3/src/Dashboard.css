@@ -21,7 +21,7 @@
   top: 50%;
   width: 100px;
   height: 100px;
-  z-index: 5;
+  z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
   background-repeat: no-repeat;

@@ -196,7 +196,7 @@ const Dashboard = () => {
             const dy = plant.position.y - newPosition.y;
             return Math.min(minDistance, Math.sqrt(dx * dx + dy * dy));
           }, Number.MAX_VALUE);
-        } while (distance < 100); // Regenerate if the distance is less than 100 pixels
+        } while (distance < 150); // Regenerate if the distance is less than 100 pixels
 
         return newPosition;
       };
@@ -260,10 +260,10 @@ const Dashboard = () => {
 
   const generateRandomPosition = () => {
 
-    const maxY = 430;
-    const maxX = 700;
-    const minY = -4550;
-    const minX = -4200;
+    const maxY = 3200;
+    const maxX = 3300;
+    const minY = -1400;
+    const minX = -1400;
 
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
@@ -434,7 +434,7 @@ useEffect(() => {
     const playerX = 650;
     const playerY = 340;
     const moveSpeed = 10;
-    const desiredDistance = 50;
+    const desiredDistance = 100;
 
     setZombies((prevZombies) => {
       let closestZombieIndex = -1;
@@ -456,26 +456,13 @@ useEffect(() => {
 
         if (distance <= desiredDistance) {
 
-        let className;
-        if (angle >= -Math.PI / 4 && angle < Math.PI / 4) {
-          className = "Zombie-Running-Right";
-        } else {
-          className = "Zombie-Running-Left";
-        }
-
-        if (distance <= 100) {
-        className = "Zombie-Fighting";
-        const deltaX = 0;
-        const deltaY = 0;
-        }
-
         return {
           ...zombie,
           position: {
-            x: zombie.position.x + deltaX,
-            y: zombie.position.y + deltaY,
+            x: zombie.position.x,
+            y: zombie.position.y,
           },
-          className,
+          className:"Zombie-Fighting",
         };
 
       } else {
@@ -518,7 +505,7 @@ useEffect(() => {
         }
 
         attackTimeout = setTimeout(() => {
-          const updatedHealth = closestZombie.health - 20;
+          const updatedHealth = closestZombie.health - 25;
          setZombies((prevZombies) =>
           prevZombies.map((prevZombie, i) =>
             i === closestZombieIndex ? { ...prevZombie, health: updatedHealth } : prevZombie
