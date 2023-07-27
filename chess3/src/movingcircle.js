@@ -45,16 +45,16 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           break;
       }
 
-      if (newX >= maxx) {
+      if (newX > maxx) {
         newX = maxx;
         setOutOfBounds(true);
-      } else if (newX <= minx) {
+      } else if (newX < minx) {
         newX = minx;
         setOutOfBounds(true);
-      } else if (newY >= maxy) {
+      } else if (newY > maxy) {
          newY = maxy;
          setOutOfBounds(true);
-       } else if (newY <= miny) {
+       } else if (newY < miny) {
          newY = miny;
          setOutOfBounds(true);
        } else {
