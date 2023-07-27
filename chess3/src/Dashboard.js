@@ -345,7 +345,9 @@ useEffect(() => {
         };
       });
 
-      if (closestZombieIndex !== -1) {
+      const closestZombie = updatedZombies[closestZombieIndex];
+
+      if (closestZombieIndex !== -1 && !closestZombie.death) {
         const closestZombie = updatedZombies[closestZombieIndex];
         const zombieX = closestZombie.position.x;
         const zombieY = closestZombie.position.y;

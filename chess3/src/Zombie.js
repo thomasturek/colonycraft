@@ -31,6 +31,7 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
           newX -= moveStep;
           break;
           case "f":
+
           setZombieHealth(zombieHealth - 5);
 
           if(zombieHealth < 0) {
