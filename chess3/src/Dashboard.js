@@ -44,7 +44,7 @@ const collectToken = async (currentStarstones, receiverAddress, tokenCollected, 
       }
 };
 
-const connectToBlockchain = async (setCurrentUser, setStarstones) => {
+const connectToBlockchain = async (setCurrentUser, setStarstones, setLoading) => {
 
   if (window.ethereum) {
   try {
@@ -129,8 +129,8 @@ const Dashboard = () => {
 
   // Game Data
 
-  const [notLoaded, setNotLoaded] = useState(true);
   const [attackTimeout, setAttackTimeout] = useState();
+  const [loading, setLoading] = useState(true);
 
   // blockchain
 
@@ -166,11 +166,16 @@ const Dashboard = () => {
   const constructMinuteMen = () => {
   };
 
-  if(!blockchainConnected) {
-    connectToBlockchain(setCurrentUser, setStarstones);
-    console.log(currentUser);
-    setBlockchainConnected(true);
-  }
+  useEffect(() => {
+     if (!blockchainConnected) {
+       connectToBlockchain(setCurrentUser, setStarstones, setLoading);
+     }
+
+     setTimeout(() => {
+          setLoading(false);
+        }, 4000);
+
+   }, [blockchainConnected]);
 
   const generateRandomPosition = () => {
   const minX = -1500; // Set your minimum X coordinate value
@@ -232,10 +237,8 @@ const Dashboard = () => {
 
 const renderLoading = () => {
 
-  /*
-
   return (
-  <div className="you-died-overlay">
+  <div className="loading-overlay">
 
     <h1 className="you-died-text">Loading...</h1>
 
@@ -243,10 +246,6 @@ const renderLoading = () => {
 
   </div>
   );
-
-  */
-
-setNotLoaded(false);
 }
 
   const handleResourceButtonClick = () => {
@@ -359,7 +358,6 @@ useEffect(() => {
          clearTimeout(attackTimeout);
        }
 
-       // Set a new attack timeout
        attackTimeout = setTimeout(() => {
          setHealthValue(healthValue - 5);
        }, 1000);
@@ -405,6 +403,8 @@ useEffect(() => {
     <head>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
    </head>
+
+   {loading && renderLoading()}
 
    <button className="user">
      <h1 className="text-user-wallet">{currentUser}</h1>
@@ -547,8 +547,6 @@ useEffect(() => {
       ))}
 
       {isDead && renderYouDiedOverlay()}
-
-      {notLoaded && renderLoading()}
 
       <div className="nighttime-overlay" />
     </div>
