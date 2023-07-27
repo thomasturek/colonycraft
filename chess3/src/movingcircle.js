@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition, lastDirection, setLastDirection,isDead}) => {
+const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, setCirclePosition, lastDirection, setLastDirection,isDead, outOfBounds, setOutOfBounds}) => {
 
   const gridSize = 50; // Number of squares in each row and column
   const squareSize = 100; // Size of each square in pixels
@@ -10,7 +10,7 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
   const moveStep = 25;
 
   const maxy = 300;
-  const maxx = 400;
+  const maxx = 500;
   const miny = -4500;
   const minx = -4200;
 
@@ -45,12 +45,21 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           break;
       }
 
-      if (newX > maxx) newX = maxx;
-      if (newX < minx) newX = minx;
-       if (newY > maxy) newY = maxy;
-       if (newY < miny) newY = miny;
-
-       console.log(newX, newY);
+      if (newX > maxx) {
+        newX = maxx;
+        setOutOfBounds(true);
+      } else if (newX < minx) {
+        newX = minx;
+        setOutOfBounds(true);
+      } else if (newY > maxy) {
+         newY = maxy;
+         setOutOfBounds(true);
+       } else if (newY < miny) {
+         newY = miny;
+         setOutOfBounds(true);
+       } else {
+         setOutOfBounds(false);
+       }
 
        setCirclePosition({ x: newX, y: newY });
     }

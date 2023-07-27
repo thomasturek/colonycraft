@@ -4,11 +4,6 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
 
   const moveStep = 25;
 
-  const maxy = 300;
-  const maxx = 400;
-  const miny = -4500;
-  const minx = -4200;
-
   useEffect(() => {
 
     const handleKeyDown = (event) => {
@@ -40,11 +35,6 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
         default:
           break;
       }
-
-      if (newX > maxx) newX = maxx;
-      if (newX < minx) newX = minx;
-       if (newY > maxy) newY = maxy;
-       if (newY < miny) newY = miny;
 
        const playerX = 650;
        const playerY = 340;

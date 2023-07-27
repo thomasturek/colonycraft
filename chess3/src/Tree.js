@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-const Tree = ({ position: initialPosition }) => {
+const Tree = ({ position: initialPosition, outOfBounds }) => {
   const [treePosition, setTreePosition] = useState(initialPosition);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       let newX = treePosition.x;
       let newY = treePosition.y;
+
       const moveStep = 25;
+
+      if(!outOfBounds) {
 
       const { key } = event;
       switch (key) {
@@ -30,15 +33,7 @@ const Tree = ({ position: initialPosition }) => {
           break;
       }
 
-      const maxy = -4500;
-      const maxx = 2100;
-      const miny = 300;
-      const minx = -2100;
-
-      if (newX > maxx) newX = maxx;
-      if (newX < minx) newX = minx;
-       if (newY > maxy) newY = maxy;
-       if (newY < miny) newY = miny;
+    }
 
       setTreePosition({ x: newX, y: newY });
     };
@@ -48,7 +43,7 @@ const Tree = ({ position: initialPosition }) => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [treePosition]);
+  }, [treePosition, outOfBounds]);
 
   const treeStyles = {
     position: "absolute",

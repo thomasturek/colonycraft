@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 
-const Bush = ({ position: initialPosition }) => {
+const Bush = ({ position: initialPosition, outOfBounds }) => {
   const [bushPosition, setBushPosition] = useState(initialPosition);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
       let newX = bushPosition.x;
       let newY = bushPosition.y;
+
       const moveStep = 25;
+
+      if(!outOfBounds) {
 
       const { key } = event;
       switch (key) {
@@ -30,15 +33,7 @@ const Bush = ({ position: initialPosition }) => {
           break;
       }
 
-      const maxy = 300;
-      const maxx = 400;
-      const miny = -4500;
-      const minx = -4200;
-
-      if (newX > maxx) newX = maxx;
-      if (newX < minx) newX = minx;
-       if (newY > maxy) newY = maxy;
-       if (newY < miny) newY = miny;
+      }
 
       setBushPosition({ x: newX, y: newY });
     };

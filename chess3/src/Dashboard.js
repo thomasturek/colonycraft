@@ -119,6 +119,7 @@ const Dashboard = () => {
   const [className, setClassName] = useState("Character");
   const [lastDirection, setLastDirection] = useState("Right");
   const [isDead, setIsDead] = useState(false);
+  const [outOfBounds, setOutOfBounds] = useState(false);
 
   // Zombie Stats
 
@@ -178,10 +179,10 @@ const Dashboard = () => {
         let newPosition;
         let distance;
 
-        const minX = -2500;
-        const maxX = 2500;
-        const minY = -3200;
-        const maxY = 3200;
+        const maxY = 2800;
+        const maxX = 3000;
+        const minY = -200;
+        const minX = -2200;
 
         do {
           newPosition = {
@@ -259,10 +260,10 @@ const Dashboard = () => {
 
   const generateRandomPosition = () => {
 
-    const minX = 0;
-    const maxX = 5000;
-    const minY = -5000;
-    const maxY = 0;
+    const maxY = 2800;
+    const maxX = 3000;
+    const minY = -200;
+    const minX = -2200;
 
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
@@ -683,7 +684,7 @@ useEffect(() => {
     </div>
 
       <div className={className}/>
-      <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition} isDead={isDead}/>
+      <MovingCircle circleClassName={className} setCircleClassName={setClassName} circlePosition={circlePosition} setCirclePosition={setCirclePosition} isDead={isDead} outOfBounds={outOfBounds} setOutOfBounds={setOutOfBounds}/>
 
       {zombies.map((zombie, index) => (
         <Zombie
@@ -724,11 +725,11 @@ useEffect(() => {
       ))}
 
       {bushes.map((bush, index) => (
-        <Bush key={index} position={bush.position} />
+        <Bush key={index} position={bush.position} outOfBounds={outOfBounds}/>
       ))}
 
       {trees.map((tree, index) => (
-        <Tree key={index} position={tree.position} />
+        <Tree key={index} position={tree.position} outOfBounds={outOfBounds}/>
       ))}
 
       {isDead && renderYouDiedOverlay()}
