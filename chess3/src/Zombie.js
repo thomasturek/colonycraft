@@ -56,14 +56,15 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
        const deltaX = moveSpeed * Math.cos(angle);
        const deltaY = moveSpeed * Math.sin(angle);
 
-       if(angle >= -Math.PI / 4) {
-
-         setZombieClassName("Zombie-Running-Right");
-       } else if(angle < Math.PI / 4) {
-
-         setZombieClassName("Zombie-Running-Left");
-
-       }
+       if (angle >= -Math.PI / 4 && angle < Math.PI / 4) {
+        setZombieClassName("Zombie-Running-Right");
+      } else if (angle >= Math.PI / 4 && angle < (3 * Math.PI) / 4) {
+        setZombieClassName("Zombie-Running-Right");
+      } else if (angle >= (3 * Math.PI) / 4 || angle < -(3 * Math.PI) / 4) {
+        setZombieClassName("Zombie-Running-Left");
+      } else {
+        setZombieClassName("Zombie-Running-Left");
+      }
 
        setZombiePosition({ x: newX, y: newY });
 
