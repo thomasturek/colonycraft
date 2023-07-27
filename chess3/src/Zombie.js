@@ -48,6 +48,23 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
        if (newY > maxy) newY = maxy;
        if (newY < miny) newY = miny;
 
+       const playerX = 650;
+       const playerY = 340;
+       const moveSpeed = 10;
+
+       const angle = Math.atan2(playerY - newY, playerX - newX);
+       const deltaX = moveSpeed * Math.cos(angle);
+       const deltaY = moveSpeed * Math.sin(angle);
+
+       if(angle >= -Math.PI / 4) {
+
+         setZombieClassName("Zombie-Running-Right");
+       } else if(angle < Math.PI / 4) {
+
+         setZombieClassName("Zombie-Running-Left");
+
+       }
+
        setZombiePosition({ x: newX, y: newY });
 
     };

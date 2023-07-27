@@ -198,7 +198,7 @@ const Dashboard = () => {
         position: randomPosition,
         health: 100, // Set initial zombie health here
         death: false, // Set initial zombie death status here
-        className: "Zombie", // Set initial zombie class name here
+        className: "Zombie",
       },
     ]);
   };
@@ -334,13 +334,20 @@ useEffect(() => {
         const deltaX = moveSpeed * Math.cos(angle);
         const deltaY = moveSpeed * Math.sin(angle);
 
+        let className;
+        if (angle >= -Math.PI / 4 && angle < Math.PI / 4) {
+          className = "Zombie-Running-Right";
+        } else {
+          className = "Zombie-Running-Left";
+        }
+
         return {
           ...zombie,
           position: {
             x: zombie.position.x + deltaX,
             y: zombie.position.y + deltaY,
           },
-          className: angle >= -Math.PI / 4 && angle < Math.PI / 4 ? "Zombie-Running-Right" : "Zombie-Running-Left",
+          className,
         };
       });
 
@@ -511,7 +518,7 @@ useEffect(() => {
       {zombies.map((zombie, index) => (
         <Zombie
           key={index}
-          zombieClassName="Zombie"
+          zombieClassName={zombie.className}
           setZombieClassName={(className) =>
             setZombies((prevZombies) =>
               prevZombies.map((prevZombie, i) =>
