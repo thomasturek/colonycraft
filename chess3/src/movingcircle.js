@@ -50,6 +50,8 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
        if (newY > maxy) newY = maxy;
        if (newY < miny) newY = miny;
 
+       console.log(newX, newY);
+
        setCirclePosition({ x: newX, y: newY });
     }
 
