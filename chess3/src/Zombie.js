@@ -4,10 +4,10 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
 
   const moveStep = 25;
 
-  const maxy = 3000;
-  const maxx = 3000;
-  const miny = -3000;
-  const minx = -3000;
+  const maxy = 300;
+  const maxx = 400;
+  const miny = -4500;
+  const minx = -4200;
 
   useEffect(() => {
 
