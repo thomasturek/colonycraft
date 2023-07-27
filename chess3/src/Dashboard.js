@@ -373,16 +373,15 @@ setNotLoaded(false);
     setStarstones(Math.floor((timeValue + 1) / 50).toString());
 };
 
-  useEffect(() => {
-
-    if(!isDead){
-
-      const zombieAttackInterval = setInterval(handleZombieAttack, 100);
-      return () => clearInterval(zombieAttackInterval);
-
+useEffect(() => {
+  let zombieAttackInterval;
+  if (!isDead) {
+    const zombieAttackInterval = setInterval(handleZombieAttack, 100);
+    return () => clearInterval(zombieAttackInterval);
+  } else {
+    clearInterval(zombieAttackInterval);
   }
-
-}, [zombiePosition, healthValue]);
+}, [zombiePosition, healthValue, isDead]);
 
   useEffect(() => {
 
