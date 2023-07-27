@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition, zombieHealth, setZombieHealth, zombieDeath, setZombieDeath}) => {
+const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombiePosition, zombieHealth, setZombieHealth, zombieDeath, setZombieDeath, zombies, setZombies}) => {
 
   const moveStep = 25;
 
