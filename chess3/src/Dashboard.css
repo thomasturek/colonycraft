@@ -4,7 +4,7 @@
   top: 50%;
   width: 100px;
   height: 100px;
-  z-index: 100;
+  z-index: 1;
   margin-top: -50px; /* Half of the square's height */
   margin-left: -50px; /* Half of the square's width */
   background-repeat: no-repeat;
@@ -37,24 +37,6 @@
   background-size: contain;
   background-position: center;
   background-image: url("./images/grassblock.png");
-
-}
-
-.tree {
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("./images/tree.png");
-
-}
-
-.bush {
-
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url("./images/bush.png");
 
 }
 
@@ -147,7 +129,7 @@
   background-size: contain;
   background-position: center;
   image-rendering: pixelated;
-  animation: runningAnimationDown 0.4s steps(4) infinite;
+  animation: runningAnimationDown 1s steps(4) infinite;
 }
 
 @keyframes runningAnimationRight {
@@ -199,15 +181,28 @@
   0% {
     background-image: url("./images/running/runningdown/runningdown1.png");
   }
-  25% {
+  15% {
     background-image: url("./images/running/runningdown/runningdown2.png");
   }
-  50% {
+  30% {
     background-image: url("./images/running/runningdown/runningdown3.png");
   }
-  75% {
+  45% {
     background-image: url("./images/running/runningdown/runningdown4.png");
   }
+  60% {
+    background-image: url("./images/running/runningdown/runningdown5.png");
+  }
+  75% {
+    background-image: url("./images/running/runningdown/runningdown6.png");
+  }
+  90% {
+    background-image: url("./images/running/runningdown/runningdown7.png");
+  }
+  100% {
+    background-image: url("./images/running/runningdown/runningdown8.png");
+  }
+
 }
 
 .health-bar {
@@ -836,6 +831,33 @@
       background-image: url("./images/zombie.png");
       transition: transform 0.3s ease;
       z-index:0;
+
+    }
+
+    .Bush {
+
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/bush.png");
+      transition: transform 0.3s ease;
+      z-index:0;
+      image-rendering: pixelated;
+
+    }
+
+    .Tree {
+
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size:cover;
+      background-position: center;
+      background-image: url("./images/Tree.png");
+      transition: transform 0.3s ease;
+      z-index:2;
+      image-rendering: pixelated;
+      transform: scale(2);
 
     }
 

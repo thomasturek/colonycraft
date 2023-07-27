@@ -1,6 +1,8 @@
 import './Dashboard.css';
 import MovingCircle from "./movingcircle.js";
 import Zombie from "./Zombie.js";
+import Bush from "./Bush.js";
+import Tree from "./Tree.js";
 import React, { useState, useEffect } from "react";
 import startokenABI from './startokenABI.json';
 
@@ -167,6 +169,83 @@ const Dashboard = () => {
   const constructMinuteMen = () => {
   };
 
+  const [bushes, setBushes] = useState([]);
+  const [trees, setTrees] = useState([]);
+
+
+      // Function to generate a random position for bushes and trees with a minimum distance of 100 pixels from each other
+      const generatePlantPosition = (existingPlants) => {
+        let newPosition;
+        let distance;
+
+        const minX = -3000;
+        const maxX = 3000;
+        const minY = -3000;
+        const maxY = 3000;
+
+        do {
+          newPosition = {
+            x: Math.random() * (maxX - minX) + minX,
+            y: Math.random() * (maxY - minY) + minY,
+          };
+
+          // Check the distance from the new position to existing plants (bushes and trees)
+          distance = existingPlants.reduce((minDistance, plant) => {
+            const dx = plant.position.x - newPosition.x;
+            const dy = plant.position.y - newPosition.y;
+            return Math.min(minDistance, Math.sqrt(dx * dx + dy * dy));
+          }, Number.MAX_VALUE);
+        } while (distance < 100); // Regenerate if the distance is less than 100 pixels
+
+        return newPosition;
+      };
+
+  useEffect(() => {
+
+    const initialBushes = [];
+    for (let i = 0; i < 200; i++) {
+      initialBushes.push({
+        position: generatePlantPosition(initialBushes),
+        berries: 100,
+      });
+    }
+
+    // Generate initial trees
+    const initialTrees = [];
+    for (let i = 0; i <200; i++) {
+      initialTrees.push({
+        position: generatePlantPosition([...initialBushes, ...initialTrees]),
+        wood: 10,
+      });
+    }
+
+    setBushes(initialBushes);
+    setTrees(initialTrees);
+
+    const spawnBush = () => {
+      const randomPosition = generatePlantPosition([...bushes, ...trees]);
+      setBushes((prevBushes) => [
+        ...prevBushes,
+        {
+          position: randomPosition,
+          berries: 100,
+        },
+      ]);
+    };
+
+    const spawnTree = () => {
+      const randomPosition = generatePlantPosition([...bushes, ...trees]);
+      setTrees((prevTrees) => [
+        ...prevTrees,
+        {
+          position: randomPosition,
+          wood: 10,
+        },
+      ]);
+    };
+
+  }, [bushes, trees]);
+
   useEffect(() => {
      if (!blockchainConnected) {
        connectToBlockchain(setCurrentUser, setStarstones, setLoading);
@@ -179,6 +258,7 @@ const Dashboard = () => {
    }, [blockchainConnected]);
 
   const generateRandomPosition = () => {
+
   const minX = -1500;
   const maxX = 1500;
   const minY = -1500;
@@ -200,6 +280,17 @@ const Dashboard = () => {
         health: 100,
         death: false,
         className: "Zombie",
+      },
+    ]);
+  };
+
+  const spawnBush = () => {
+    const randomPosition = generateRandomPosition();
+    setBushes((prevBushes) => [
+      ...prevBushes,
+      {
+        position: randomPosition,
+        berries: 100,
       },
     ]);
   };
@@ -371,6 +462,12 @@ useEffect(() => {
           className = "Zombie-Running-Left";
         }
 
+        if (distance <= 100) {
+        className = "Zombie-Fighting";
+        const deltaX = 0;
+        const deltaY = 0;
+        }
+
         return {
           ...zombie,
           position: {
@@ -414,7 +511,7 @@ useEffect(() => {
         }
 
         attackTimeout = setTimeout(() => {
-          const updatedHealth = closestZombie.health - 10;
+          const updatedHealth = closestZombie.health - 20;
          setZombies((prevZombies) =>
           prevZombies.map((prevZombie, i) =>
             i === closestZombieIndex ? { ...prevZombie, health: updatedHealth } : prevZombie
@@ -433,7 +530,7 @@ useEffect(() => {
       }
 
        zombieAttackTimeout = setTimeout(() => {
-       setHealthValue(healthValue - 5);
+       setHealthValue(healthValue - 2.5);
       }, 1000);
 
       setZombieAttackTimeout(zombieAttackTimeout);
@@ -618,6 +715,14 @@ useEffect(() => {
             )
           }
         />
+      ))}
+
+      {bushes.map((bush, index) => (
+        <Bush key={index} position={bush.position} />
+      ))}
+
+      {trees.map((tree, index) => (
+        <Tree key={index} position={tree.position} />
       ))}
 
       {isDead && renderYouDiedOverlay()}

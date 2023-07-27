@@ -90,23 +90,6 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
           Array(gridSize).fill("green")
         );
 
-
-        for (let i = 0; i < gridSize; i++) {
-          for (let y = 0; y < gridSize; y++) {
-              if (Math.random() < 0.20) {
-                newIslandMap[i][y] = "tree";
-            }
-          }
-        }
-
-        for (let i = 0; i < gridSize; i++) {
-          for (let y = 0; y < gridSize; y++) {
-            if (Math.random() < 0.10) {
-              newIslandMap[i][y] = "bush";
-            }
-          }
-        }
-
         // Set the top row as sand
         for (let i = 0; i < gridSize; i++) {
           newIslandMap[0][i] = "yellow";
