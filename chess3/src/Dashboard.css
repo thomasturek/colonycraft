@@ -853,7 +853,7 @@
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;
-      background-image: url("./images/Tree.png");
+      background-image: url("./images/tree.png");
       transition: transform 0.3s ease;
       z-index:2;
       image-rendering: pixelated;
