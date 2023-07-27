@@ -88,7 +88,7 @@ const Home = () => {
           Play
         </button>
         <form>
-        <button className="button" formaction="https://traderjoexyz.com/avalanche/pool/v21/0xf1ab2cF80233341CF72bBE7f56A3FED0Cea8C5Dd/AVAX/100">
+        <button className="button" formaction="https://traderjoexyz.com/avalanche/pool/v21/0x1DAE10715B28f711EDEc1ecbBaa868274814A5ce/AVAX/100">
           Token Exchange
         </button>
         </form>
@@ -98,7 +98,7 @@ const Home = () => {
         </button>
         </form>
         <form>
-        <button className="button" formaction="https://discord.gg/9XhNSdRg">
+        <button className="button" formaction="https://discord.gg/rgKK5qGC">
           Join Our Discord
         </button>
         </form>
