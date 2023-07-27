@@ -204,70 +204,6 @@ const Dashboard = () => {
     return () => clearInterval(spawnInterval);
   }, []);
 
-  const handleZombieAttack = () => {
-  if (!isDead) {
-    const playerX = 650;
-    const playerY = 340;
-    const moveSpeed = 10; // Adjust the move speed of zombies
-
-    setZombies((prevZombies) => {
-      let closestZombieIndex = -1;
-      let closestDistance = Number.MAX_VALUE;
-
-      const updatedZombies = prevZombies.map((zombie, index) => {
-        const zombieX = zombie.position.x;
-        const zombieY = zombie.position.y;
-        const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
-
-        if (distance <= 100 && distance < closestDistance) {
-          closestZombieIndex = index;
-          closestDistance = distance;
-        }
-
-        const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
-        const deltaX = moveSpeed * Math.cos(angle);
-        const deltaY = moveSpeed * Math.sin(angle);
-
-        return {
-          ...zombie,
-          position: {
-            x: zombie.position.x + deltaX,
-            y: zombie.position.y + deltaY,
-          },
-          className: angle >= -Math.PI / 4 && angle < Math.PI / 4 ? "Zombie-Running-Right" : "Zombie-Running-Left",
-        };
-      });
-
-      if (closestZombieIndex !== -1) {
-        const closestZombie = updatedZombies[closestZombieIndex];
-        const zombieX = closestZombie.position.x;
-        const zombieY = closestZombie.position.y;
-        const distanceToClosestZombie = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
-
-        let attackTimeout;
-
-        if (attackTimeout) {
-         clearTimeout(attackTimeout);
-       }
-
-       // Set a new attack timeout
-       attackTimeout = setTimeout(() => {
-         setHealthValue(healthValue - 5);
-       }, 1000);
-
-       setAttackTimeout(attackTimeout);
-
-      }
-
-      return updatedZombies;
-    });
-  }
-
-  if (healthValue <= 0) {
-    setIsDead(true);
-  }
-};
-
   function refreshPage() {
       window.location.reload();
     }
@@ -374,6 +310,71 @@ setNotLoaded(false);
 };
 
 useEffect(() => {
+
+  const handleZombieAttack = () => {
+  if (!isDead) {
+    const playerX = 650;
+    const playerY = 340;
+    const moveSpeed = 10; // Adjust the move speed of zombies
+
+    setZombies((prevZombies) => {
+      let closestZombieIndex = -1;
+      let closestDistance = Number.MAX_VALUE;
+
+      const updatedZombies = prevZombies.map((zombie, index) => {
+        const zombieX = zombie.position.x;
+        const zombieY = zombie.position.y;
+        const distance = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
+
+        if (distance <= 100 && distance < closestDistance) {
+          closestZombieIndex = index;
+          closestDistance = distance;
+        }
+
+        const angle = Math.atan2(playerY - zombieY, playerX - zombieX);
+        const deltaX = moveSpeed * Math.cos(angle);
+        const deltaY = moveSpeed * Math.sin(angle);
+
+        return {
+          ...zombie,
+          position: {
+            x: zombie.position.x + deltaX,
+            y: zombie.position.y + deltaY,
+          },
+          className: angle >= -Math.PI / 4 && angle < Math.PI / 4 ? "Zombie-Running-Right" : "Zombie-Running-Left",
+        };
+      });
+
+      if (closestZombieIndex !== -1) {
+        const closestZombie = updatedZombies[closestZombieIndex];
+        const zombieX = closestZombie.position.x;
+        const zombieY = closestZombie.position.y;
+        const distanceToClosestZombie = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
+
+        let attackTimeout;
+
+        if (attackTimeout) {
+         clearTimeout(attackTimeout);
+       }
+
+       // Set a new attack timeout
+       attackTimeout = setTimeout(() => {
+         setHealthValue(healthValue - 5);
+       }, 1000);
+
+       setAttackTimeout(attackTimeout);
+
+      }
+
+      return updatedZombies;
+    });
+  }
+
+  if (healthValue <= 0) {
+    setIsDead(true);
+  }
+};
+
   let zombieAttackInterval;
   if (!isDead) {
     const zombieAttackInterval = setInterval(handleZombieAttack, 100);
@@ -381,6 +382,7 @@ useEffect(() => {
   } else {
     clearInterval(zombieAttackInterval);
   }
+
 }, [zombiePosition, healthValue, isDead]);
 
   useEffect(() => {

@@ -58,6 +58,16 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
       window.removeEventListener("keydown", handleKeyDown);
     };
 
+    if (zombieHealth <= 0 && !zombieDeath) {
+     setZombieDeath(true);
+     setTimeout(() => {
+       // Remove the dead zombie from the zombies array
+       setZombies((prevZombies) =>
+         prevZombies.filter((zombie) => zombie.position !== zombiePosition)
+       );
+     }, 1000);
+   }
+
   }, [moveStep, zombiePosition]); // Include `moveStep` in the dependency array to prevent stale values
 
   const zombieStyles = {
