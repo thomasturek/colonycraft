@@ -130,6 +130,7 @@ const Dashboard = () => {
   // Game Data
 
   const [attackTimeout, setAttackTimeout] = useState();
+  const [zombieAttackTimeout, setZombieAttackTimeout] = useState();
   const [loading, setLoading] = useState(true);
 
   // blockchain
@@ -366,7 +367,7 @@ useEffect(() => {
        }
 
        attackTimeout = setTimeout(() => {
-          const updatedHealth = closestZombie.health - 5;
+          const updatedHealth = closestZombie.health - 10;
          setZombies((prevZombies) =>
           prevZombies.map((prevZombie, i) =>
             i === closestZombieIndex ? { ...prevZombie, health: updatedHealth } : prevZombie
@@ -375,6 +376,18 @@ useEffect(() => {
        }, 1000);
 
        setAttackTimeout(attackTimeout);
+
+       let zombieAttackTimeout;
+
+       if (zombieAttackTimeout) {
+        clearTimeout(zombieAttackTimeout);
+      }
+
+       zombieAttackTimeout = setTimeout(() => {
+       setHealthValue(healthValue - 5);
+      }, 1000);
+
+      setZombieAttackTimeout(zombieAttackTimeout);
 
       }
 
