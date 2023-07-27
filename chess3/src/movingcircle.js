@@ -14,7 +14,6 @@ const MovingCircle = ({ circleClassName, setCircleClassName, circlePosition, set
   const miny = -4500;
   const minx = -4200;
 
-
   useEffect(() => {
 
     const handleKeyDown = (event) => {

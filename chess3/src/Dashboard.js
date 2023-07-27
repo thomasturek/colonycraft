@@ -178,10 +178,10 @@ const Dashboard = () => {
         let newPosition;
         let distance;
 
-        const minX = -3000;
-        const maxX = 3000;
-        const minY = -3000;
-        const maxY = 3000;
+        const minX = -4200;
+        const maxX = 650;
+        const minY = -4500;
+        const maxY = 350;
 
         do {
           newPosition = {
@@ -259,10 +259,10 @@ const Dashboard = () => {
 
   const generateRandomPosition = () => {
 
-  const minX = -1500;
-  const maxX = 1500;
-  const minY = -1500;
-  const maxY = 1500;
+    const minX = -4200;
+    const maxX = 650;
+    const minY = -4500;
+    const maxY = 350;
 
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
@@ -296,7 +296,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    const spawnInterval = setInterval(spawnZombie, 10000);
+    const spawnInterval = setInterval(spawnZombie, 30000);
 
     return () => clearInterval(spawnInterval);
   }, []);
