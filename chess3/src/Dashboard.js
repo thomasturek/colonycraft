@@ -113,7 +113,7 @@ const Dashboard = () => {
 
   const [healthValue, setHealthValue] = useState(100);
   const [hungerValue, setHungerValue] = useState(100);
-  const [timeValue, setTimeValue] = useState(0);
+  const [timeValue, setTimeValue] = useState(-4);
   const [className, setClassName] = useState("Character");
   const [lastDirection, setLastDirection] = useState("Right");
   const [isDead, setIsDead] = useState(false);
@@ -179,10 +179,10 @@ const Dashboard = () => {
    }, [blockchainConnected]);
 
   const generateRandomPosition = () => {
-  const minX = -1500; // Set your minimum X coordinate value
-  const maxX = 1500;  // Set your maximum X coordinate value
-  const minY = -1500; // Set your minimum Y coordinate value
-  const maxY = 1500;  // Set your maximum Y coordinate value
+  const minX = -1500;
+  const maxX = 1500;
+  const minY = -1500;
+  const maxY = 1500;
 
   const x = Math.random() * (maxX - minX) + minX;
   const y = Math.random() * (maxY - minY) + minY;
@@ -197,8 +197,8 @@ const Dashboard = () => {
       ...prevZombies,
       {
         position: randomPosition,
-        health: 100, // Set initial zombie health here
-        death: false, // Set initial zombie death status here
+        health: 100,
+        death: false,
         className: "Zombie",
       },
     ]);
@@ -309,13 +309,40 @@ const renderLoading = () => {
     setStarstones(Math.floor((timeValue + 1) / 50).toString());
 };
 
+const [isFKeyPressed, setIsFKeyPressed] = useState(false);
+
+useEffect(() => {
+    const handleKeyDown = (event) => {
+      const { key } = event;
+      if (key === "f") {
+        setIsFKeyPressed(true);
+      }
+    };
+
+    const handleKeyUp = (event) => {
+      const { key } = event;
+      if (key === "f") {
+        setIsFKeyPressed(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, []);
+
 useEffect(() => {
 
   const handleZombieAttack = () => {
   if (!isDead) {
     const playerX = 650;
     const playerY = 340;
-    const moveSpeed = 10; // Adjust the move speed of zombies
+    const moveSpeed = 10;
+    const desiredDistance = 50;
 
     setZombies((prevZombies) => {
       let closestZombieIndex = -1;
@@ -335,6 +362,8 @@ useEffect(() => {
         const deltaX = moveSpeed * Math.cos(angle);
         const deltaY = moveSpeed * Math.sin(angle);
 
+        if (distance <= desiredDistance) {
+
         let className;
         if (angle >= -Math.PI / 4 && angle < Math.PI / 4) {
           className = "Zombie-Running-Right";
@@ -350,6 +379,22 @@ useEffect(() => {
           },
           className,
         };
+
+      } else {
+
+        const newX = zombieX + deltaX;
+          const newY = zombieY + deltaY;
+          return {
+            ...zombie,
+            position: {
+              x: newX,
+              y: newY,
+            },
+            className: angle >= -Math.PI / 4 && angle < Math.PI / 4 ? "Zombie-Running-Right" : "Zombie-Running-Left",
+          };
+
+      }
+
       });
 
       const closestZombie = updatedZombies[closestZombieIndex];
@@ -360,22 +405,26 @@ useEffect(() => {
         const zombieY = closestZombie.position.y;
         const distanceToClosestZombie = Math.sqrt((playerX - zombieX) ** 2 + (playerY - zombieY) ** 2);
 
+        if(isFKeyPressed) {
+
         let attackTimeout;
 
         if (attackTimeout) {
          clearTimeout(attackTimeout);
-       }
+        }
 
-       attackTimeout = setTimeout(() => {
+        attackTimeout = setTimeout(() => {
           const updatedHealth = closestZombie.health - 10;
          setZombies((prevZombies) =>
           prevZombies.map((prevZombie, i) =>
             i === closestZombieIndex ? { ...prevZombie, health: updatedHealth } : prevZombie
           )
         );
-       }, 1000);
+        }, 1000);
 
-       setAttackTimeout(attackTimeout);
+        setAttackTimeout(attackTimeout);
+
+      }
 
        let zombieAttackTimeout;
 
@@ -408,7 +457,7 @@ useEffect(() => {
     clearInterval(zombieAttackInterval);
   }
 
-}, [zombiePosition, healthValue, isDead]);
+}, [zombiePosition, healthValue, isDead, isFKeyPressed]);
 
   useEffect(() => {
 

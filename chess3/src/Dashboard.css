@@ -248,11 +248,11 @@
   background-position: center;
   background-color: #eb4034;
   border: 0.1px solid black;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
   font-family: 'Press Start 2P', sans-serif;
   user-select: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: width 0.5s ease;
   z-index: 0;
 }
 
