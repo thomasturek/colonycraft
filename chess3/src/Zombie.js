@@ -57,11 +57,11 @@ const Zombie = ({ zombieClassName, setZombieClassName, zombiePosition, setZombie
        if (angle >= -Math.PI / 4 && angle < Math.PI / 4) {
         setZombieClassName("Zombie-Running-Right");
       } else if (angle >= Math.PI / 4 && angle < (3 * Math.PI) / 4) {
-        setZombieClassName("Zombie-Running-Right");
+        setZombieClassName("Zombie-Running-Down");
       } else if (angle >= (3 * Math.PI) / 4 || angle < -(3 * Math.PI) / 4) {
         setZombieClassName("Zombie-Running-Left");
       } else {
-        setZombieClassName("Zombie-Running-Left");
+        setZombieClassName("Zombie-Running-Up");
       }
 
        setZombiePosition({ x: newX, y: newY });

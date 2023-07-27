@@ -487,7 +487,13 @@ useEffect(() => {
               x: newX,
               y: newY,
             },
-            className: angle >= -Math.PI / 4 && angle < Math.PI / 4 ? "Zombie-Running-Right" : "Zombie-Running-Left",
+            className: angle >= -Math.PI / 4 && angle < Math.PI / 4
+              ? "Zombie-Running-Right"
+              : angle >= Math.PI / 4 && angle < (3 * Math.PI) / 4
+              ? "Zombie-Running-Down"
+              : angle >= -(3 * Math.PI) / 4 && angle < -Math.PI / 4
+              ? "Zombie-Running-Up"
+              : "Zombie-Running-Left",
           };
 
       }
