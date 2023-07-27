@@ -366,7 +366,12 @@ useEffect(() => {
        }
 
        attackTimeout = setTimeout(() => {
-         setHealthValue(healthValue - 5);
+          const updatedHealth = closestZombie.health - 5;
+         setZombies((prevZombies) =>
+          prevZombies.map((prevZombie, i) =>
+            i === closestZombieIndex ? { ...prevZombie, health: updatedHealth } : prevZombie
+          )
+        );
        }, 1000);
 
        setAttackTimeout(attackTimeout);
